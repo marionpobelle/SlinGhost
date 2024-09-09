@@ -14,12 +14,11 @@ public class EnemyHandler : MonoBehaviour
 
     private void SlingshotFired()
     {
-
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
+        //IF ENEMY HIT
+        //Game won
+        //IF ENEMY MISSED
+        //Move enemy
+        //Check if game is ended
     }
 
     private void OnDestroy()
