@@ -24,6 +24,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID DISTANCE = 1240670792U;
+        static const AkUniqueID DISTANCETOTAL = 985456950U;
         static const AkUniqueID ELEVATION = 2141048674U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
