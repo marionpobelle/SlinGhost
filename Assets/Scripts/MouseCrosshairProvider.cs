@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -8,6 +10,14 @@ public class MouseCrosshairProvider : MonoBehaviour
 {
     private CrosshairController _crosshairController;
     private Camera _mainCamera;
+    
+    private bool _isInCooldown;
+    private WaitForSeconds _cooldownInSeconds;
+
+    private void Awake()
+    {
+        _cooldownInSeconds = new WaitForSeconds(Data.GameData.CooldownBetweenShotsInSeconds);
+    }
 
     private void Start()
     {
@@ -35,7 +45,19 @@ public class MouseCrosshairProvider : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
+            if (_isInCooldown) return;
             _crosshairController.Fire();
+            StartCoroutine(CooldownCoroutine());
         }
+    }
+    
+    private IEnumerator CooldownCoroutine()
+    {
+        if (_isInCooldown) yield break;
+        Debug.Log($"Slingshot is in cooldown, waiting {Data.GameData.CooldownBetweenShotsInSeconds} seconds...", this);
+        _isInCooldown = true;
+        yield return _cooldownInSeconds;
+        Debug.Log("Slingshot is ready to fire.", this);
+        _isInCooldown = false;
     }
 }
