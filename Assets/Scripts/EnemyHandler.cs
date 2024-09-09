@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class EnemyHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private CrosshairController _crosshairController;
+
+    private void Start()
+    {
+        _crosshairController = FindObjectOfType<CrosshairController>();
+        //_crosshairController.OnSlingshotFired += SlingshotFired;
+    }
+
+    private void SlingshotFired()
+    {
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        //_crosshairController.OnSlingshotFired -= SlingshotFired;
     }
 }
