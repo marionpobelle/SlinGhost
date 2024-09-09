@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 [CreateAssetMenu(fileName = nameof(GameData), menuName = "Slingshot/" + nameof(GameData))]
 public class GameData : ScriptableObject
@@ -28,7 +27,6 @@ public class GameData : ScriptableObject
     [Tooltip("Amount by which the speed increases.")]
     public float Increase = 0.2f;
 }
-
 
 
 // Create a static getter that load GameData from Resources
