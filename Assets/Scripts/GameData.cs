@@ -19,7 +19,7 @@ public class GameData : ScriptableObject
     [Tooltip("Enemy health points default.")]
     public int EnemyHP = 1;
     [Tooltip("Enemy capsule collider radius.")]
-    public float ColliderSize = 4.5f;
+    public float ColliderRadius = 1.2f;
 
     [Header("Difficulty progression")]
     [Tooltip("Amount of time until the difficulty increases.")]
