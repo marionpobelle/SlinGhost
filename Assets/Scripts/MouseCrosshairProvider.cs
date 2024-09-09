@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 /// <summary>
@@ -33,6 +32,10 @@ public class MouseCrosshairProvider : MonoBehaviour
         {
             // Set the crosshair position to the hit point
             _crosshairController.transform.position = hit.point;
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            _crosshairController.Fire();
         }
     }
 }
