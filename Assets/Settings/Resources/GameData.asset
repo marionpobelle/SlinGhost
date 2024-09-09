@@ -13,3 +13,11 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   CooldownBetweenShotsInSeconds: 1
+  EnemyMinScale: 0.05
+  EnemyMaxScale: 10
+  EnemyScaleMinStep: 0.00005
+  EnemyScaleMaxStep: 0.1
+  EnemyHP: 1
+  ColliderSize: {x: 4.5, y: 6}
+  TimeInterval: 5
+  Increase: 0.00005
