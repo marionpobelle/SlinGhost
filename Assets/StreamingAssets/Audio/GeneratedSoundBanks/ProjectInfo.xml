@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="HyperSlingshot" GUID="{D472400D-5B24-4F22-93FE-546F745406B0}" Generator="2023.1.2.8444"/>
+	<CacheRoot>E:/Slingshot/HyperSlingshot/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Windows" GUID="{D710414B-6E44-4A7C-98ED-5377233CD3D6}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="E:/Slingshot/HyperSlingshot/GeneratedSoundBanks/Windows/"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{1B8DFCD5-F80A-4CB7-9204-9BE197E9601A}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{3951063E-2F46-0734-6388-513A6BBEB68B}</FileHash>
+</ProjectInfo>
