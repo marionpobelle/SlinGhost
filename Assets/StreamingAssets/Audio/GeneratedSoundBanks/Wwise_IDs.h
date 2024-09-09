@@ -13,7 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID SLINGSHOT_SHOT = 687979583U;
+        static const AkUniqueID SLINGSHOT_REALEASE = 2744732293U;
         static const AkUniqueID SLINGSHOT_STRETCH = 4122898902U;
         static const AkUniqueID TARGET_HIT = 316379624U;
         static const AkUniqueID TARGET_LOOP = 3993324383U;
