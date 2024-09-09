@@ -25,9 +25,9 @@ public class EnemyHandler : MonoBehaviour
         _isCrosshairOnEnemy = false;
         _currentHP = _gameData.EnemyHP;
         _currentScaleStep = _gameData.EnemyScaleMinStep;
-        if(this.gameObject.TryGetComponent<CapsuleCollider2D>(out var collider))
+        if(this.gameObject.TryGetComponent<CapsuleCollider>(out var collider))
         {
-            collider.size = _gameData.ColliderSize;
+            collider.radius = _gameData.ColliderRadius;
         }
     }
 
@@ -54,7 +54,7 @@ public class EnemyHandler : MonoBehaviour
         //Change enemy scale according to speed
         transform.localScale = transform.localScale + new UnityEngine.Vector3(_currentScaleStep, _currentScaleStep, _currentScaleStep);
         //If enemy reached maximum scale, end the game
-        if (transform.localScale == new UnityEngine.Vector3(_gameData.EnemyMaxScale, _gameData.EnemyMaxScale, _gameData.EnemyMaxScale))
+        if (transform.localScale.x >= _gameData.EnemyMaxScale)
         {
             GameHandler.Instance.LostGame();
         }
@@ -94,7 +94,7 @@ public class EnemyHandler : MonoBehaviour
         return UnityEngine.Vector2.Distance(_crosshairPosition, this.transform.position);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.TryGetComponent<CrosshairController>(out var crosshair))
         {
@@ -102,7 +102,7 @@ public class EnemyHandler : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit(Collider collision)
     {
         if (collision.TryGetComponent<CrosshairController>(out var crosshair))
         {

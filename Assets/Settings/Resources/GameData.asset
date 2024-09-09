@@ -18,6 +18,6 @@ MonoBehaviour:
   EnemyScaleMinStep: 0.00005
   EnemyScaleMaxStep: 0.1
   EnemyHP: 1
-  ColliderSize: {x: 4.5, y: 6}
+  ColliderRadius: 1.2
   TimeInterval: 5
   Increase: 0.00005
