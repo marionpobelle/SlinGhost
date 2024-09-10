@@ -34,7 +34,8 @@ public class SlingshotInputs : MonoBehaviour
         gyro = new Vector3(0, 0, 0);
         accel = new Vector3(0, 0, 0);
         // get the public Joycon array attached to the JoyconManager in scene
-        joycon = JoyconManager.Instance.j[0];
+        if (JoyconManager.Instance.j.Count != 0)
+            joycon = JoyconManager.Instance.j[0];
 
         latestAccelValues = new Queue<Vector3>();
 
@@ -59,13 +60,8 @@ public class SlingshotInputs : MonoBehaviour
             return;
 
         CacheValues();
-        SetCrosshairPosition();
-        //Recenter
-        if (joycon.GetButtonDown(Joycon.Button.DPAD_RIGHT))
-        {
-            joycon.Recenter();
-            Debug.Log("Recentering joycon");
-        }
+
+
 
         float averageAccel = 0;
         foreach (Vector3 accelValue in latestAccelValues)
@@ -80,6 +76,7 @@ public class SlingshotInputs : MonoBehaviour
         if (!wasShotFired && averageAccel > fireThreshold || joycon.GetButtonDown(Joycon.Button.DPAD_UP))
         {
             Debug.Log("SHOT FIRED");
+            crosshairController.Fire();
             lastShotDir = Average(latestOrientValues.ToList()) * Vector3.forward;
             wasShotFired = true;
         }
@@ -87,6 +84,14 @@ public class SlingshotInputs : MonoBehaviour
         if (averageAccel < 0)
         {
             wasShotFired = false;
+        }
+
+        SetCrosshairPosition();
+        //Recenter
+        if (joycon.GetButtonDown(Joycon.Button.DPAD_RIGHT))
+        {
+            joycon.Recenter();
+            Debug.Log("Recentering joycon");
         }
         transform.rotation = orientation;
     }
@@ -124,12 +129,12 @@ public class SlingshotInputs : MonoBehaviour
                 lowestValue = quaternionValue;
             }
         }
-           // Debug.Log(bestIndex + " : " + lowestValue);
+        // Debug.Log(bestIndex + " : " + lowestValue);
 
 
         targetPos.x = Mathf.Lerp(-1, 1, bestIndex / totalTests);
 
-        crosshairController.transform.position = targetPos;
+        //crosshairController.transform.position = targetPos;
     }
 
     private void CacheValues()
