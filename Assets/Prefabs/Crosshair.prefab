@@ -48,6 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dfc368124d542028feb9d38a4c39559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  potentialLockOnEnemies: []
+  gameData: {fileID: 11400000, guid: 3f81df3077389734db8e9b58b2450896, type: 2}
+  enemyToLock: {fileID: 0}
+  lockedOnEnemy: {fileID: 0}
 --- !u!135 &7690307478715901432
 SphereCollider:
   m_ObjectHideFlags: 0

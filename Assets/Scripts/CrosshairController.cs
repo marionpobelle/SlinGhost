@@ -9,10 +9,9 @@ public class CrosshairController : MonoBehaviour
     public event Action<Vector3> OnSlingshotFired;
 
     [SerializeField] List<EnemyHandler> potentialLockOnEnemies = new List<EnemyHandler>();
+    [SerializeField] GameData gameData;
     [SerializeField] EnemyHandler enemyToLock;
     [SerializeField] EnemyHandler lockedOnEnemy;
-    [SerializeField] float lockOnDuration = .1f;
-    [SerializeField] float lockOffDuration = .2f;
 
     bool isLockedOn = false;
     bool isLockChanging = false;
@@ -34,7 +33,7 @@ public class CrosshairController : MonoBehaviour
             if (!isLockChanging && !potentialLockOnEnemies.Contains(lockedOnEnemy))
             {
                 isLockChanging = true;
-                enemyLockTimer = Time.time + lockOffDuration;
+                enemyLockTimer = Time.time + gameData.delockDelay;
             }
             //if we were delocking the enemy, but we got it back before the delay
             else if (isLockChanging && potentialLockOnEnemies.Contains(lockedOnEnemy))
@@ -56,7 +55,7 @@ public class CrosshairController : MonoBehaviour
             {
                 isLockChanging = true;
                 enemyToLock = potentialLockOnEnemies[0];
-                enemyLockTimer = Time.time + lockOnDuration;
+                enemyLockTimer = Time.time + gameData.lockOnDelay;
                 return;
             }
             //If we were locking on to someone but it got away before

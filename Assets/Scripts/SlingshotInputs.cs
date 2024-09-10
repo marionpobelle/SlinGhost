@@ -60,13 +60,8 @@ public class SlingshotInputs : MonoBehaviour
             return;
 
         CacheValues();
-        SetCrosshairPosition();
-        //Recenter
-        if (joycon.GetButtonDown(Joycon.Button.DPAD_RIGHT))
-        {
-            joycon.Recenter();
-            Debug.Log("Recentering joycon");
-        }
+
+
 
         float averageAccel = 0;
         foreach (Vector3 accelValue in latestAccelValues)
@@ -81,6 +76,7 @@ public class SlingshotInputs : MonoBehaviour
         if (!wasShotFired && averageAccel > fireThreshold || joycon.GetButtonDown(Joycon.Button.DPAD_UP))
         {
             Debug.Log("SHOT FIRED");
+            crosshairController.Fire();
             lastShotDir = Average(latestOrientValues.ToList()) * Vector3.forward;
             wasShotFired = true;
         }
@@ -88,6 +84,14 @@ public class SlingshotInputs : MonoBehaviour
         if (averageAccel < 0)
         {
             wasShotFired = false;
+        }
+
+        SetCrosshairPosition();
+        //Recenter
+        if (joycon.GetButtonDown(Joycon.Button.DPAD_RIGHT))
+        {
+            joycon.Recenter();
+            Debug.Log("Recentering joycon");
         }
         transform.rotation = orientation;
     }
@@ -130,7 +134,7 @@ public class SlingshotInputs : MonoBehaviour
 
         targetPos.x = Mathf.Lerp(-1, 1, bestIndex / totalTests);
 
-        crosshairController.transform.position = targetPos;
+        //crosshairController.transform.position = targetPos;
     }
 
     private void CacheValues()
