@@ -20,6 +20,7 @@ public class CrosshairController : MonoBehaviour
     public void Fire()
     {
         Debug.Log("Slingshot fired at position: " + transform.position, this);
+        AkSoundEngine.PostEvent("SLG_Fire", gameObject);
 
         if (lockedOnEnemy)
             lockedOnEnemy.HitEnemy();

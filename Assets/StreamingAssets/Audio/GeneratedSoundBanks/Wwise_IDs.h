@@ -45,6 +45,7 @@ namespace AK
         static const AkUniqueID SS_AIR_TIMEOFDAY = 3203397129U;
         static const AkUniqueID SS_AIR_TURBULENCE = 4160247818U;
         static const AkUniqueID STRETCH = 3238454324U;
+        static const AkUniqueID TRIGGERZONE_TOGGLE = 3966939032U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

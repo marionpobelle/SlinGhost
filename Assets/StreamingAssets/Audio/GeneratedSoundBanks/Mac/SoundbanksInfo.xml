@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4DF34955-219A-C9C6-E5AF-59354E1BB7CA}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{AD007BA2-6136-AC82-F705-C1D5D1D01E3D}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -41,6 +41,7 @@
 				<GameParameter Id="3238454324" Name="Stretch"/>
 				<GameParameter Id="3715662592" Name="SS_Air_Storm"/>
 				<GameParameter Id="3847924954" Name="SS_Air_Presence"/>
+				<GameParameter Id="3966939032" Name="TriggerZone_Toggle"/>
 				<GameParameter Id="4160247818" Name="SS_Air_Turbulence"/>
 			</GameParameters>
 			<AcousticTextures>
@@ -172,17 +173,41 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{195DFA9B-E77C-E9C5-8322-7ECCCB317349}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5F492D12-6663-2619-F3D8-7FBD2BB8107C}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
-				<File Id="22648667" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Moving_Ghost.wav</ShortName>
-					<CachePath>SFX/Moving_Ghost_FBC78EF0.wem</CachePath>
+				<File Id="15632848" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Move-004.wav</ShortName>
+					<CachePath>SFX/Ghost_Move-004_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="30005427" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-014.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-014_818F3B66.wem</CachePath>
+				</File>
+				<File Id="56179963" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-002.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-002_818F3B66.wem</CachePath>
+				</File>
+				<File Id="77050662" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-018.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-018_818F3B66.wem</CachePath>
+				</File>
+				<File Id="83890821" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Move-002.wav</ShortName>
+					<CachePath>SFX/Ghost_Move-002_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="92851935" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Alarms, Misc, Alert, Gritty, Reverb SND37244.wav</ShortName>
 					<CachePath>SFX/Alarms, Misc, Alert, Gritty, Reverb SND37244_6C38286B.wem</CachePath>
+				</File>
+				<File Id="94734955" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-005.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-005_818F3B66.wem</CachePath>
+				</File>
+				<File Id="98849893" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-013.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-013_818F3B66.wem</CachePath>
 				</File>
 				<File Id="124692840" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Picked Coin Echo by NenadSimic Id-171696.wav</ShortName>
@@ -192,6 +217,34 @@
 					<ShortName>CLICK_PLASTIC_SEQUNCE_PHASED_CLICK01.wav</ShortName>
 					<CachePath>SFX/CLICK_PLASTIC_SEQUNCE_PHASED_CLICK01_0C4DA644.wem</CachePath>
 				</File>
+				<File Id="167367052" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Move-003.wav</ShortName>
+					<CachePath>SFX/Ghost_Move-003_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="201521654" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-020.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-020_818F3B66.wem</CachePath>
+				</File>
+				<File Id="231964784" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-021.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-021_818F3B66.wem</CachePath>
+				</File>
+				<File Id="236303231" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Move-001.wav</ShortName>
+					<CachePath>SFX/Ghost_Move-001_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="294114357" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Move-005.wav</ShortName>
+					<CachePath>SFX/Ghost_Move-005_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="339661756" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-008.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-008_818F3B66.wem</CachePath>
+				</File>
+				<File Id="390301835" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-001.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-001_818F3B66.wem</CachePath>
+				</File>
 				<File Id="397276058" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Enemy_Hit-001.wav</ShortName>
 					<CachePath>SFX/Enemy_Hit-001_818F3B66.wem</CachePath>
@@ -200,21 +253,69 @@
 					<ShortName>Enemy_Hit-003.wav</ShortName>
 					<CachePath>SFX/Enemy_Hit-003_818F3B66.wem</CachePath>
 				</File>
+				<File Id="400722481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Move-006.wav</ShortName>
+					<CachePath>SFX/Ghost_Move-006_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="432923580" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>CLICK_PLASTIC_SEQUNENCE_VERY_STRANGE.wav</ShortName>
 					<CachePath>SFX/CLICK_PLASTIC_SEQUNENCE_VERY_STRANGE_4CE10658.wem</CachePath>
+				</File>
+				<File Id="438065145" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-007.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-007_818F3B66.wem</CachePath>
+				</File>
+				<File Id="472132911" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SLG_Stretch-001.wav</ShortName>
+					<CachePath>SFX/SLG_Stretch-001_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="550476572" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-019.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-019_818F3B66.wem</CachePath>
 				</File>
 				<File Id="555763139" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Enemy_Hit-002.wav</ShortName>
 					<CachePath>SFX/Enemy_Hit-002_818F3B66.wem</CachePath>
 				</File>
-				<File Id="662502466" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Rubber_Stretch_PSEF251.wav</ShortName>
-					<CachePath>SFX/Rubber_Stretch_PSEF251_BB4E938B.wem</CachePath>
+				<File Id="576794218" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SLG_Fire.wav</ShortName>
+					<CachePath>SFX/SLG_Fire_818F3B66.wem</CachePath>
+				</File>
+				<File Id="661831790" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-016.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-016_818F3B66.wem</CachePath>
+				</File>
+				<File Id="731602718" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-015.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-015_818F3B66.wem</CachePath>
+				</File>
+				<File Id="758761906" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-004.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-004_818F3B66.wem</CachePath>
+				</File>
+				<File Id="777307637" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-006.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-006_818F3B66.wem</CachePath>
+				</File>
+				<File Id="787034331" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-022.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-022_818F3B66.wem</CachePath>
 				</File>
 				<File Id="806533360" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Voice Designer, Ethan.wav</ShortName>
 					<CachePath>SFX/Soundly Voice Designer, Ethan_F2535D7B.wem</CachePath>
+				</File>
+				<File Id="912744587" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-009.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-009_818F3B66.wem</CachePath>
+				</File>
+				<File Id="940154327" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-003.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-003_818F3B66.wem</CachePath>
+				</File>
+				<File Id="974327661" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-017.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-017_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1004975446" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Enemy_Hit-004.wav</ShortName>
@@ -228,11 +329,15 @@
 					<ShortName>GhostHover_BW3669.wav</ShortName>
 					<CachePath>SFX/GhostHover_BW3669_3C090834.wem</CachePath>
 				</File>
-				<File Id="1050889111" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>SlingshotShoot_BW10318.wav</ShortName>
-					<CachePath>SFX/SlingshotShoot_BW10318_818F3B66.wem</CachePath>
-				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="274456923" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="344550193" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="515446453" Name="Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="991716127" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+				</Custom>
+			</Plugins>
 			<Events>
 				<Event Id="174960569" Name="Loose" DurationType="OneShot" DurationMin="1.6044159" DurationMax="1.6044159">
 					<MediaRefs>
@@ -240,23 +345,65 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="3991942870" Name="Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="4145749436" Name="NME_Death" MaxAttenuation="3" DurationType="OneShot" DurationMin="2.8546803" DurationMax="2.8546803">
+				<Event Id="4145749436" Name="NME_Death" DurationType="OneShot" DurationMin="2.8546803" DurationMax="2.8546803">
 					<MediaRefs>
+						<MediaRef Id="124692840"/>
 						<MediaRef Id="1026356411"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="515446453"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
-				<Event Id="1706673613" Name="NME_Hit" MaxAttenuation="3" DurationType="OneShot" DurationMin="0.8760504" DurationMax="1.3317778">
+				<Event Id="1706673613" Name="NME_Hit" MaxAttenuation="3" DurationType="OneShot" DurationMin="0.8760504" DurationMax="4.3317776">
 					<MediaRefs>
 						<MediaRef Id="397276058"/>
 						<MediaRef Id="397658424"/>
 						<MediaRef Id="555763139"/>
 						<MediaRef Id="1004975446"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="515446453"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 				<Event Id="3843687674" Name="NME_Signal" MaxAttenuation="3" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="22648667"/>
+						<MediaRef Id="15632848"/>
+						<MediaRef Id="30005427"/>
+						<MediaRef Id="56179963"/>
+						<MediaRef Id="77050662"/>
+						<MediaRef Id="83890821"/>
+						<MediaRef Id="94734955"/>
+						<MediaRef Id="98849893"/>
+						<MediaRef Id="167367052"/>
+						<MediaRef Id="201521654"/>
+						<MediaRef Id="231964784"/>
+						<MediaRef Id="236303231"/>
+						<MediaRef Id="294114357"/>
+						<MediaRef Id="339661756"/>
+						<MediaRef Id="390301835"/>
+						<MediaRef Id="400722481"/>
+						<MediaRef Id="438065145"/>
+						<MediaRef Id="550476572"/>
+						<MediaRef Id="661831790"/>
+						<MediaRef Id="731602718"/>
+						<MediaRef Id="758761906"/>
+						<MediaRef Id="777307637"/>
+						<MediaRef Id="787034331"/>
+						<MediaRef Id="912744587"/>
+						<MediaRef Id="940154327"/>
+						<MediaRef Id="974327661"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="274456923"/>
+							<PluginRef Id="344550193"/>
+							<PluginRef Id="991716127"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 				<Event Id="2537597519" Name="NME_Zone_Enter" DurationType="OneShot" DurationMin="0.15001713" DurationMax="0.15001713">
 					<MediaRefs>
@@ -273,19 +420,15 @@
 						<MediaRef Id="92851935"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3248278131" Name="Score_Up" DurationType="OneShot" DurationMin="0.8660771" DurationMax="0.8660771">
+				<Event Id="3248278131" Name="Score_Up" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="191779598" Name="SLG_Fire" DurationType="OneShot" DurationMin="2.0172918" DurationMax="2.0172918">
 					<MediaRefs>
-						<MediaRef Id="124692840"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="191779598" Name="SLG_Fire" DurationType="OneShot" DurationMin="0.20448959" DurationMax="0.20448959">
-					<MediaRefs>
-						<MediaRef Id="1050889111"/>
+						<MediaRef Id="576794218"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2917512008" Name="SLG_Stretch_Start" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="662502466"/>
+						<MediaRef Id="472132911"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4232021140" Name="SLG_Stretch_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -300,8 +443,9 @@
 				<GameParameter Id="1240670792" Name="Distance"/>
 				<GameParameter Id="2141048674" Name="Elevation"/>
 				<GameParameter Id="3238454324" Name="Stretch"/>
+				<GameParameter Id="3966939032" Name="TriggerZone_Toggle"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8EF4931D-B7E7-88DE-F680-1D567D68DE5F}</FileHash>
+	<FileHash>{3396CEA9-9D7B-1B7D-C688-243E43722E05}</FileHash>
 </SoundBanksInfo>
