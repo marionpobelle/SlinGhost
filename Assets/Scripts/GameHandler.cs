@@ -8,20 +8,18 @@ public class GameHandler : MonoBehaviour
     [SerializeField] private int _enemyCount;
     public static GameHandler Instance;
 
+    private GameData _gameData;
+
     private void Awake()
     {
         Instance = this;
+        _gameData = Data.GameData;
     }
 
     private void Start()
     {
-        List<EnemyHandler> enemies = new List<EnemyHandler>();
-        enemies = FindObjectsOfType<EnemyHandler>().ToList();
-        if (enemies.Count == 0)
-        {
-            Debug.LogError("No enemies were found in the scene !", this);
-        }
-        _enemyCount = enemies.Count;
+        
+        _enemyCount = _gameData.MaxAmountEnemies;
     }
 
     // Update is called once per frame
@@ -52,6 +50,11 @@ public class GameHandler : MonoBehaviour
     public void IncreaseEnemyCount()
     {
         _enemyCount++;
+    }
+
+    private IEnumerator EnemySpawner()
+    {
+        yield return new WaitForEndOfFrame();
     }
 
 }

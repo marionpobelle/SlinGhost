@@ -36,6 +36,11 @@ public class GameData : ScriptableObject
     public float minSpawnTime = 10f;
     [Tooltip("Maximum time in between enemies spawning.")]
     public float maxSpawnTime = 15f;
+    [Tooltip("X axis range from 0 for enemy to spawn.")]
+    public float Xrange = 1000f;
+    [Tooltip("Y axis range from 0 for enemy to spawn.")]
+    public float Yrange = 1000f;
+
 }
 
 
