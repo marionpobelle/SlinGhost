@@ -45,8 +45,6 @@ public class EnemyHandler : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _normalizedScaleY = this.transform.localScale.normalized.y;
-        AkSoundEngine.SetRTPCValue("NME_Scale", _normalizedScaleY);
         _speedTick += Time.deltaTime;
         //If tick reached, increase enemy speed
         if(_speedTick >= _gameData.TimeInterval && _currentScaleStep < _gameData.EnemyScaleMaxStep)
@@ -62,6 +60,7 @@ public class EnemyHandler : MonoBehaviour
         {
             GameHandler.Instance.LostGame();
         }
+        AkSoundEngine.SetRTPCValue("NME_Scale", transform.localScale.y);
     }
 
     private void SlingshotFired(UnityEngine.Vector3 crosshairPosition)
@@ -89,8 +88,8 @@ public class EnemyHandler : MonoBehaviour
     /// </summary>
     public float GetNormalizedYDistance()
     {
-        UnityEngine.Vector3 differences = (this.transform.position - _crosshairPosition).normalized;
-        return differences.y;
+        float i = this.transform.position.y - _crosshairController.transform.position.y;
+        return i;
     }
 
     /// <summary>

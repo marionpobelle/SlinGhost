@@ -172,7 +172,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{06A3B7C2-913B-B5A0-3997-A8ABF2A831EF}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9B6BCC49-B1C5-7585-6C35-20D144A7B53B}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -228,12 +228,12 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="3991942870" Name="Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="4145749436" Name="NME_Death" MaxAttenuation="3" DurationType="OneShot" DurationMin="2.7546804" DurationMax="2.7546804">
+				<Event Id="4145749436" Name="NME_Death" MaxAttenuation="3" DurationType="OneShot" DurationMin="2.8546803" DurationMax="2.8546803">
 					<MediaRefs>
 						<MediaRef Id="1026356411"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1706673613" Name="NME_Hit" MaxAttenuation="3" DurationType="OneShot" DurationMin="0.64025027" DurationMax="0.64025027">
+				<Event Id="1706673613" Name="NME_Hit" MaxAttenuation="3" DurationType="OneShot" DurationMin="0.7402503" DurationMax="0.7402503">
 					<MediaRefs>
 						<MediaRef Id="642212491"/>
 					</MediaRefs>
@@ -274,7 +274,7 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="4232021140" Name="SLG_Stretch_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="979765101" Name="Win" DurationType="OneShot" DurationMin="1.0196288" DurationMax="1.0196288">
+				<Event Id="979765101" Name="Win" DurationType="OneShot" DurationMin="1.2696288" DurationMax="1.2696288">
 					<MediaRefs>
 						<MediaRef Id="1020287732"/>
 					</MediaRefs>
@@ -288,5 +288,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0A8B2044-56E4-BF4F-DFD5-F9736A2D0A40}</FileHash>
+	<FileHash>{D31CCFFA-2CFB-7560-A65E-65B86D7A5DCC}</FileHash>
 </SoundBanksInfo>
