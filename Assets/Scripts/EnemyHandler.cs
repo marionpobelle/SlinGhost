@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 
 public class EnemyHandler : MonoBehaviour
@@ -29,8 +28,8 @@ public class EnemyHandler : MonoBehaviour
         {
             collider.radius = _gameData.ColliderRadius;
         }
-        float randomCoordX = Random.Range(-_gameData.Xrange, _gameData.Xrange);
-        float randomCoordY = Random.Range(-_gameData.Yrange, _gameData.Yrange);
+        float randomCoordX = 0;// Random.Range(-_gameData.Xrange, _gameData.Xrange);
+        float randomCoordY = 0;// Random.Range(-_gameData.Yrange, _gameData.Yrange);
         transform.position = new UnityEngine.Vector3(randomCoordY, randomCoordX, 0);
     }
 
@@ -61,6 +60,8 @@ public class EnemyHandler : MonoBehaviour
         {
             GameHandler.Instance.LostGame();
         }
+        //Left-right movement
+        transform.position = new Vector3(_gameData.MovementCurve.Evaluate(_gameData.EnemySpeed * Time.time) * _gameData.EnemyMovementOffset, 0, transform.position.z);
     }
 
     private void SlingshotFired(UnityEngine.Vector3 crosshairPosition)

@@ -16,6 +16,13 @@ public class GameData : ScriptableObject
     [Tooltip("By how much the enemy moves each step max value.")]
     public float EnemyScaleMaxStep = 1.5f;
 
+    [Tooltip("Movement curve for the enemy position over time.")]
+    public AnimationCurve MovementCurve;
+    [Tooltip("Default enemy movement speed.")]
+    public float EnemySpeed = 6f;
+    [Tooltip("Axis offset value from default enemy position for left to right movement.")]
+    public float EnemyMovementOffset = 1f;
+
     [Tooltip("Enemy health points default.")]
     public int EnemyHP = 1;
     [Tooltip("Enemy capsule collider radius.")]
