@@ -171,7 +171,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4EEA927E-EBD5-4C4B-C726-8DF10A2D76F3}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{384EAEBA-46E4-D0DA-6817-80EB473994FD}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -201,22 +201,22 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1706673613" Name="NME_Hit" DurationType="OneShot" DurationMin="0.64025027" DurationMax="0.64025027">
+				<Event Id="1706673613" Name="NME_Hit" MaxAttenuation="3" DurationType="OneShot" DurationMin="0.64025027" DurationMax="0.64025027">
 					<MediaRefs>
 						<MediaRef Id="642212491"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3843687674" Name="NME_Signal" DurationType="Infinite">
+				<Event Id="3843687674" Name="NME_Signal" MaxAttenuation="3" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="681102172"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2537597519" Name="NME_Zone_Enter" DurationType="OneShot" DurationMin="0.510839" DurationMax="0.510839">
+				<Event Id="2537597519" Name="NME_Zone_Enter" MaxAttenuation="3" DurationType="OneShot" DurationMin="0.510839" DurationMax="0.510839">
 					<MediaRefs>
 						<MediaRef Id="147950435"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="542453335" Name="NME_Zone_Exit" DurationType="OneShot" DurationMin="0.69716775" DurationMax="0.69716775">
+				<Event Id="542453335" Name="NME_Zone_Exit" MaxAttenuation="3" DurationType="OneShot" DurationMin="0.69716775" DurationMax="0.69716775">
 					<MediaRefs>
 						<MediaRef Id="432923580"/>
 					</MediaRefs>
@@ -239,5 +239,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5EF90623-D9DB-E3A4-293C-C61357B8A308}</FileHash>
+	<FileHash>{CEFA72CF-8022-2D44-A8FC-EF71CD8D438D}</FileHash>
 </SoundBanksInfo>
