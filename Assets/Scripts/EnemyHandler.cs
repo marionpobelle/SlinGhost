@@ -16,6 +16,8 @@ public class EnemyHandler : MonoBehaviour
 
     private float _speedTick = 0;
 
+    private float _timeOffset;
+
     private void Awake()
     {
         _gameData = Data.GameData;
@@ -31,6 +33,7 @@ public class EnemyHandler : MonoBehaviour
         float randomCoordX = 0;// Random.Range(-_gameData.Xrange, _gameData.Xrange);
         float randomCoordY = 0;// Random.Range(-_gameData.Yrange, _gameData.Yrange);
         transform.position = new UnityEngine.Vector3(randomCoordY, randomCoordX, 0);
+        _timeOffset = Random.Range(0f, 100f);
     }
 
     private void Start()
@@ -61,7 +64,7 @@ public class EnemyHandler : MonoBehaviour
             GameHandler.Instance.LostGame();
         }
         //Left-right movement
-        transform.position = new Vector3(_gameData.MovementCurve.Evaluate(_gameData.EnemySpeed * Time.time) * _gameData.EnemyMovementOffset, 0, transform.position.z);
+        transform.position = new Vector3(_gameData.MovementCurve.Evaluate(_gameData.EnemySpeed * (Time.time + _timeOffset)) * _gameData.EnemyMovementOffset, 0, transform.position.z);
     }
 
     private void SlingshotFired(UnityEngine.Vector3 crosshairPosition)
