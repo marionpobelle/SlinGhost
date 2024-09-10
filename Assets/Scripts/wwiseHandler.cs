@@ -11,6 +11,7 @@ public class wwiseHandler : MonoBehaviour
 
     void Awake()
     {
+        _gameData = Data.GameData;
     }
 
     // Update is called once per frame

@@ -20,15 +20,18 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	3238454324	Stretch			\Default Work Unit\Stretch	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	92851935	Warning	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Alarms, Misc, Alert, Gritty, Reverb SND37244_BBE0685F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Warning\Warning		1438864
+	22648667	NME_Signal	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Moving_Ghost_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Signal		678708
+	92851935	Warning	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Alarms, Misc, Alert, Gritty, Reverb SND37244_6C38286B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Warning\Warning		1438864
 	124692840	UI_Score_Up	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Picked Coin Echo by NenadSimic Id-171696_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Score_Up		305648
-	147950435	NME_Zone_Enter	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\CLICK_PLASTIC_SEQUNCE_PHASED_CLICK01_02BA90C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\NME_Zone_Enter		26560
+	147950435	NME_Zone_Enter	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\CLICK_PLASTIC_SEQUNCE_PHASED_CLICK01_0C4DA644.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\NME_Zone_Enter		26560
+	397276058	Enemy_Hit-001	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Enemy_Hit-001_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Hit\Enemy_Hit-001		227900
+	397658424	Enemy_Hit-003	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Enemy_Hit-003_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Hit\Enemy_Hit-003		208612
 	432923580	NME_Zone_Exit	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\CLICK_PLASTIC_SEQUNENCE_VERY_STRANGE_4CE10658.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\NME_Zone_Exit		6990
-	642212491	NME_Hit	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Hits,Meat,Drops,Big 1_CCE49ACB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Hit		61560
+	555763139	Enemy_Hit-002	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Enemy_Hit-002_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Hit\Enemy_Hit-002		188896
 	662502466	SLG_Stretch	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Rubber_Stretch_PSEF251_BB4E938B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slingshot\SLG_Stretch\SLG_Stretch		589040
-	681102172	NME_Signal	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Target_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Signal		1769568
-	806533360	Loose	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Ethan_A80FB420.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Loose		308144
-	1020287732	Win	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Ethan_704FC64A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Win		195864
-	1026356411	NME_Death	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\GhostHover_BW3669_08CDF71D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Death		528996
+	806533360	Loose	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Ethan_F2535D7B.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Loose		308144
+	1004975446	Enemy_Hit-004	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Enemy_Hit-004_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Hit\Enemy_Hit-004		208612
+	1020287732	Win	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Ethan_CDB3EC99.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Win		195864
+	1026356411	NME_Death	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\GhostHover_BW3669_3C090834.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Death		528996
 	1050889111	SLG_Fire	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\SlingshotShoot_BW10318_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slingshot\SLG_Fire		39356
 

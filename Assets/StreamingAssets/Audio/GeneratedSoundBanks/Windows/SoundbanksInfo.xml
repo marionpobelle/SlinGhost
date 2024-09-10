@@ -172,13 +172,17 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9B6BCC49-B1C5-7585-6C35-20D144A7B53B}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{195DFA9B-E77C-E9C5-8322-7ECCCB317349}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
+				<File Id="22648667" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Moving_Ghost.wav</ShortName>
+					<CachePath>SFX/Moving_Ghost_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="92851935" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Alarms, Misc, Alert, Gritty, Reverb SND37244.wav</ShortName>
-					<CachePath>SFX/Alarms, Misc, Alert, Gritty, Reverb SND37244_BBE0685F.wem</CachePath>
+					<CachePath>SFX/Alarms, Misc, Alert, Gritty, Reverb SND37244_6C38286B.wem</CachePath>
 				</File>
 				<File Id="124692840" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Picked Coin Echo by NenadSimic Id-171696.wav</ShortName>
@@ -186,35 +190,43 @@
 				</File>
 				<File Id="147950435" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>CLICK_PLASTIC_SEQUNCE_PHASED_CLICK01.wav</ShortName>
-					<CachePath>SFX/CLICK_PLASTIC_SEQUNCE_PHASED_CLICK01_02BA90C4.wem</CachePath>
+					<CachePath>SFX/CLICK_PLASTIC_SEQUNCE_PHASED_CLICK01_0C4DA644.wem</CachePath>
+				</File>
+				<File Id="397276058" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy_Hit-001.wav</ShortName>
+					<CachePath>SFX/Enemy_Hit-001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="397658424" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy_Hit-003.wav</ShortName>
+					<CachePath>SFX/Enemy_Hit-003_818F3B66.wem</CachePath>
 				</File>
 				<File Id="432923580" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>CLICK_PLASTIC_SEQUNENCE_VERY_STRANGE.wav</ShortName>
 					<CachePath>SFX/CLICK_PLASTIC_SEQUNENCE_VERY_STRANGE_4CE10658.wem</CachePath>
 				</File>
-				<File Id="642212491" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Hits,Meat,Drops,Big 1.wav</ShortName>
-					<CachePath>SFX/Hits,Meat,Drops,Big 1_CCE49ACB.wem</CachePath>
+				<File Id="555763139" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy_Hit-002.wav</ShortName>
+					<CachePath>SFX/Enemy_Hit-002_818F3B66.wem</CachePath>
 				</File>
 				<File Id="662502466" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rubber_Stretch_PSEF251.wav</ShortName>
 					<CachePath>SFX/Rubber_Stretch_PSEF251_BB4E938B.wem</CachePath>
 				</File>
-				<File Id="681102172" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Target.wav</ShortName>
-					<CachePath>SFX/Target_FBC78EF0.wem</CachePath>
-				</File>
 				<File Id="806533360" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Voice Designer, Ethan.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Ethan_A80FB420.wem</CachePath>
+					<CachePath>SFX/Soundly Voice Designer, Ethan_F2535D7B.wem</CachePath>
+				</File>
+				<File Id="1004975446" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy_Hit-004.wav</ShortName>
+					<CachePath>SFX/Enemy_Hit-004_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1020287732" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Voice Designer, Ethan.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Ethan_704FC64A.wem</CachePath>
+					<CachePath>SFX/Soundly Voice Designer, Ethan_CDB3EC99.wem</CachePath>
 				</File>
 				<File Id="1026356411" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GhostHover_BW3669.wav</ShortName>
-					<CachePath>SFX/GhostHover_BW3669_08CDF71D.wem</CachePath>
+					<CachePath>SFX/GhostHover_BW3669_3C090834.wem</CachePath>
 				</File>
 				<File Id="1050889111" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SlingshotShoot_BW10318.wav</ShortName>
@@ -233,14 +245,17 @@
 						<MediaRef Id="1026356411"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1706673613" Name="NME_Hit" MaxAttenuation="3" DurationType="OneShot" DurationMin="0.7402503" DurationMax="0.7402503">
+				<Event Id="1706673613" Name="NME_Hit" MaxAttenuation="3" DurationType="OneShot" DurationMin="0.8760504" DurationMax="1.3317778">
 					<MediaRefs>
-						<MediaRef Id="642212491"/>
+						<MediaRef Id="397276058"/>
+						<MediaRef Id="397658424"/>
+						<MediaRef Id="555763139"/>
+						<MediaRef Id="1004975446"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3843687674" Name="NME_Signal" MaxAttenuation="3" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="681102172"/>
+						<MediaRef Id="22648667"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2537597519" Name="NME_Zone_Enter" DurationType="OneShot" DurationMin="0.15001713" DurationMax="0.15001713">
@@ -288,5 +303,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3B7F89BC-E19E-0261-CA80-012444CDDE48}</FileHash>
+	<FileHash>{45DC0B28-327E-6896-18A8-99703D61D080}</FileHash>
 </SoundBanksInfo>
