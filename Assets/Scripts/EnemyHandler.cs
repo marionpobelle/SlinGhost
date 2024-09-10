@@ -20,15 +20,7 @@ public class EnemyHandler : MonoBehaviour
     private void Awake()
     {
         _gameData = Data.GameData;
-        transform.localScale = new UnityEngine.Vector3(_gameData.EnemyMinScale, _gameData.EnemyMinScale, _gameData.EnemyMinScale);
-        _crosshairPosition = UnityEngine.Vector3.zero;
-        _isCrosshairOnEnemy = false;
-        _currentHP = _gameData.EnemyHP;
-        _currentScaleStep = _gameData.EnemyScaleMinStep;
-        if(this.gameObject.TryGetComponent<CapsuleCollider>(out var collider))
-        {
-            collider.radius = _gameData.ColliderRadius;
-        }
+        InitEnemy();
     }
 
     private void Start()
@@ -70,7 +62,7 @@ public class EnemyHandler : MonoBehaviour
             if(_currentHP <= 0)
             {
                 GameHandler.Instance.DecreaseEnemyCount();
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
             }
         }
     }
@@ -92,6 +84,24 @@ public class EnemyHandler : MonoBehaviour
     public float GetDistance()
     {
         return UnityEngine.Vector2.Distance(_crosshairPosition, this.transform.position);
+    }
+
+    public void InitEnemy()
+    {
+        transform.localScale = new UnityEngine.Vector3(_gameData.EnemyMinScale, _gameData.EnemyMinScale, _gameData.EnemyMinScale);
+        _crosshairPosition = UnityEngine.Vector3.zero;
+        _isCrosshairOnEnemy = false;
+        _currentHP = _gameData.EnemyHP;
+        _currentScaleStep = _gameData.EnemyScaleMinStep;
+        if (this.gameObject.TryGetComponent<CapsuleCollider>(out var collider))
+        {
+            collider.radius = _gameData.ColliderRadius;
+        }
+        float randomCoordX = Random.Range(-_gameData.Xrange, _gameData.Xrange);
+        float randomCoordY = Random.Range(-_gameData.Yrange, _gameData.Yrange);
+        this.transform.position =  new UnityEngine.Vector3(randomCoordX, randomCoordY, 0);
+        GameHandler.Instance.EnemyCount++;
+        GameHandler.Instance.EnemySpawnedCount++;
     }
 
     private void OnTriggerEnter(Collider collision)
