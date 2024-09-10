@@ -6,23 +6,26 @@ using AK.Wwise;
 
 public class GameHandler : MonoBehaviour
 {
-    [SerializeField] private int _enemyCount;
+    [Header("REFERENCES")]
+    [SerializeField] private GameObject _enemyPrefab;
+
+    private int _enemyCount;
+    private int _enemySpawnedCount;
+
     public static GameHandler Instance;
+    private GameData _gameData;
 
     private void Awake()
     {
         Instance = this;
+        _gameData = Data.GameData;
+        _enemySpawnedCount = 0;
+        _enemyCount = 0;
     }
 
     private void Start()
     {
-        List<EnemyHandler> enemies = new List<EnemyHandler>();
-        enemies = FindObjectsOfType<EnemyHandler>().ToList();
-        if (enemies.Count == 0)
-        {
-            Debug.LogError("No enemies were found in the scene !", this);
-        }
-        _enemyCount = enemies.Count;
+        StartCoroutine(EnemySpawner());
     }
 
     // Update is called once per frame
@@ -56,6 +59,23 @@ public class GameHandler : MonoBehaviour
     public void IncreaseEnemyCount()
     {
         _enemyCount++;
+    }
+
+    private IEnumerator EnemySpawner()
+    {
+        float randomCoordX, randomCoordY;
+        while (_enemySpawnedCount < _gameData.MaxAmountEnemies)
+        {
+            for (int i = 0; i < _gameData.enemySpawnAmount; i++)
+            {
+                randomCoordX = Random.Range(-_gameData.Xrange, _gameData.Xrange);
+                randomCoordY = Random.Range(-_gameData.Yrange, _gameData.Yrange);
+                Instantiate(_enemyPrefab, new Vector3(randomCoordX, randomCoordY, 0), Quaternion.identity);
+                _enemyCount++;
+                _enemySpawnedCount++;
+            }
+            yield return new WaitForSeconds(Random.Range(_gameData.minSpawnTime, _gameData.maxSpawnTime));
+        }
     }
 
 }

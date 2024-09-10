@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 [CreateAssetMenu(fileName = nameof(GameData), menuName = "Slingshot/" + nameof(GameData))]
 public class GameData : ScriptableObject
@@ -27,8 +26,22 @@ public class GameData : ScriptableObject
     public float TimeInterval = 10f;
     [Tooltip("Amount by which the speed increases.")]
     public float Increase = 0.2f;
-}
 
+    [Header("Spawner")]
+    [Tooltip("Max amount of enemies to spawn.")]
+    public int MaxAmountEnemies = 5;
+    [Tooltip("Amount of enemies to spawn per wave.")]
+    public int enemySpawnAmount = 1;
+    [Tooltip("Minimum time in between enemies spawning.")]
+    public float minSpawnTime = 10f;
+    [Tooltip("Maximum time in between enemies spawning.")]
+    public float maxSpawnTime = 15f;
+    [Tooltip("X axis range from 0 for enemy to spawn.")]
+    public float Xrange = 1000f;
+    [Tooltip("Y axis range from 0 for enemy to spawn.")]
+    public float Yrange = 1000f;
+
+}
 
 
 // Create a static getter that load GameData from Resources
