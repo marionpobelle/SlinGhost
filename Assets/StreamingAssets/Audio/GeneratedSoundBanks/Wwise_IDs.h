@@ -13,12 +13,12 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID SLINGSHOT_REALEASE = 2744732293U;
-        static const AkUniqueID SLINGSHOT_STRETCH = 4122898902U;
-        static const AkUniqueID TARGET_HIT = 316379624U;
-        static const AkUniqueID TARGET_LOOP = 3993324383U;
-        static const AkUniqueID TARGETZONE_ENTER = 645908835U;
-        static const AkUniqueID TARGETZONE_EXIT = 889227971U;
+        static const AkUniqueID NME_HIT = 1706673613U;
+        static const AkUniqueID NME_SIGNAL = 3843687674U;
+        static const AkUniqueID NME_ZONE_ENTER = 2537597519U;
+        static const AkUniqueID NME_ZONE_EXIT = 542453335U;
+        static const AkUniqueID SLG_FIRE = 191779598U;
+        static const AkUniqueID SLG_STRETCH_START = 2917512008U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
@@ -36,6 +36,7 @@ namespace AK
         static const AkUniqueID SS_AIR_STORM = 3715662592U;
         static const AkUniqueID SS_AIR_TIMEOFDAY = 3203397129U;
         static const AkUniqueID SS_AIR_TURBULENCE = 4160247818U;
+        static const AkUniqueID STRETCH = 3238454324U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
@@ -48,7 +49,10 @@ namespace AK
     {
         static const AkUniqueID BINAURAL = 52442795U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PASSTHROUGH = 2804736953U;
+        static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID UI = 1551306167U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES
