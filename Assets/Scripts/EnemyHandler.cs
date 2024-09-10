@@ -17,6 +17,8 @@ public class EnemyHandler : MonoBehaviour
 
     private float _speedTick = 0;
 
+    private float _normalizedScaleY;
+
     private void Awake()
     {
         _gameData = Data.GameData;
@@ -43,6 +45,8 @@ public class EnemyHandler : MonoBehaviour
 
     private void FixedUpdate()
     {
+        _normalizedScaleY = this.transform.localScale.normalized.y;
+        AkSoundEngine.SetRTPCValue("NME_Scale", _normalizedScaleY);
         _speedTick += Time.deltaTime;
         //If tick reached, increase enemy speed
         if(_speedTick >= _gameData.TimeInterval && _currentScaleStep < _gameData.EnemyScaleMaxStep)
@@ -63,12 +67,15 @@ public class EnemyHandler : MonoBehaviour
     private void SlingshotFired(UnityEngine.Vector3 crosshairPosition)
     {
         _crosshairPosition = crosshairPosition;
+        AkSoundEngine.PostEvent("SLG_Fire", gameObject);
         //IF ENEMY HIT
         if (_isCrosshairOnEnemy)
         {
+            AkSoundEngine.PostEvent("NME_Hit", gameObject);
             _currentHP--;
             if(_currentHP <= 0)
             {
+                AkSoundEngine.PostEvent("NME_Death", gameObject);
                 GameHandler.Instance.DecreaseEnemyCount();
                 Destroy(this.gameObject);
             }
@@ -99,6 +106,7 @@ public class EnemyHandler : MonoBehaviour
         if (collision.TryGetComponent<CrosshairController>(out var crosshair))
         {
             _isCrosshairOnEnemy = true;
+            AkSoundEngine.PostEvent("NME_Zone_Enter", gameObject);
         }
     }
 
@@ -107,6 +115,7 @@ public class EnemyHandler : MonoBehaviour
         if (collision.TryGetComponent<CrosshairController>(out var crosshair))
         {
             _isCrosshairOnEnemy = false;
+            AkSoundEngine.PostEvent("NME_Zone_Exit", gameObject);
         }
     }
 
