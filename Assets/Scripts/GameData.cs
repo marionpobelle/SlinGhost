@@ -6,6 +6,10 @@ public class GameData : ScriptableObject
     [Header("Slingshot")]
     [Tooltip("The minimum time between shots.")]
     public float CooldownBetweenShotsInSeconds = 0.5f;
+    [Tooltip("The minimum time between shots.")]
+    public float lockOnDelay = 0.1f;
+    [Tooltip("The minimum time between shots.")]
+    public float delockDelay = 0.7f;
 
     [Header("Enemy")]
     [Tooltip("Enemy starting scale (the smallest the furthest, the biggest the closest.")]
