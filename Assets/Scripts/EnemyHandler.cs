@@ -29,6 +29,9 @@ public class EnemyHandler : MonoBehaviour
         {
             collider.radius = _gameData.ColliderRadius;
         }
+        float randomCoordX = Random.Range(-_gameData.Xrange, _gameData.Xrange);
+        float randomCoordY = Random.Range(-_gameData.Yrange, _gameData.Yrange);
+        transform.position = new UnityEngine.Vector3(randomCoordY, randomCoordX, 0);
     }
 
     private void Start()
