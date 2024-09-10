@@ -69,6 +69,7 @@ public class EnemyHandler : MonoBehaviour
 
     public void HitEnemy()
     {
+        Debug.LogWarning("ENNEMY HIT");
         _currentHP--;
         AkSoundEngine.PostEvent("NME_Hit", gameObject);
         if (_currentHP <= 0)
