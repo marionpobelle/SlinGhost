@@ -24,7 +24,7 @@ public class EnemyHandler : MonoBehaviour
         _isCrosshairOnEnemy = false;
         _currentHP = _gameData.EnemyHP;
         _currentScaleStep = _gameData.EnemyScaleMinStep;
-        if(this.gameObject.TryGetComponent<CapsuleCollider>(out var collider))
+        if (this.gameObject.TryGetComponent<CapsuleCollider>(out var collider))
         {
             collider.radius = _gameData.ColliderRadius;
         }
@@ -36,18 +36,17 @@ public class EnemyHandler : MonoBehaviour
     private void Start()
     {
         _crosshairController = FindObjectOfType<CrosshairController>();
-        if(_crosshairController == null)
+        if (_crosshairController == null)
         {
             Debug.LogError("Couldn't find CrosshairController !", this);
         }
-        _crosshairController.OnSlingshotFired += SlingshotFired;
     }
 
     private void FixedUpdate()
     {
         _speedTick += Time.deltaTime;
         //If tick reached, increase enemy speed
-        if(_speedTick >= _gameData.TimeInterval && _currentScaleStep < _gameData.EnemyScaleMaxStep)
+        if (_speedTick >= _gameData.TimeInterval && _currentScaleStep < _gameData.EnemyScaleMaxStep)
         {
             _speedTick = 0f;
             _currentScaleStep += _gameData.Increase;
@@ -64,18 +63,13 @@ public class EnemyHandler : MonoBehaviour
         transform.position = new Vector3(_gameData.MovementCurve.Evaluate(_gameData.EnemySpeed * Time.time) * _gameData.EnemyMovementOffset, 0, transform.position.z);
     }
 
-    private void SlingshotFired(UnityEngine.Vector3 crosshairPosition)
+    public void HitEnemy()
     {
-        _crosshairPosition = crosshairPosition;
-        //IF ENEMY HIT
-        if (_isCrosshairOnEnemy)
+        _currentHP--;
+        if (_currentHP <= 0)
         {
-            _currentHP--;
-            if(_currentHP <= 0)
-            {
-                GameHandler.Instance.DecreaseEnemyCount();
-                Destroy(this.gameObject);
-            }
+            GameHandler.Instance.DecreaseEnemyCount();
+            Destroy(this.gameObject);
         }
     }
 
@@ -103,6 +97,7 @@ public class EnemyHandler : MonoBehaviour
         if (collision.TryGetComponent<CrosshairController>(out var crosshair))
         {
             _isCrosshairOnEnemy = true;
+            crosshair.AddEnemyToPotentialLockList(this);
         }
     }
 
@@ -111,11 +106,12 @@ public class EnemyHandler : MonoBehaviour
         if (collision.TryGetComponent<CrosshairController>(out var crosshair))
         {
             _isCrosshairOnEnemy = false;
+            crosshair.RemoveEnemyFromPotentialLockList(this);
         }
     }
 
     private void OnDestroy()
     {
-        _crosshairController.OnSlingshotFired -= SlingshotFired;
+        _crosshairController.RemoveEnemyFromPotentialLockList(this);
     }
 }

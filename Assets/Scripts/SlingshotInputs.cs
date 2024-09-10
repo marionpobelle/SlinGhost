@@ -34,7 +34,8 @@ public class SlingshotInputs : MonoBehaviour
         gyro = new Vector3(0, 0, 0);
         accel = new Vector3(0, 0, 0);
         // get the public Joycon array attached to the JoyconManager in scene
-        joycon = JoyconManager.Instance.j[0];
+        if (JoyconManager.Instance.j.Count != 0)
+            joycon = JoyconManager.Instance.j[0];
 
         latestAccelValues = new Queue<Vector3>();
 
@@ -124,7 +125,7 @@ public class SlingshotInputs : MonoBehaviour
                 lowestValue = quaternionValue;
             }
         }
-           // Debug.Log(bestIndex + " : " + lowestValue);
+        // Debug.Log(bestIndex + " : " + lowestValue);
 
 
         targetPos.x = Mathf.Lerp(-1, 1, bestIndex / totalTests);
