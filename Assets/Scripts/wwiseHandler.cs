@@ -8,11 +8,9 @@ public class wwiseHandler : MonoBehaviour
     [SerializeField] private EnemyHandler _enemyHandler;
     private float _enemyScale;
     private float _enemyElevation;
-    // Start is called before the first frame update
+
     void Awake()
     {
-        _gameData = Data.GameData;
-        
     }
 
     // Update is called once per frame
@@ -20,6 +18,5 @@ public class wwiseHandler : MonoBehaviour
     {
         _enemyElevation = _enemyHandler.GetNormalizedYDistance();
         AkSoundEngine.SetRTPCValue("Elevation", _enemyElevation);
-        Debug.Log(_enemyElevation);
     }
 }
