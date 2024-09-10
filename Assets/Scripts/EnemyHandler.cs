@@ -70,9 +70,11 @@ public class EnemyHandler : MonoBehaviour
     public void HitEnemy()
     {
         _currentHP--;
+        AkSoundEngine.PostEvent("NME_Hit", gameObject);
         if (_currentHP <= 0)
         {
             GameHandler.Instance.DecreaseEnemyCount();
+            AkSoundEngine.PostEvent("NME_Death", gameObject);
             Destroy(this.gameObject);
         }
     }
