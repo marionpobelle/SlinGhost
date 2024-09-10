@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 [CreateAssetMenu(fileName = nameof(GameData), menuName = "Slingshot/" + nameof(GameData))]
 public class GameData : ScriptableObject
@@ -38,7 +37,6 @@ public class GameData : ScriptableObject
     [Tooltip("Maximum time in between enemies spawning.")]
     public float maxSpawnTime = 15f;
 }
-
 
 
 // Create a static getter that load GameData from Resources
