@@ -530,6 +530,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1633183884216898133, guid: 15cd3a5fa9403c14b84ca1d5df3e5f4c,
+        type: 3}
+      propertyPath: _enemyPrefab
+      value: 
+      objectReference: {fileID: 6096294936691078542, guid: 4832f28c4aa935b428627a5f39983c51,
+        type: 3}
     - target: {fileID: 9165412992046951253, guid: 15cd3a5fa9403c14b84ca1d5df3e5f4c,
         type: 3}
       propertyPath: m_Name
@@ -694,6 +700,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlingshotSetup
       objectReference: {fileID: 0}
+    - target: {fileID: 5887304425815364595, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887304425815364595, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887304425815364595, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.17
+      objectReference: {fileID: 0}
     - target: {fileID: 6047396164417927782, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -744,6 +765,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7995591062599337669, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995591062599337669, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995591062599337669, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -757,7 +793,5 @@ SceneRoots:
   - {fileID: 3668679386928658340}
   - {fileID: 265045279}
   - {fileID: 267582473}
-  - {fileID: 1408812876}
-  - {fileID: 614641217}
   - {fileID: 1817012590}
   - {fileID: 6361163709664238909}

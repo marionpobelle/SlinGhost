@@ -13,11 +13,61 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   CooldownBetweenShotsInSeconds: 1
-  EnemyMinScale: 0.05
+  EnemyMinScale: 0.1
   EnemyMaxScale: 10
   EnemyScaleMinStep: 0.00005
   EnemyScaleMaxStep: 0.1
-  EnemyHP: 1
+  MovementCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -1
+      outSlope: -1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: -1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 3
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 4
+      value: 0
+      inSlope: -1
+      outSlope: -1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  EnemySpeed: 1
+  EnemyMovementOffset: 0.8
+  EnemyHP: 3
   ColliderRadius: 1.2
   TimeInterval: 5
   Increase: 0.00005
+  MaxAmountEnemies: 1
+  enemySpawnAmount: 1
+  minSpawnTime: 5
+  maxSpawnTime: 15
+  Xrange: 0.6
+  Yrange: 0.6

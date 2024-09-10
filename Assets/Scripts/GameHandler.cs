@@ -63,14 +63,11 @@ public class GameHandler : MonoBehaviour
 
     private IEnumerator EnemySpawner()
     {
-        float randomCoordX, randomCoordY;
         while (_enemySpawnedCount < _gameData.MaxAmountEnemies)
         {
             for (int i = 0; i < _gameData.enemySpawnAmount; i++)
             {
-                randomCoordX = Random.Range(-_gameData.Xrange, _gameData.Xrange);
-                randomCoordY = Random.Range(-_gameData.Yrange, _gameData.Yrange);
-                Instantiate(_enemyPrefab, new Vector3(randomCoordX, randomCoordY, 0), Quaternion.identity);
+                Instantiate(_enemyPrefab);
                 _enemyCount++;
                 _enemySpawnedCount++;
             }
