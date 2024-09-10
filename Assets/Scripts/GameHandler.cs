@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using AK.Wwise;
 
 public class GameHandler : MonoBehaviour
 {
@@ -36,16 +37,19 @@ public class GameHandler : MonoBehaviour
     public void LostGame()
     {
         Debug.Log("Lost the game !");
+        AkSoundEngine.PostEvent("Loose", gameObject);
     }
 
     public void WonGame()
     {
         Debug.Log("Won the game !");
+        AkSoundEngine.PostEvent("Win", gameObject);
     }
 
     public void DecreaseEnemyCount()
     {
         _enemyCount--;
+        AkSoundEngine.PostEvent("Score_Up", gameObject);
         if (_enemyCount <= 0)
         {
             WonGame();

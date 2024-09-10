@@ -64,15 +64,18 @@ public class EnemyHandler : MonoBehaviour
         }
         //Left-right movement
         transform.position = new Vector3(_gameData.MovementCurve.Evaluate(_gameData.EnemySpeed * (Time.time + _timeOffset)) * _gameData.EnemyMovementOffset, 0, transform.position.z);
+        AkSoundEngine.SetRTPCValue("NME_Scale", transform.localScale.y);
     }
 
     public void HitEnemy()
     {
         Debug.LogWarning("ENNEMY HIT");
         _currentHP--;
+        AkSoundEngine.PostEvent("NME_Hit", gameObject);
         if (_currentHP <= 0)
         {
             GameHandler.Instance.DecreaseEnemyCount();
+            AkSoundEngine.PostEvent("NME_Death", gameObject);
             Destroy(this.gameObject);
         }
     }
@@ -84,8 +87,8 @@ public class EnemyHandler : MonoBehaviour
     /// </summary>
     public float GetNormalizedYDistance()
     {
-        UnityEngine.Vector3 differences = (this.transform.position - _crosshairPosition).normalized;
-        return differences.y;
+        float i = this.transform.position.y - _crosshairController.transform.position.y;
+        return i;
     }
 
     /// <summary>
@@ -102,6 +105,7 @@ public class EnemyHandler : MonoBehaviour
         {
             _isCrosshairOnEnemy = true;
             crosshair.AddEnemyToPotentialLockList(this);
+            AkSoundEngine.PostEvent("NME_Zone_Enter", gameObject);
         }
     }
 
@@ -111,6 +115,7 @@ public class EnemyHandler : MonoBehaviour
         {
             _isCrosshairOnEnemy = false;
             crosshair.RemoveEnemyFromPotentialLockList(this);
+            AkSoundEngine.PostEvent("NME_Zone_Exit", gameObject);
         }
     }
 
