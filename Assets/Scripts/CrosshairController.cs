@@ -12,20 +12,97 @@ public class CrosshairController : MonoBehaviour
     [SerializeField] GameData gameData;
     [SerializeField] EnemyHandler enemyToLock;
     [SerializeField] EnemyHandler lockedOnEnemy;
+    [SerializeField] Transform projectileStartPos;
+    [SerializeField] float projectileDuration = .3f;
+    [SerializeField] AnimationCurve projectileAdditionalHeightCurve;
+    [SerializeField] float projectileAdditionalHeightMultiplier = 1;
+    [SerializeField] Transform projectileInstance;
 
     bool isLockedOn = false;
     bool isLockChanging = false;
+    bool isShootingProjectile = false;
+    float projectileStartTime;
     float enemyLockTimer;
+    float nextAllowedFire;
+    Vector3 projectileTargetPos;
+
+    public bool IsLockedOn => isLockedOn;
 
     public void Fire()
     {
-        Debug.Log("Slingshot fired at position: " + transform.position, this);
+        if (nextAllowedFire > Time.time)
+            return;
+
+        nextAllowedFire = Time.time + gameData.CooldownBetweenShotsInSeconds;
+
+        Debug.Log("Slingshot fired to : " + lockedOnEnemy, this);
 
         if (lockedOnEnemy)
+        {
             lockedOnEnemy.HitEnemy();
+            //Launch projectile to enemy
+        }
+
+        //Raycast and launch projectile to hit
+
+        ShootProjectile();
+    }
+
+    void ShootProjectile()
+    {
+        if (projectileInstance != null)
+            DestroyImmediate(projectileInstance);
+
+        if (lockedOnEnemy)
+        {
+            projectileTargetPos = lockedOnEnemy.transform.position;
+            //Stop enemy from moving
+            //When done, destroy enemy
+        }
+        else
+        {
+            projectileTargetPos = transform.position;
+        }
+
+        isShootingProjectile = true;
+        projectileStartTime = Time.time;
     }
 
     private void Update()
+    {
+        LockOnLogic();
+        ProjectileLogic();
+    }
+
+    private void ProjectileLogic()
+    {
+        if (!isShootingProjectile || projectileInstance == null)
+            return;
+
+        float posInSimulation = Mathf.InverseLerp(
+                    projectileStartTime,
+                    projectileStartTime + projectileDuration,
+                    Time.time);
+
+        Vector3 projectilePosition =
+            Vector3.Lerp(
+                projectileStartPos.position,
+                projectileTargetPos,
+                posInSimulation);
+
+        projectilePosition.y += projectileAdditionalHeightCurve.Evaluate(posInSimulation) * projectileAdditionalHeightMultiplier;
+
+        projectileInstance.position = projectilePosition;
+
+        if (posInSimulation >= 1)
+        {
+            isShootingProjectile = false;
+            projectileInstance.position = projectileStartPos.position;
+            //spawn projectile splatter
+        }
+    }
+
+    private void LockOnLogic()
     {
         if (isLockedOn)
         {
