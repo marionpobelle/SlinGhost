@@ -72,11 +72,6 @@ public class VRCrosshairProvider : MonoBehaviour
         XRGeneralSettings.Instance.Manager.DeinitializeLoader();
     }
 
-    private void OnDestroy()
-    {
-        // stop all XR subsystems
-    }
-
     private void Update()
     {
         UpdateCrosshairPosition();
@@ -183,6 +178,7 @@ public class VRCrosshairProvider : MonoBehaviour
     {
         // Implement the logic for when a fire is detected
         Debug.Log("Fire detected!");
+        _crosshairController.Fire();
     }
 
     private void OnDrawGizmos()
