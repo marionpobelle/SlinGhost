@@ -58,8 +58,6 @@ public class EnemyHandler : MonoBehaviour
             GameHandler.Instance.EndGame();
         }
         _currentSize = (GetPercent(_maxTriggerScale, transform.localScale.x)).ToString();
-        //Left-right movement
-        transform.position = new Vector3(_gameData.MovementCurve.Evaluate(_gameData.EnemySpeed * (Time.time + _timeOffset)) * _gameData.EnemyMovementOffset, 0, transform.position.z);
         AkSoundEngine.SetRTPCValue("NME_Scale", transform.localScale.y);
         AkSoundEngine.SetRTPCValue("Elevation", transform.position.y - _crosshairController.transform.position.y);
 
@@ -94,8 +92,8 @@ public class EnemyHandler : MonoBehaviour
 
     public float GetScaleRatio()
     {
-        Debug.Log(Mathf.InverseLerp(.1f, _gameData.EnemyMaxScale, transform.localScale.x));
-        return Mathf.InverseLerp(.1f, _gameData.EnemyMaxScale, transform.localScale.x);
+        Debug.Log(Mathf.InverseLerp(.1f, _maxTriggerScale, transform.localScale.x));
+        return Mathf.InverseLerp(.1f, _maxTriggerScale, transform.localScale.x);
     }
 
     private float GetPercent(float maxValue, float currentValue)
