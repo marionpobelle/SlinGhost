@@ -25,7 +25,7 @@ public class VRCrosshairProvider : MonoBehaviour
     private float _lastFireTime;
     private VRControllerRaycastOrigin _raycastOrigin;
 
-    private void Awake()
+    private void Start()
     {
         if( XRGeneralSettings.Instance.Manager.activeLoader )
         {
