@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{38549EDB-0BC3-E881-3F97-0D649B7F38DF}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E0048A7A-01C6-76A9-2AC1-E774B7F2DD36}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -49,6 +49,15 @@
 				<GameParameter Id="4160247818" Name="SS_Air_Turbulence"/>
 				<GameParameter Id="4245676100" Name="Master_Level"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3991942870" Name="Music">
+					<States>
+						<State Id="89505537" Name="Gameplay"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="3399545293" Name="ButtonType">
 					<Switches>
@@ -698,5 +707,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2AD99E57-8A1F-0BD5-F47A-5977C0BE3899}</FileHash>
+	<FileHash>{2442F8B1-A0E4-CB9A-739C-4A85CFAECE39}</FileHash>
 </SoundBanksInfo>

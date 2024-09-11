@@ -1,3 +1,11 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3991942870	Music			\Default Work Unit\Music	
+
+State	ID	Name	State Group			Notes
+	89505537	Gameplay	Music			
+	748895195	None	Music			
+	2607556080	Menu	Music			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	
@@ -16,6 +24,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	3394486108	NME_Level			\Default Work Unit\NME_Level	
 	3670307564	Drywall			\Factory Acoustic Textures\Textures\Drywall	
 	4168643977	Acoustic_Banner			\Factory Acoustic Textures\Textures\Acoustic_Banner	
+	4245676100	Master_Level			\Default Work Unit\Master_Level	
 	4262522749	Wood_Bright			\Factory Acoustic Textures\Textures\Wood_Bright	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes

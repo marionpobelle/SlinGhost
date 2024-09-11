@@ -32,6 +32,22 @@ namespace AK
         static const AkUniqueID WIN = 979765101U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace MUSIC
+        {
+            static const AkUniqueID GROUP = 3991942870U;
+
+            namespace STATE
+            {
+                static const AkUniqueID GAMEPLAY = 89505537U;
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace MUSIC
+
+    } // namespace STATES
+
     namespace SWITCHES
     {
         namespace BUTTONTYPE

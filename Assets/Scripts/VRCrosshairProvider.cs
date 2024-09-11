@@ -62,6 +62,8 @@ public class VRCrosshairProvider : MonoBehaviour
         LoadOffset();
         LoadIdlePosition();
         LoadFullStretchPosition();
+
+        AkSoundEngine.PostEvent("SLG_Stretch_Start", gameObject);
     }
 
     private void OnApplicationQuit()
@@ -75,11 +77,6 @@ public class VRCrosshairProvider : MonoBehaviour
     private void OnDestroy()
     {
         // stop all XR subsystems
-    }
-
-    private void Start()
-    {
-        AkSoundEngine.PostEvent("SLG_Stretch_Start", gameObject);
     }
     private void Update()
     {
