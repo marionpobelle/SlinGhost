@@ -50,9 +50,6 @@ public class CrosshairController : MonoBehaviour
 
     void ShootProjectile()
     {
-        if (projectileInstance != null)
-            DestroyImmediate(projectileInstance);
-
         if (lockedOnEnemy)
         {
             projectileTargetPos = lockedOnEnemy.transform.position;
