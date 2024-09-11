@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: blackandwhite
   m_EditorClassIdentifier: 
   m_Active: 1
-  injectionPoint: 600
+  injectionPoint: 450
   fetchColorBuffer: 1
   requirements: 0
   passMaterial: {fileID: 2100000, guid: 9676f1cfaf22de444aa426d91051233f, type: 2}
