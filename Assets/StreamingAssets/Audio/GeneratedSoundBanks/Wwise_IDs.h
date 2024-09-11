@@ -48,9 +48,11 @@ namespace AK
                 static const AkUniqueID MUSICVOLUME = 2346531308U;
                 static const AkUniqueID PLAY = 1256202815U;
                 static const AkUniqueID QUIT = 3930794392U;
+                static const AkUniqueID RETURN = 3859834159U;
                 static const AkUniqueID SETTINGS = 2910527622U;
                 static const AkUniqueID SFXVOLUME = 988953028U;
                 static const AkUniqueID TARGETVOLUME = 3260108748U;
+                static const AkUniqueID UIVOLUME = 3415057477U;
                 static const AkUniqueID WHEELCHAIRMODE = 4054299888U;
             } // namespace SWITCH
         } // namespace BUTTONTYPE

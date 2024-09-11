@@ -62,6 +62,8 @@
 						<Switch Id="2910527622" Name="Settings"/>
 						<Switch Id="2918011349" Name="MasterVolume"/>
 						<Switch Id="3260108748" Name="TargetVolume"/>
+						<Switch Id="3415057477" Name="UIVolume"/>
+						<Switch Id="3859834159" Name="Return"/>
 						<Switch Id="3930794392" Name="Quit"/>
 						<Switch Id="4054299888" Name="WheelchairMode"/>
 					</Switches>
@@ -196,7 +198,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{1CBB2B1D-5B85-0E57-1588-12A38912EED8}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{23BAFE24-4617-D9CC-3EFF-9C51D38001B8}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -215,6 +217,10 @@
 				<File Id="56179963" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-002.wav</ShortName>
 					<CachePath>SFX/Ghost_Laughter-002_818F3B66.wem</CachePath>
+				</File>
+				<File Id="65663430" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 13.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 13_818F3B66.wem</CachePath>
 				</File>
 				<File Id="77050662" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-018.wav</ShortName>
@@ -360,6 +366,10 @@
 					<ShortName>Soundly Voice Designer, Sarah B 9.wav</ShortName>
 					<CachePath>SFX/Soundly Voice Designer, Sarah B 9_818F3B66.wem</CachePath>
 				</File>
+				<File Id="912402991" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 14.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 14_818F3B66.wem</CachePath>
+				</File>
 				<File Id="912744587" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-009.wav</ShortName>
 					<CachePath>SFX/Ghost_Laughter-009_818F3B66.wem</CachePath>
@@ -403,6 +413,10 @@
 				<File Id="1045767381" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Voice Designer, Sarah B 1.wav</ShortName>
 					<CachePath>SFX/Soundly Voice Designer, Sarah B 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1070347322" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Warning.wav</ShortName>
+					<CachePath>SFX/Warning_BB756E74.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -536,9 +550,9 @@
 						<MediaRef Id="24627663"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="21544190" Name="OnClick" DurationType="Infinite">
+				<Event Id="21544190" Name="OnClick" DurationType="OneShot" DurationMin="1.2865275" DurationMax="1.2865275">
 					<MediaRefs>
-						<MediaRef Id="744643511"/>
+						<MediaRef Id="1070347322"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="829756566" Name="OnSelect" DurationType="OneShot" DurationMin="1.0135" DurationMax="2.5735">
@@ -577,6 +591,12 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="3415057477"/>
+							<MediaRefs>
+								<MediaRef Id="912402991"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="4054299888"/>
 							<MediaRefs>
 								<MediaRef Id="128907944"/>
@@ -604,6 +624,12 @@
 							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="3930794392"/>
 							<MediaRefs>
 								<MediaRef Id="995461531"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="3859834159"/>
+							<MediaRefs>
+								<MediaRef Id="65663430"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -663,6 +689,8 @@
 						<Switch Id="2910527622" Name="Settings"/>
 						<Switch Id="2918011349" Name="MasterVolume"/>
 						<Switch Id="3260108748" Name="TargetVolume"/>
+						<Switch Id="3415057477" Name="UIVolume"/>
+						<Switch Id="3859834159" Name="Return"/>
 						<Switch Id="3930794392" Name="Quit"/>
 						<Switch Id="4054299888" Name="WheelchairMode"/>
 					</Switches>
@@ -670,5 +698,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{57C8C214-CE16-1D24-28B0-7378E50D2558}</FileHash>
+	<FileHash>{418DDC28-A194-EF9F-3A26-2EF2ABD1AACF}</FileHash>
 </SoundBanksInfo>
