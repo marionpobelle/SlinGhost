@@ -36,6 +36,7 @@ public class CrosshairController : MonoBehaviour
         nextAllowedFire = Time.time + gameData.CooldownBetweenShotsInSeconds;
 
         Debug.Log("Slingshot fired to : " + lockedOnEnemy, this);
+        AkSoundEngine.PostEvent("SLG_Fire", gameObject);
 
         if (lockedOnEnemy)
         {

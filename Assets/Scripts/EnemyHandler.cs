@@ -43,6 +43,7 @@ public class EnemyHandler : MonoBehaviour
         {
             Debug.LogError("Couldn't find CrosshairController !", this);
         }
+        AkSoundEngine.PostEvent("NME_Spawn", gameObject);
     }
 
     private void FixedUpdate()
@@ -65,6 +66,7 @@ public class EnemyHandler : MonoBehaviour
         //Left-right movement
         transform.position = new Vector3(_gameData.MovementCurve.Evaluate(_gameData.EnemySpeed * (Time.time + _timeOffset)) * _gameData.EnemyMovementOffset, 0, transform.position.z);
         AkSoundEngine.SetRTPCValue("NME_Scale", transform.localScale.y);
+        AkSoundEngine.SetRTPCValue("Elevation", transform.position.y - _crosshairController.transform.position.y);
     }
 
     public void HitEnemy()
@@ -78,17 +80,6 @@ public class EnemyHandler : MonoBehaviour
             AkSoundEngine.PostEvent("NME_Death", gameObject);
             Destroy(this.gameObject);
         }
-    }
-
-    /// <summary>
-    /// Gets the distance in between the crosshair and the enemy on the Y axis.
-    /// If the distance is negative, the crosshair is above the enemy.
-    /// If the distance is positive, the crosshair is below the enemy.
-    /// </summary>
-    public float GetNormalizedYDistance()
-    {
-        float i = this.transform.position.y - _crosshairController.transform.position.y;
-        return i;
     }
 
     /// <summary>

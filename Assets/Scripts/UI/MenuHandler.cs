@@ -122,26 +122,31 @@ public class MenuHandler : MonoBehaviour
     private void OnMasterChanged(float arg0)
     {
         //TO DO : Change the master volume using _masterSlider.value (in between 0 and 1).
+        AkSoundEngine.SetRTPCValue("Master_Level", arg0);
     }
 
     private void OnSFXChanged(float arg0)
     {
         //TO DO : Change the sfx volume using _sfxSlider.value (in between 0 and 1).
+        AkSoundEngine.SetRTPCValue("SFX_Level", arg0);
     }
 
     private void OnMusicChanged(float arg0)
     {
         //TO DO : Change the music volume using _musicSlider.value (in between 0 and 1).
+        AkSoundEngine.SetRTPCValue("Music_Level", arg0);
     }
 
     private void OnUIChanged(float arg0)
     {
         //TO DO : Change the ui volume using _uiSlider.value (in between 0 and 1).
+        AkSoundEngine.SetRTPCValue("UI_Level", arg0);
     }
 
     private void OnTargetChanged(float arg0)
     {
         //TO DO : Change the target volume using _targetSlider.value (in between 0 and 1).
+        AkSoundEngine.SetRTPCValue("Target_Level", arg0);
     }
 
     private void OnAudioReturnClicked()

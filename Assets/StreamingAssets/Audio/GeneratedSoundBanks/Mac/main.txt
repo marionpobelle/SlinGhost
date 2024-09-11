@@ -1,9 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
+	21544190	OnClick			\Default Work Unit\OnClick	
 	174960569	Loose			\Default Work Unit\Loose	
 	191779598	SLG_Fire			\Default Work Unit\SLG_Fire	
 	542453335	NME_Zone_Exit			\Default Work Unit\NME_Zone_Exit	
+	595342759	NME_Spawn			\Default Work Unit\NME_Spawn	
+	829756566	OnSelect			\Default Work Unit\OnSelect	
 	979765101	Win			\Default Work Unit\Win	
 	1471872846	Play_Warning			\Default Work Unit\Play_Warning	
+	1559875400	Back			\Default Work Unit\Back	
 	1706673613	NME_Hit			\Default Work Unit\NME_Hit	
 	2537597519	NME_Zone_Enter			\Default Work Unit\NME_Zone_Enter	
 	2917512008	SLG_Stretch_Start			\Default Work Unit\SLG_Stretch_Start	
@@ -13,25 +17,99 @@ Event	ID	Name			Wwise Object Path	Notes
 	4145749436	NME_Death			\Default Work Unit\NME_Death	
 	4232021140	SLG_Stretch_Stop			\Default Work Unit\SLG_Stretch_Stop	
 
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3399545293	ButtonType			\Default Work Unit\ButtonType	
+
+Switch	ID	Name	Switch Group			Notes
+	290942698	Difficulty	ButtonType			
+	849915761	DifficultySlider	ButtonType			
+	988953028	SFXVolume	ButtonType			
+	1069811801	Audio	ButtonType			
+	1256202815	Play	ButtonType			
+	1451272583	Close	ButtonType			
+	2346531308	MusicVolume	ButtonType			
+	2910527622	Settings	ButtonType			
+	2918011349	MasterVolume	ButtonType			
+	3260108748	TargetVolume	ButtonType			
+	3415057477	UIVolume	ButtonType			
+	3859834159	Return	ButtonType			
+	3930794392	Quit	ButtonType			
+	4054299888	WheelchairMode	ButtonType			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3991942870	Music			\Default Work Unit\Music	
+
+State	ID	Name	State Group			Notes
+	89505537	Gameplay	Music			
+	748895195	None	Music			
+	2607556080	Menu	Music			
+	2716678721	Victory	Music			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	683874092	NME_Scale			\Default Work Unit\NME_Scale	
 	1240670792	Distance			\Default Work Unit\Distance	
 	2141048674	Elevation			\Default Work Unit\Elevation	
 	3238454324	Stretch			\Default Work Unit\Stretch	
+	3966939032	TriggerZone_Toggle			\Default Work Unit\TriggerZone_Toggle	
+
+Effect plug-ins	ID	Name	Type				Notes
+	274456923	Compressor (Custom)	Wwise Compressor			
+	515446453	Parametric EQ (Custom)	Wwise Parametric EQ			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	22648667	NME_Signal	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Moving_Ghost_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Signal		678708
-	92851935	Warning	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Alarms, Misc, Alert, Gritty, Reverb SND37244_6C38286B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Warning\Warning		1438864
-	124692840	UI_Score_Up	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Picked Coin Echo by NenadSimic Id-171696_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Score_Up		305648
-	147950435	NME_Zone_Enter	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\CLICK_PLASTIC_SEQUNCE_PHASED_CLICK01_0C4DA644.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\NME_Zone_Enter		26560
+	15632848	Ghost_Move-004	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Move-004_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Signal\Ghost_Move-004		551512
+	24627663	NME_Zone_Exit	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\TriggerZone-002_620B9533.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\NME_Zone_Exit		28694
+	30005427	Ghost_Laughter-014	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-014_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-014		528438
+	56179963	Ghost_Laughter-002	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-002_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-002		437682
+	65663430	Return	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B 13_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\Return		147312
+	77050662	Ghost_Laughter-018	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-018_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-018		434078
+	83890821	Ghost_Move-002	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Move-002_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Signal\Ghost_Move-002		1058010
+	94734955	Ghost_Laughter-005	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-005_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-005		402362
+	98849893	Ghost_Laughter-013	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-013_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-013		512554
+	107380109	DifficultySlider	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B 4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\DifficultySlider		247152
+	128907944	WheelchairMode	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B 8_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\WheelchairMode		197232
+	167367052	Ghost_Move-003	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Move-003_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Signal\Ghost_Move-003		383990
+	201521654	Ghost_Laughter-020	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-020_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-020		430292
+	231964784	Ghost_Laughter-021	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-021_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-021		472236
+	236303231	Ghost_Move-001	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Move-001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Signal\Ghost_Move-001		1319966
+	294114357	Ghost_Move-005	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Move-005_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Signal\Ghost_Move-005		693236
+	336006796	SFXVolume	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B 11_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\SFXVolume		197232
+	339661756	Ghost_Laughter-008	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-008_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-008		412884
 	397276058	Enemy_Hit-001	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Enemy_Hit-001_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Hit\Enemy_Hit-001		227900
 	397658424	Enemy_Hit-003	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Enemy_Hit-003_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Hit\Enemy_Hit-003		208612
-	432923580	NME_Zone_Exit	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\CLICK_PLASTIC_SEQUNENCE_VERY_STRANGE_4CE10658.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\NME_Zone_Exit		6990
+	400722481	Ghost_Move-006	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Move-006_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Signal\Ghost_Move-006		482614
+	438065145	Ghost_Laughter-007	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-007_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-007		423944
+	440802488	Play	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B 5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\Play		147312
+	472132911	SLG_Stretch_Low	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\SLG_Stretch-001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slingshot\SLG_Stretch\SLG_Stretch_Low		663580
+	473012841	MusicVolume	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B 10_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\MusicVolume		197232
+	509451948	Ghost_Laughter-001	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-001_2A2787AB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-001		150812
+	550476572	Ghost_Laughter-019	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-019_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-019		593458
 	555763139	Enemy_Hit-002	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Enemy_Hit-002_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Hit\Enemy_Hit-002		188896
-	662502466	SLG_Stretch	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Rubber_Stretch_PSEF251_BB4E938B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slingshot\SLG_Stretch\SLG_Stretch		589040
-	806533360	Loose	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Ethan_F2535D7B.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Loose		308144
+	576794218	SLG_Fire	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\SLG_Fire_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slingshot\SLG_Fire		387416
+	661831790	Ghost_Laughter-016	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-016_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-016		471598
+	668258626	Difficulty	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B 2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\Difficulty		147312
+	731602718	Ghost_Laughter-015	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-015_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-015		413580
+	744643511	Warning	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Warning_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Warning\Warning		144096
+	774271890	VictoryStinger	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\VictoryStinger_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Music\VictoryStinger\VictoryStinger		1024096
+	777307637	Ghost_Laughter-006	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-006_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-006		397396
+	787034331	Ghost_Laughter-022	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-022_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-022		531536
+	803365634	Close	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\Close		97392
+	837476499	Slinghost_V1	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Slinghost_V1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Gameplay\Music\Slinghost_V1		12800096
+	846697140	Settings	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B 7_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\Settings		147312
+	870557716	TargetVolume	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B 12_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\TargetVolume		197232
+	889594309	NME_Zone_Enter	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\TriggerZone-001_807DD976.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\NME_Zone_Enter		24278
+	900162309	MasterVolume	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B 9_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\MasterVolume		197232
+	902172471	Menu_Segment (1)	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Menu_Segment (1)_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Menu\Menu\Menu_Segment (1)		7168096
+	912402991	UI Volume	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B 14_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\UI Volume		197232
+	912744587	Ghost_Laughter-009	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-009_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-009		482454
+	933500569	Ghost_Laughter-004	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-004_CAB7C0BB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-004		293578
+	940154327	Ghost_Laughter-003	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-003_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-003		434288
+	949619428	Portal spawn	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Portal spawn_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Portal spawn		352896
+	965093550	UI_Score_Up	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Score_Up-001_A9CB3C46.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Score_Up		443370
+	974327661	Ghost_Laughter-017	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Ghost_Laughter-017_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt_01\Ghost_Laughter-017		504802
+	995461531	Quit	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B 6_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\Quit		147312
 	1004975446	Enemy_Hit-004	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Enemy_Hit-004_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Hit\Enemy_Hit-004		208612
-	1020287732	Win	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Ethan_CDB3EC99.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Win		195864
 	1026356411	NME_Death	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\GhostHover_BW3669_3C090834.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Death		528996
-	1050889111	SLG_Fire	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\SlingshotShoot_BW10318_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slingshot\SLG_Fire		39356
+	1045767381	Audio	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Soundly Voice Designer, Sarah B 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\Audio		97392
+	1070347322	OnClick	E:\Slingshot\HyperSlingshot\.cache\Mac\SFX\Warning_1BE9961A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\OnClick		123602
 
