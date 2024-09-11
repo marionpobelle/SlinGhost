@@ -40,6 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6047396164417927782}
+  - component: {fileID: 695257887334166456}
   m_Layer: 0
   m_Name: SlingshotSetup
   m_TagString: Untagged
@@ -66,6 +67,18 @@ Transform:
   - {fileID: 531399724833359168}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &695257887334166456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3140746733973540747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2032ad7478bc49e3a979bb9f4dd9bcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &783966740191237130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97,17 +110,17 @@ PrefabInstance:
     - target: {fileID: 6580565780933281785, guid: 9035bfc7a5202fe4aa084c341f283301,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7999797
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6580565780933281785, guid: 9035bfc7a5202fe4aa084c341f283301,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.165623
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6580565780933281785, guid: 9035bfc7a5202fe4aa084c341f283301,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.9002695
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6580565780933281785, guid: 9035bfc7a5202fe4aa084c341f283301,
         type: 3}
@@ -182,17 +195,17 @@ PrefabInstance:
     - target: {fileID: 326519772544167163, guid: d08c5d9c89b170647a3ee8b97edc1f9f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7999797
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 326519772544167163, guid: d08c5d9c89b170647a3ee8b97edc1f9f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1656227
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 326519772544167163, guid: d08c5d9c89b170647a3ee8b97edc1f9f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.4252696
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 326519772544167163, guid: d08c5d9c89b170647a3ee8b97edc1f9f,
         type: 3}
