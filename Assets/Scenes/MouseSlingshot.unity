@@ -122,6 +122,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &46798261 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8458657247322464488, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+    type: 3}
+  m_PrefabInstance: {fileID: 8022142735176079807}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &265045277
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +290,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d45cdd875d437a9c71d4744b8c6ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &311498426 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 531399724833359168, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+    type: 3}
+  m_PrefabInstance: {fileID: 8022142735176079807}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1817012590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -371,6 +383,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crosshair
       objectReference: {fileID: 0}
+    - target: {fileID: 4392302011405644223, guid: 3cc3f9196f8785c48927270b46fb19e7,
+        type: 3}
+      propertyPath: projectileInstance
+      value: 
+      objectReference: {fileID: 311498426}
+    - target: {fileID: 4392302011405644223, guid: 3cc3f9196f8785c48927270b46fb19e7,
+        type: 3}
+      propertyPath: projectileStartPos
+      value: 
+      objectReference: {fileID: 46798261}
     - target: {fileID: 7502351424634469743, guid: 3cc3f9196f8785c48927270b46fb19e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -597,6 +619,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458657247322464488, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458657247322464488, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458657247322464488, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.68
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
