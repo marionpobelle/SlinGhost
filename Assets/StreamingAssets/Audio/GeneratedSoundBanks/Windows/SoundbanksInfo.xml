@@ -55,6 +55,7 @@
 						<State Id="89505537" Name="Gameplay"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="2607556080" Name="Menu"/>
+						<State Id="2716678721" Name="Victory"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -207,7 +208,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{80C40C12-C589-DF58-167A-16B51CBB1392}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{82ED0E31-BC35-6F4D-A0CC-C566B7A6220D}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -343,6 +344,10 @@
 					<ShortName>Warning.wav</ShortName>
 					<CachePath>SFX/Warning_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="774271890" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VictoryStinger.wav</ShortName>
+					<CachePath>SFX/VictoryStinger_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="777307637" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-006.wav</ShortName>
 					<CachePath>SFX/Ghost_Laughter-006_818F3B66.wem</CachePath>
@@ -415,10 +420,6 @@
 					<ShortName>Enemy_Hit-004.wav</ShortName>
 					<CachePath>SFX/Enemy_Hit-004_818F3B66.wem</CachePath>
 				</File>
-				<File Id="1020287732" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Soundly Voice Designer, Ethan.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Ethan_CDB3EC99.wem</CachePath>
-				</File>
 				<File Id="1026356411" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GhostHover_BW3669.wav</ShortName>
 					<CachePath>SFX/GhostHover_BW3669_3C090834.wem</CachePath>
@@ -485,6 +486,12 @@
 							<SwitchValue GroupType="State" GroupId="3991942870" Id="89505537"/>
 							<MediaRefs>
 								<MediaRef Id="837476499"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3991942870" Id="2716678721"/>
+							<MediaRefs>
+								<MediaRef Id="774271890"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -680,10 +687,10 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="4232021140" Name="SLG_Stretch_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="979765101" Name="Win" DurationType="OneShot" DurationMin="1.2696288" DurationMax="1.2696288">
-					<MediaRefs>
-						<MediaRef Id="1020287732"/>
-					</MediaRefs>
+				<Event Id="979765101" Name="Win" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3991942870" Id="2716678721" Name="Victory"/>
+					</ActionSetState>
 				</Event>
 			</Events>
 			<GameParameters>
@@ -699,6 +706,7 @@
 						<State Id="89505537" Name="Gameplay"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="2607556080" Name="Menu"/>
+						<State Id="2716678721" Name="Victory"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -724,5 +732,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9D11ADCC-3A68-7935-28F6-9871CFE25817}</FileHash>
+	<FileHash>{DAF5021B-E319-ECFB-ABEF-715438F1D5F9}</FileHash>
 </SoundBanksInfo>
