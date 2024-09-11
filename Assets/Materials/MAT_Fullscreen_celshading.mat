@@ -112,13 +112,14 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - _color_detection_sensibility: 0
     - _depth_line: 8.16
     - _depth_line_bias: 2.62
     - _line_thickness: 0.0057
-    - _step_0: 0.282
-    - _step_1: 0.201
-    - _step_2: 0.067
-    - _strength: 0
+    - _step_0: 1
+    - _step_1: 0.639
+    - _step_2: 0.289
+    - _strength: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0, g: 0, b: 0, a: 1}
