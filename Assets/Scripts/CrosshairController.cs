@@ -27,6 +27,8 @@ public class CrosshairController : MonoBehaviour
     Vector3 projectileTargetPos;
 
     public bool IsLockedOn => isLockedOn;
+    public float DistanceFromEnemy;
+    public float CurrentEnemyRatio;
 
     public void Fire()
     {
@@ -36,6 +38,7 @@ public class CrosshairController : MonoBehaviour
         nextAllowedFire = Time.time + gameData.CooldownBetweenShotsInSeconds;
 
         Debug.Log("Slingshot fired to : " + lockedOnEnemy, this);
+        AkSoundEngine.PostEvent("SLG_Fire", gameObject);
 
         if (lockedOnEnemy)
         {
@@ -159,5 +162,15 @@ public class CrosshairController : MonoBehaviour
     {
         if (potentialLockOnEnemies.Contains(enemyHandler))
             potentialLockOnEnemies.Remove(enemyHandler);
+    }
+
+    public void UpdateDistanceValue(float distanceFromEnemy)
+    {
+        DistanceFromEnemy = distanceFromEnemy;
+    }
+
+    public void UpdateCurrentScaleRatio(float currentEnemyRatio)
+    {
+        CurrentEnemyRatio = currentEnemyRatio;
     }
 }

@@ -12,41 +12,21 @@ public class GameData : ScriptableObject
     public float delockDelay = 0.7f;
 
     [Header("Enemy")]
-    [Tooltip("Enemy starting scale (the smallest the furthest, the biggest the closest.")]
-    public float EnemyMinScale = 1f;
-    public float EnemyMaxScale = 5f;
-    [Tooltip("By how much the enemy moves each step default value.")]
-    public float EnemyScaleMinStep = 1f;
-    [Tooltip("By how much the enemy moves each step max value.")]
-    public float EnemyScaleMaxStep = 1.5f;
-
-    [Tooltip("Movement curve for the enemy position over time.")]
-    public AnimationCurve MovementCurve;
-    [Tooltip("Default enemy movement speed.")]
-    public float EnemySpeed = 6f;
-    [Tooltip("Axis offset value from default enemy position for left to right movement.")]
-    public float EnemyMovementOffset = 1f;
+    [Tooltip("Enemy starting scale (the smallest the furthest, the biggest the closest).")]
+    public float EnemyDefaultScale = 1f;
+    [Tooltip("Enemy trigger scale range for random value (the smallest the furthest, the biggest the closest).")]
+    public float EnemyMinTriggerScale = 3f;
+    public float EnemyMaxTriggerScale = 5f;
+    [Tooltip("By how much the enemy moves each step range for random value.")]
+    public float EnemyMinScaleStep = 1f;
+    public float EnemyMaxScaleStep = 2f;
 
     [Tooltip("Enemy health points default.")]
     public int EnemyHP = 1;
     [Tooltip("Enemy capsule collider radius.")]
     public float ColliderRadius = 1.2f;
 
-    [Header("Difficulty progression")]
-    [Tooltip("Amount of time until the difficulty increases.")]
-    public float TimeInterval = 10f;
-    [Tooltip("Amount by which the speed increases.")]
-    public float Increase = 0.2f;
-
     [Header("Spawner")]
-    [Tooltip("Max amount of enemies to spawn.")]
-    public int MaxAmountEnemies = 5;
-    [Tooltip("Amount of enemies to spawn per wave.")]
-    public int enemySpawnAmount = 1;
-    [Tooltip("Minimum time in between enemies spawning.")]
-    public float minSpawnTime = 10f;
-    [Tooltip("Maximum time in between enemies spawning.")]
-    public float maxSpawnTime = 15f;
     [Tooltip("X axis range from 0 for enemy to spawn.")]
     public float Xrange = 1000f;
     [Tooltip("Y axis range from 0 for enemy to spawn.")]
@@ -55,8 +35,6 @@ public class GameData : ScriptableObject
     [Header("SCORE")]
     [Tooltip("Last registered score this session.")]
     public int Score = 0;
-    [Tooltip("Last registered highscore this session.")]
-    public int Highscore = 0;
 
 }
 

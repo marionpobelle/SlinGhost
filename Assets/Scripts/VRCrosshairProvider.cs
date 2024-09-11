@@ -25,7 +25,7 @@ public class VRCrosshairProvider : MonoBehaviour
     private float _lastFireTime;
     private VRControllerRaycastOrigin _raycastOrigin;
 
-    private void Awake()
+    private void Start()
     {
         if( XRGeneralSettings.Instance.Manager.activeLoader )
         {
@@ -62,6 +62,8 @@ public class VRCrosshairProvider : MonoBehaviour
         LoadOffset();
         LoadIdlePosition();
         LoadFullStretchPosition();
+
+        AkSoundEngine.PostEvent("SLG_Stretch_Start", gameObject);
     }
 
     private void OnApplicationQuit()
@@ -70,11 +72,6 @@ public class VRCrosshairProvider : MonoBehaviour
         Debug.Log("Deinitializing XR SDK.");
         XRGeneralSettings.Instance.Manager.StopSubsystems();
         XRGeneralSettings.Instance.Manager.DeinitializeLoader();
-    }
-
-    private void OnDestroy()
-    {
-        // stop all XR subsystems
     }
 
     private void Update()
@@ -177,12 +174,14 @@ public class VRCrosshairProvider : MonoBehaviour
         float distanceFromIdleToFullStretch = Vector3.Distance(_idlePosition, _fullStretchPosition);
         _currentStrechAmount = distanceFromIdleToController / distanceFromIdleToFullStretch;
         _currentStrechAmount = Mathf.Clamp(_currentStrechAmount, 0, 1);
+        AkSoundEngine.SetRTPCValue("Stretch", _currentStrechAmount);
     }
     
     private void FireDetected()
     {
         // Implement the logic for when a fire is detected
         Debug.Log("Fire detected!");
+        _crosshairController.Fire();
     }
 
     private void OnDrawGizmos()
