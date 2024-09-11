@@ -3,76 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using AK.Wwise;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
     [Header("REFERENCES")]
     [SerializeField] private GameObject _enemyPrefab;
 
-    private int _enemyCount;
-    private int _enemySpawnedCount;
-
     public static GameHandler Instance;
     private GameData _gameData;
+    public int EnemyCount;
 
     private void Awake()
     {
         Instance = this;
         _gameData = Data.GameData;
-        _enemySpawnedCount = 0;
-        _enemyCount = 0;
+        EnemyCount = 0;
+        _gameData.Score = 0;
     }
 
     private void Start()
     {
-        StartCoroutine(EnemySpawner());
+        SpawnEnemy();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EndGame()
     {
-        
-    }
-
-    public void LostGame()
-    {
-        Debug.Log("Lost the game !");
-        AkSoundEngine.PostEvent("Loose", gameObject);
-    }
-
-    public void WonGame()
-    {
-        Debug.Log("Won the game !");
+        Debug.Log("Game ended !");
         AkSoundEngine.PostEvent("Win", gameObject);
+        SceneManager.LoadScene("Menu");
     }
 
-    public void DecreaseEnemyCount()
+    public void SpawnEnemy()
     {
-        _enemyCount--;
-        AkSoundEngine.PostEvent("Score_Up", gameObject);
-        if (_enemyCount <= 0)
-        {
-            WonGame();
-        }
-    }
-
-    public void IncreaseEnemyCount()
-    {
-        _enemyCount++;
-    }
-
-    private IEnumerator EnemySpawner()
-    {
-        while (_enemySpawnedCount < _gameData.MaxAmountEnemies)
-        {
-            for (int i = 0; i < _gameData.enemySpawnAmount; i++)
-            {
-                Instantiate(_enemyPrefab);
-                _enemyCount++;
-                _enemySpawnedCount++;
-            }
-            yield return new WaitForSeconds(Random.Range(_gameData.minSpawnTime, _gameData.maxSpawnTime));
-        }
+        Instantiate(_enemyPrefab);
+        EnemyCount++;
+        Debug.Log("We spawned " + EnemyCount + " ghosts in total at this point !");
     }
 
 }
