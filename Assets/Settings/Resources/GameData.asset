@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   CooldownBetweenShotsInSeconds: 1
+  lockOnDelay: 0.1
+  delockDelay: 0.5
   EnemyMinScale: 0.1
   EnemyMaxScale: 10
   EnemyScaleMinStep: 0.00005
@@ -65,9 +67,9 @@ MonoBehaviour:
   ColliderRadius: 1.2
   TimeInterval: 5
   Increase: 0.00005
-  MaxAmountEnemies: 1
+  MaxAmountEnemies: 5
   enemySpawnAmount: 1
-  minSpawnTime: 5
-  maxSpawnTime: 15
+  minSpawnTime: 1
+  maxSpawnTime: 5
   Xrange: 0.6
   Yrange: 0.6
