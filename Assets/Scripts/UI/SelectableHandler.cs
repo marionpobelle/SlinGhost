@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class SelectableHandler : MonoBehaviour, ISelectHandler
     {
         //AUDIO
         //Play sounds depending on what is the _selectableObject : name or int
+        AkSoundEngine.SetSwitch("ButtonType",_selectableObject.ToString(), gameObject);
+        AkSoundEngine.PostEvent("OnSelect", gameObject);
     }
 
     public enum SelectableObject

@@ -178,7 +178,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{325A9F19-B6FA-257C-4E23-202F441AEDC8}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{04D43A60-4CC6-F360-365C-DEE39C47A213}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -188,7 +188,7 @@
 				</File>
 				<File Id="24627663" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TriggerZone-002.wav</ShortName>
-					<CachePath>SFX/TriggerZone-002_3650DD24.wem</CachePath>
+					<CachePath>SFX/TriggerZone-002_620B9533.wem</CachePath>
 				</File>
 				<File Id="30005427" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-014.wav</ShortName>
@@ -260,7 +260,7 @@
 				</File>
 				<File Id="509451948" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-001.wav</ShortName>
-					<CachePath>SFX/Ghost_Laughter-001_8163A955.wem</CachePath>
+					<CachePath>SFX/Ghost_Laughter-001_2A2787AB.wem</CachePath>
 				</File>
 				<File Id="550476572" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-019.wav</ShortName>
@@ -298,9 +298,13 @@
 					<ShortName>Soundly Voice Designer, Ethan.wav</ShortName>
 					<CachePath>SFX/Soundly Voice Designer, Ethan_F2535D7B.wem</CachePath>
 				</File>
+				<File Id="837476499" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slinghost_V1.wav</ShortName>
+					<CachePath>SFX/Slinghost_V1_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="889594309" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TriggerZone-001.wav</ShortName>
-					<CachePath>SFX/TriggerZone-001_94DFB2AB.wem</CachePath>
+					<CachePath>SFX/TriggerZone-001_807DD976.wem</CachePath>
 				</File>
 				<File Id="912744587" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-009.wav</ShortName>
@@ -308,7 +312,7 @@
 				</File>
 				<File Id="933500569" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-004.wav</ShortName>
-					<CachePath>SFX/Ghost_Laughter-004_342A03BF.wem</CachePath>
+					<CachePath>SFX/Ghost_Laughter-004_CAB7C0BB.wem</CachePath>
 				</File>
 				<File Id="940154327" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-003.wav</ShortName>
@@ -320,7 +324,7 @@
 				</File>
 				<File Id="965093550" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Score_Up-001.wav</ShortName>
-					<CachePath>SFX/Score_Up-001_8291E391.wem</CachePath>
+					<CachePath>SFX/Score_Up-001_A9CB3C46.wem</CachePath>
 				</File>
 				<File Id="974327661" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-017.wav</ShortName>
@@ -351,7 +355,11 @@
 						<MediaRef Id="806533360"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3991942870" Name="Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3991942870" Name="Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="837476499"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4145749436" Name="NME_Death" DurationType="OneShot" DurationMin="5.1174393" DurationMax="5.1174393">
 					<MediaRefs>
 						<MediaRef Id="965093550"/>
@@ -462,5 +470,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1B5ECC09-37D1-69F3-2D1D-DD2DD0243877}</FileHash>
+	<FileHash>{F5820454-7221-ABC9-184E-A00ADF4ACE60}</FileHash>
 </SoundBanksInfo>
