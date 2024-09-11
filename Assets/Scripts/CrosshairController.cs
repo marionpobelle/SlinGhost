@@ -16,10 +16,18 @@ public class CrosshairController : MonoBehaviour
     bool isLockedOn = false;
     bool isLockChanging = false;
     float enemyLockTimer;
+    float nextAllowedFire;
+
+    public bool IsLockedOn => isLockedOn;
 
     public void Fire()
     {
-        Debug.Log("Slingshot fired at position: " + transform.position, this);
+        if (nextAllowedFire > Time.time)
+            return;
+
+        nextAllowedFire = Time.time + gameData.CooldownBetweenShotsInSeconds;
+
+        Debug.Log("Slingshot fired to : " + lockedOnEnemy, this);
 
         if (lockedOnEnemy)
             lockedOnEnemy.HitEnemy();
