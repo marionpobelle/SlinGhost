@@ -57,7 +57,7 @@ public class EnemyHandler : MonoBehaviour
 
         }
         //Change enemy scale according to speed
-        transform.localScale = transform.localScale + new UnityEngine.Vector3(_currentScaleStep, _currentScaleStep, _currentScaleStep);
+        transform.localScale = transform.localScale + new Vector3(_currentScaleStep, _currentScaleStep, _currentScaleStep);
         //If enemy reached maximum scale, end the game
         if (transform.localScale.x >= _gameData.EnemyMaxScale)
         {
@@ -67,6 +67,9 @@ public class EnemyHandler : MonoBehaviour
         transform.position = new Vector3(_gameData.MovementCurve.Evaluate(_gameData.EnemySpeed * (Time.time + _timeOffset)) * _gameData.EnemyMovementOffset, 0, transform.position.z);
         AkSoundEngine.SetRTPCValue("NME_Scale", transform.localScale.y);
         AkSoundEngine.SetRTPCValue("Elevation", transform.position.y - _crosshairController.transform.position.y);
+
+        _crosshairController.UpdateDistanceValue(GetDistanceFromCrosshair());
+        _crosshairController.UpdateCurrentScaleRatio(GetScaleRatio());
     }
 
     public void HitEnemy()
@@ -85,9 +88,15 @@ public class EnemyHandler : MonoBehaviour
     /// <summary>
     /// Gets the distance in between the crosshair and the enemy in 2D space.
     /// </summary>
-    public float GetDistance()
+    public float GetDistanceFromCrosshair()
     {
-        return UnityEngine.Vector2.Distance(_crosshairPosition, this.transform.position);
+        return Vector3.Distance(_crosshairController.transform.position, transform.position);
+    }
+
+    public float GetScaleRatio()
+    {
+        Debug.Log(Mathf.InverseLerp(.1f, _gameData.EnemyMaxScale, transform.localScale.x));
+        return Mathf.InverseLerp(.1f, _gameData.EnemyMaxScale, transform.localScale.x);
     }
 
     private void OnTriggerEnter(Collider collision)

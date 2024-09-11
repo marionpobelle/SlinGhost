@@ -16,7 +16,7 @@ MonoBehaviour:
   lockOnDelay: 0.1
   delockDelay: 0.5
   EnemyMinScale: 0.1
-  EnemyMaxScale: 10
+  EnemyMaxScale: 2
   EnemyScaleMinStep: 0.00005
   EnemyScaleMaxStep: 0.1
   MovementCurve:
