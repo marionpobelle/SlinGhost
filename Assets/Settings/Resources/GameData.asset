@@ -73,3 +73,5 @@ MonoBehaviour:
   maxSpawnTime: 5
   Xrange: 0.6
   Yrange: 0.6
+  Score: 0
+  Highscore: 0

@@ -1,6 +1,9 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR;
+using UnityEngine.XR.Management;
 using Valve.VR;
 
 public class VRCrosshairProvider : MonoBehaviour
@@ -24,6 +27,17 @@ public class VRCrosshairProvider : MonoBehaviour
 
     private void Awake()
     {
+        if( XRGeneralSettings.Instance.Manager.activeLoader )
+        {
+            XRGeneralSettings.Instance.Manager.StopSubsystems();
+            XRGeneralSettings.Instance.Manager.DeinitializeLoader();
+        }
+        Debug.Log("Initializing XR SDK.");
+        XRGeneralSettings.Instance.Manager.InitializeLoaderSync();
+        XRGeneralSettings.Instance.Manager.StartSubsystems();
+        Debug.Log("XR SDK initialized.", this);
+        
+        
         _crosshairController = FindObjectOfType<CrosshairController>();
         if (!_crosshairController)
         {
@@ -49,7 +63,20 @@ public class VRCrosshairProvider : MonoBehaviour
         LoadIdlePosition();
         LoadFullStretchPosition();
     }
-    
+
+    private void OnApplicationQuit()
+    {
+        // Clean all subsystems
+        Debug.Log("Deinitializing XR SDK.");
+        XRGeneralSettings.Instance.Manager.StopSubsystems();
+        XRGeneralSettings.Instance.Manager.DeinitializeLoader();
+    }
+
+    private void OnDestroy()
+    {
+        // stop all XR subsystems
+    }
+
     private void Update()
     {
         UpdateCrosshairPosition();
@@ -167,6 +194,9 @@ public class VRCrosshairProvider : MonoBehaviour
     
     private void SaveOffset()
     {
+        _offsetPosition = transform.position;
+        _offsetRotation = transform.eulerAngles;
+        
         PlayerPrefs.SetFloat("OffsetPositionX", _offsetPosition.x);
         PlayerPrefs.SetFloat("OffsetPositionY", _offsetPosition.y);
         PlayerPrefs.SetFloat("OffsetPositionZ", _offsetPosition.z);
@@ -194,6 +224,9 @@ public class VRCrosshairProvider : MonoBehaviour
         _offsetRotation.x = PlayerPrefs.GetFloat("OffsetRotationX", 0);
         _offsetRotation.y = PlayerPrefs.GetFloat("OffsetRotationY", 0);
         _offsetRotation.z = PlayerPrefs.GetFloat("OffsetRotationZ", 0);
+        
+        transform.position = _offsetPosition;
+        transform.eulerAngles = _offsetRotation;
         
         Debug.Log("Offset position and rotation loaded from PlayerPrefs for the VR Controller.", this);
     }
