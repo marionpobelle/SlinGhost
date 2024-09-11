@@ -67,7 +67,7 @@ MonoBehaviour:
   ColliderRadius: 1.2
   TimeInterval: 5
   Increase: 0.00005
-  MaxAmountEnemies: 5
+  MaxAmountEnemies: 1
   enemySpawnAmount: 1
   minSpawnTime: 1
   maxSpawnTime: 5

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class wwiseHandler : MonoBehaviour
 {
-    private GameData _gameData;
+    /**private GameData _gameData;
     [SerializeField] private EnemyHandler _enemyHandler;
     private float _enemyScale;
     private float _enemyElevation;
@@ -19,5 +19,5 @@ public class wwiseHandler : MonoBehaviour
     {
         _enemyElevation = _enemyHandler.GetNormalizedYDistance();
         AkSoundEngine.SetRTPCValue("Elevation", _enemyElevation);
-    }
+    }**/
 }

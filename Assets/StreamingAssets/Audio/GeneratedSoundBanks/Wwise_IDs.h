@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID NME_DEATH = 4145749436U;
         static const AkUniqueID NME_HIT = 1706673613U;
         static const AkUniqueID NME_SIGNAL = 3843687674U;
+        static const AkUniqueID NME_SPAWN = 595342759U;
         static const AkUniqueID NME_ZONE_ENTER = 2537597519U;
         static const AkUniqueID NME_ZONE_EXIT = 542453335U;
         static const AkUniqueID PLAY_WARNING = 1471872846U;
@@ -33,7 +34,11 @@ namespace AK
         static const AkUniqueID DISTANCE = 1240670792U;
         static const AkUniqueID DISTANCETOTAL = 985456950U;
         static const AkUniqueID ELEVATION = 2141048674U;
+        static const AkUniqueID MASTER_LEVEL = 4245676100U;
+        static const AkUniqueID MUSIC_LEVEL = 2177735725U;
+        static const AkUniqueID NME_LEVEL = 3394486108U;
         static const AkUniqueID NME_SCALE = 683874092U;
+        static const AkUniqueID SFX_LEVEL = 2780599685U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;
@@ -46,6 +51,7 @@ namespace AK
         static const AkUniqueID SS_AIR_TURBULENCE = 4160247818U;
         static const AkUniqueID STRETCH = 3238454324U;
         static const AkUniqueID TRIGGERZONE_TOGGLE = 3966939032U;
+        static const AkUniqueID UI_LEVEL = 1394542388U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
