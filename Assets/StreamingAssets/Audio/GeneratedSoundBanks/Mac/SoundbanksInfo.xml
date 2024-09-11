@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E0048A7A-01C6-76A9-2AC1-E774B7F2DD36}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D53C09FC-9AC1-8EE6-E993-31E2F4B28CD4}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -207,7 +207,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{23BAFE24-4617-D9CC-3EFF-9C51D38001B8}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{80C40C12-C589-DF58-167A-16B51CBB1392}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -375,6 +375,10 @@
 					<ShortName>Soundly Voice Designer, Sarah B 9.wav</ShortName>
 					<CachePath>SFX/Soundly Voice Designer, Sarah B 9_818F3B66.wem</CachePath>
 				</File>
+				<File Id="902172471" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu_Segment (1).wav</ShortName>
+					<CachePath>SFX/Menu_Segment (1)_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="912402991" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Voice Designer, Sarah B 14.wav</ShortName>
 					<CachePath>SFX/Soundly Voice Designer, Sarah B 14_818F3B66.wem</CachePath>
@@ -425,7 +429,7 @@
 				</File>
 				<File Id="1070347322" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Warning.wav</ShortName>
-					<CachePath>SFX/Warning_BB756E74.wem</CachePath>
+					<CachePath>SFX/Warning_1BE9961A.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -433,9 +437,6 @@
 					<Plugin Id="274456923" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="515446453" Name="Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</Custom>
-				<ShareSets>
-					<Plugin Id="1125262053" Name="Blue_Distant_Echoes" LibName="Wwise Stereo Delay" LibId="8847363"/>
-				</ShareSets>
 			</Plugins>
 			<Events>
 				<Event Id="1559875400" Name="Back" DurationType="OneShot" DurationMin="0.25049952" DurationMax="0.25049952">
@@ -472,14 +473,21 @@
 					</PluginRefs>
 				</Event>
 				<Event Id="3991942870" Name="Music" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="837476499"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="1125262053"/>
-						</ShareSets>
-					</PluginRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3991942870" Id="2607556080"/>
+							<MediaRefs>
+								<MediaRef Id="837476499"/>
+								<MediaRef Id="902172471"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3991942870" Id="89505537"/>
+							<MediaRefs>
+								<MediaRef Id="837476499"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 				<Event Id="4145749436" Name="NME_Death" DurationType="OneShot" DurationMin="5.1174393" DurationMax="5.1174393">
 					<MediaRefs>
@@ -685,6 +693,15 @@
 				<GameParameter Id="3238454324" Name="Stretch"/>
 				<GameParameter Id="3966939032" Name="TriggerZone_Toggle"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3991942870" Name="Music">
+					<States>
+						<State Id="89505537" Name="Gameplay"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="3399545293" Name="ButtonType">
 					<Switches>
@@ -707,5 +724,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2442F8B1-A0E4-CB9A-739C-4A85CFAECE39}</FileHash>
+	<FileHash>{9FE74F77-4CF7-4184-ABCB-ED4724FBB1A3}</FileHash>
 </SoundBanksInfo>
