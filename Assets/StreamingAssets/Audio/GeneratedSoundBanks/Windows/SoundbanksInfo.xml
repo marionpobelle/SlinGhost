@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{DB674020-ED81-A729-1543-C20DC3A724C6}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{366E6675-13B8-0E6E-851F-0D6E17F20C54}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -178,7 +178,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{04D43A60-4CC6-F360-365C-DEE39C47A213}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5E242620-BE10-EDA8-88E8-70A149C7F035}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -294,10 +294,6 @@
 					<ShortName>Ghost_Laughter-022.wav</ShortName>
 					<CachePath>SFX/Ghost_Laughter-022_818F3B66.wem</CachePath>
 				</File>
-				<File Id="806533360" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Soundly Voice Designer, Ethan.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Ethan_F2535D7B.wem</CachePath>
-				</File>
 				<File Id="837476499" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slinghost_V1.wav</ShortName>
 					<CachePath>SFX/Slinghost_V1_FBC78EF0.wem</CachePath>
@@ -348,17 +344,48 @@
 					<Plugin Id="274456923" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="515446453" Name="Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</Custom>
+				<ShareSets>
+					<Plugin Id="1125262053" Name="Blue_Distant_Echoes" LibName="Wwise Stereo Delay" LibId="8847363"/>
+				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="174960569" Name="Loose" DurationType="OneShot" DurationMin="1.6044159" DurationMax="1.6044159">
+				<Event Id="174960569" Name="Loose" MaxAttenuation="3" DurationType="OneShot" DurationMin="1.866994" DurationMax="7.3503156">
 					<MediaRefs>
-						<MediaRef Id="806533360"/>
+						<MediaRef Id="30005427"/>
+						<MediaRef Id="56179963"/>
+						<MediaRef Id="77050662"/>
+						<MediaRef Id="94734955"/>
+						<MediaRef Id="98849893"/>
+						<MediaRef Id="201521654"/>
+						<MediaRef Id="231964784"/>
+						<MediaRef Id="339661756"/>
+						<MediaRef Id="438065145"/>
+						<MediaRef Id="509451948"/>
+						<MediaRef Id="550476572"/>
+						<MediaRef Id="661831790"/>
+						<MediaRef Id="731602718"/>
+						<MediaRef Id="777307637"/>
+						<MediaRef Id="787034331"/>
+						<MediaRef Id="912744587"/>
+						<MediaRef Id="933500569"/>
+						<MediaRef Id="940154327"/>
+						<MediaRef Id="974327661"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="274456923"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 				<Event Id="3991942870" Name="Music" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="837476499"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1125262053"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="4145749436" Name="NME_Death" DurationType="OneShot" DurationMin="5.1174393" DurationMax="5.1174393">
 					<MediaRefs>
@@ -399,7 +426,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="595342759" Name="NME_Spawn" MaxAttenuation="3" DurationType="OneShot" DurationMin="1.5699487" DurationMax="6.1808543">
+				<Event Id="595342759" Name="NME_Spawn" MaxAttenuation="3" DurationType="OneShot" DurationMin="1.866994" DurationMax="7.3503156">
 					<MediaRefs>
 						<MediaRef Id="30005427"/>
 						<MediaRef Id="56179963"/>
@@ -470,5 +497,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5B48C036-A6C9-D231-A962-9A20BAD554F9}</FileHash>
+	<FileHash>{402438B6-6D57-D9A5-97B8-6852EA5908DA}</FileHash>
 </SoundBanksInfo>

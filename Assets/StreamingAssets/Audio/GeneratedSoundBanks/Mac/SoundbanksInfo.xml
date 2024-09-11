@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{61204E6B-C4DD-DF1D-CF09-1C0CD3756964}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{38549EDB-0BC3-E881-3F97-0D649B7F38DF}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -49,6 +49,24 @@
 				<GameParameter Id="4160247818" Name="SS_Air_Turbulence"/>
 				<GameParameter Id="4245676100" Name="Master_Level"/>
 			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="3399545293" Name="ButtonType">
+					<Switches>
+						<Switch Id="290942698" Name="Difficulty"/>
+						<Switch Id="849915761" Name="DifficultySlider"/>
+						<Switch Id="988953028" Name="SFXVolume"/>
+						<Switch Id="1069811801" Name="Audio"/>
+						<Switch Id="1256202815" Name="Play"/>
+						<Switch Id="1451272583" Name="Close"/>
+						<Switch Id="2346531308" Name="MusicVolume"/>
+						<Switch Id="2910527622" Name="Settings"/>
+						<Switch Id="2918011349" Name="MasterVolume"/>
+						<Switch Id="3260108748" Name="TargetVolume"/>
+						<Switch Id="3930794392" Name="Quit"/>
+						<Switch Id="4054299888" Name="WheelchairMode"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 			<AcousticTextures>
 				<AcousticTexture Id="504532776" Name="Brick">
 					<Properties>
@@ -178,7 +196,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{04D43A60-4CC6-F360-365C-DEE39C47A213}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{05B744E3-E76E-DBF5-A2B6-9A6C4CBABC35}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -214,6 +232,14 @@
 					<ShortName>Ghost_Laughter-013.wav</ShortName>
 					<CachePath>SFX/Ghost_Laughter-013_818F3B66.wem</CachePath>
 				</File>
+				<File Id="107380109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 4.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="128907944" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 8.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 8_818F3B66.wem</CachePath>
+				</File>
 				<File Id="167367052" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Move-003.wav</ShortName>
 					<CachePath>SFX/Ghost_Move-003_FBC78EF0.wem</CachePath>
@@ -233,6 +259,10 @@
 				<File Id="294114357" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Move-005.wav</ShortName>
 					<CachePath>SFX/Ghost_Move-005_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="336006796" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 11.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 11_818F3B66.wem</CachePath>
 				</File>
 				<File Id="339661756" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-008.wav</ShortName>
@@ -254,9 +284,17 @@
 					<ShortName>Ghost_Laughter-007.wav</ShortName>
 					<CachePath>SFX/Ghost_Laughter-007_818F3B66.wem</CachePath>
 				</File>
+				<File Id="440802488" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 5.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 5_818F3B66.wem</CachePath>
+				</File>
 				<File Id="472132911" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SLG_Stretch-001.wav</ShortName>
 					<CachePath>SFX/SLG_Stretch-001_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="473012841" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 10.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 10_818F3B66.wem</CachePath>
 				</File>
 				<File Id="509451948" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-001.wav</ShortName>
@@ -278,6 +316,10 @@
 					<ShortName>Ghost_Laughter-016.wav</ShortName>
 					<CachePath>SFX/Ghost_Laughter-016_818F3B66.wem</CachePath>
 				</File>
+				<File Id="668258626" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 2.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="731602718" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-015.wav</ShortName>
 					<CachePath>SFX/Ghost_Laughter-015_818F3B66.wem</CachePath>
@@ -294,17 +336,29 @@
 					<ShortName>Ghost_Laughter-022.wav</ShortName>
 					<CachePath>SFX/Ghost_Laughter-022_818F3B66.wem</CachePath>
 				</File>
-				<File Id="806533360" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Soundly Voice Designer, Ethan.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Ethan_F2535D7B.wem</CachePath>
+				<File Id="803365634" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B_818F3B66.wem</CachePath>
 				</File>
 				<File Id="837476499" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slinghost_V1.wav</ShortName>
 					<CachePath>SFX/Slinghost_V1_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="846697140" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 7.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="870557716" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 12.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 12_818F3B66.wem</CachePath>
+				</File>
 				<File Id="889594309" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TriggerZone-001.wav</ShortName>
 					<CachePath>SFX/TriggerZone-001_807DD976.wem</CachePath>
+				</File>
+				<File Id="900162309" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 9.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 9_818F3B66.wem</CachePath>
 				</File>
 				<File Id="912744587" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-009.wav</ShortName>
@@ -330,6 +384,10 @@
 					<ShortName>Ghost_Laughter-017.wav</ShortName>
 					<CachePath>SFX/Ghost_Laughter-017_818F3B66.wem</CachePath>
 				</File>
+				<File Id="995461531" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 6.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 6_818F3B66.wem</CachePath>
+				</File>
 				<File Id="1004975446" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Enemy_Hit-004.wav</ShortName>
 					<CachePath>SFX/Enemy_Hit-004_818F3B66.wem</CachePath>
@@ -342,23 +400,63 @@
 					<ShortName>GhostHover_BW3669.wav</ShortName>
 					<CachePath>SFX/GhostHover_BW3669_3C090834.wem</CachePath>
 				</File>
+				<File Id="1045767381" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 1.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 1_818F3B66.wem</CachePath>
+				</File>
 			</Media>
 			<Plugins>
 				<Custom>
 					<Plugin Id="274456923" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="515446453" Name="Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</Custom>
+				<ShareSets>
+					<Plugin Id="1125262053" Name="Blue_Distant_Echoes" LibName="Wwise Stereo Delay" LibId="8847363"/>
+				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="174960569" Name="Loose" DurationType="OneShot" DurationMin="1.6044159" DurationMax="1.6044159">
+				<Event Id="1559875400" Name="Back" DurationType="OneShot" DurationMin="0.25049952" DurationMax="0.25049952">
 					<MediaRefs>
-						<MediaRef Id="806533360"/>
+						<MediaRef Id="24627663"/>
 					</MediaRefs>
+				</Event>
+				<Event Id="174960569" Name="Loose" MaxAttenuation="3" DurationType="OneShot" DurationMin="1.866994" DurationMax="7.3503156">
+					<MediaRefs>
+						<MediaRef Id="30005427"/>
+						<MediaRef Id="56179963"/>
+						<MediaRef Id="77050662"/>
+						<MediaRef Id="94734955"/>
+						<MediaRef Id="98849893"/>
+						<MediaRef Id="201521654"/>
+						<MediaRef Id="231964784"/>
+						<MediaRef Id="339661756"/>
+						<MediaRef Id="438065145"/>
+						<MediaRef Id="509451948"/>
+						<MediaRef Id="550476572"/>
+						<MediaRef Id="661831790"/>
+						<MediaRef Id="731602718"/>
+						<MediaRef Id="777307637"/>
+						<MediaRef Id="787034331"/>
+						<MediaRef Id="912744587"/>
+						<MediaRef Id="933500569"/>
+						<MediaRef Id="940154327"/>
+						<MediaRef Id="974327661"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="274456923"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 				<Event Id="3991942870" Name="Music" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="837476499"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1125262053"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="4145749436" Name="NME_Death" DurationType="OneShot" DurationMin="5.1174393" DurationMax="5.1174393">
 					<MediaRefs>
@@ -399,7 +497,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="595342759" Name="NME_Spawn" MaxAttenuation="3" DurationType="OneShot" DurationMin="1.5699487" DurationMax="6.1808543">
+				<Event Id="595342759" Name="NME_Spawn" MaxAttenuation="3" DurationType="OneShot" DurationMin="1.866994" DurationMax="7.3503156">
 					<MediaRefs>
 						<MediaRef Id="30005427"/>
 						<MediaRef Id="56179963"/>
@@ -438,6 +536,90 @@
 						<MediaRef Id="24627663"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="21544190" Name="OnClick" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="744643511"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="829756566" Name="OnSelect" DurationType="OneShot" DurationMin="1.0135" DurationMax="2.5735">
+					<MediaRefs>
+						<MediaRef Id="889594309"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="2918011349"/>
+							<MediaRefs>
+								<MediaRef Id="900162309"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="290942698"/>
+							<MediaRefs>
+								<MediaRef Id="668258626"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="2910527622"/>
+							<MediaRefs>
+								<MediaRef Id="846697140"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="1451272583"/>
+							<MediaRefs>
+								<MediaRef Id="803365634"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="988953028"/>
+							<MediaRefs>
+								<MediaRef Id="336006796"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="4054299888"/>
+							<MediaRefs>
+								<MediaRef Id="128907944"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="3260108748"/>
+							<MediaRefs>
+								<MediaRef Id="870557716"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="2346531308"/>
+							<MediaRefs>
+								<MediaRef Id="473012841"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="1256202815"/>
+							<MediaRefs>
+								<MediaRef Id="440802488"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="3930794392"/>
+							<MediaRefs>
+								<MediaRef Id="995461531"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="849915761"/>
+							<MediaRefs>
+								<MediaRef Id="107380109"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="1069811801" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="1045767381"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="1471872846" Name="Play_Warning" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="744643511"/>
@@ -468,7 +650,25 @@
 				<GameParameter Id="3238454324" Name="Stretch"/>
 				<GameParameter Id="3966939032" Name="TriggerZone_Toggle"/>
 			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="3399545293" Name="ButtonType">
+					<Switches>
+						<Switch Id="290942698" Name="Difficulty"/>
+						<Switch Id="849915761" Name="DifficultySlider"/>
+						<Switch Id="988953028" Name="SFXVolume"/>
+						<Switch Id="1069811801" Name="Audio"/>
+						<Switch Id="1256202815" Name="Play"/>
+						<Switch Id="1451272583" Name="Close"/>
+						<Switch Id="2346531308" Name="MusicVolume"/>
+						<Switch Id="2910527622" Name="Settings"/>
+						<Switch Id="2918011349" Name="MasterVolume"/>
+						<Switch Id="3260108748" Name="TargetVolume"/>
+						<Switch Id="3930794392" Name="Quit"/>
+						<Switch Id="4054299888" Name="WheelchairMode"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F5820454-7221-ABC9-184E-A00ADF4ACE60}</FileHash>
+	<FileHash>{8044AA27-246B-7E10-347B-67FF8BE6C26D}</FileHash>
 </SoundBanksInfo>

@@ -49,7 +49,11 @@ public class VRCrosshairProvider : MonoBehaviour
         LoadIdlePosition();
         LoadFullStretchPosition();
     }
-    
+
+    private void Start()
+    {
+        AkSoundEngine.PostEvent("SLG_Stretch_Start", gameObject);
+    }
     private void Update()
     {
         UpdateCrosshairPosition();
@@ -150,6 +154,7 @@ public class VRCrosshairProvider : MonoBehaviour
         float distanceFromIdleToFullStretch = Vector3.Distance(_idlePosition, _fullStretchPosition);
         _currentStrechAmount = distanceFromIdleToController / distanceFromIdleToFullStretch;
         _currentStrechAmount = Mathf.Clamp(_currentStrechAmount, 0, 1);
+        AkSoundEngine.SetRTPCValue("Stretch", _currentStrechAmount);
     }
     
     private void FireDetected()
