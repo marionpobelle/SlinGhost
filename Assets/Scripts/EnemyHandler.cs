@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 
 public class EnemyHandler : MonoBehaviour
@@ -17,6 +16,8 @@ public class EnemyHandler : MonoBehaviour
 
     private float _speedTick = 0;
 
+    private float _timeOffset;
+
     private void Awake()
     {
         _gameData = Data.GameData;
@@ -25,27 +26,30 @@ public class EnemyHandler : MonoBehaviour
         _isCrosshairOnEnemy = false;
         _currentHP = _gameData.EnemyHP;
         _currentScaleStep = _gameData.EnemyScaleMinStep;
-        if(this.gameObject.TryGetComponent<CapsuleCollider>(out var collider))
+        if (this.gameObject.TryGetComponent<CapsuleCollider>(out var collider))
         {
             collider.radius = _gameData.ColliderRadius;
         }
+        float randomCoordX = 0;// Random.Range(-_gameData.Xrange, _gameData.Xrange);
+        float randomCoordY = 0;// Random.Range(-_gameData.Yrange, _gameData.Yrange);
+        transform.position = new UnityEngine.Vector3(randomCoordY, randomCoordX, 0);
+        _timeOffset = Random.Range(0f, 100f);
     }
 
     private void Start()
     {
         _crosshairController = FindObjectOfType<CrosshairController>();
-        if(_crosshairController == null)
+        if (_crosshairController == null)
         {
             Debug.LogError("Couldn't find CrosshairController !", this);
         }
-        _crosshairController.OnSlingshotFired += SlingshotFired;
     }
 
     private void FixedUpdate()
     {
         _speedTick += Time.deltaTime;
         //If tick reached, increase enemy speed
-        if(_speedTick >= _gameData.TimeInterval && _currentScaleStep < _gameData.EnemyScaleMaxStep)
+        if (_speedTick >= _gameData.TimeInterval && _currentScaleStep < _gameData.EnemyScaleMaxStep)
         {
             _speedTick = 0f;
             _currentScaleStep += _gameData.Increase;
@@ -58,20 +62,21 @@ public class EnemyHandler : MonoBehaviour
         {
             GameHandler.Instance.LostGame();
         }
+        //Left-right movement
+        transform.position = new Vector3(_gameData.MovementCurve.Evaluate(_gameData.EnemySpeed * (Time.time + _timeOffset)) * _gameData.EnemyMovementOffset, 0, transform.position.z);
+        AkSoundEngine.SetRTPCValue("NME_Scale", transform.localScale.y);
     }
 
-    private void SlingshotFired(UnityEngine.Vector3 crosshairPosition)
+    public void HitEnemy()
     {
-        _crosshairPosition = crosshairPosition;
-        //IF ENEMY HIT
-        if (_isCrosshairOnEnemy)
+        Debug.LogWarning("ENNEMY HIT");
+        _currentHP--;
+        AkSoundEngine.PostEvent("NME_Hit", gameObject);
+        if (_currentHP <= 0)
         {
-            _currentHP--;
-            if(_currentHP <= 0)
-            {
-                GameHandler.Instance.DecreaseEnemyCount();
-                Destroy(this.gameObject);
-            }
+            GameHandler.Instance.DecreaseEnemyCount();
+            AkSoundEngine.PostEvent("NME_Death", gameObject);
+            Destroy(this.gameObject);
         }
     }
 
@@ -82,8 +87,8 @@ public class EnemyHandler : MonoBehaviour
     /// </summary>
     public float GetNormalizedYDistance()
     {
-        UnityEngine.Vector3 differences = (this.transform.position - _crosshairPosition).normalized;
-        return differences.y;
+        float i = this.transform.position.y - _crosshairController.transform.position.y;
+        return i;
     }
 
     /// <summary>
@@ -99,6 +104,8 @@ public class EnemyHandler : MonoBehaviour
         if (collision.TryGetComponent<CrosshairController>(out var crosshair))
         {
             _isCrosshairOnEnemy = true;
+            crosshair.AddEnemyToPotentialLockList(this);
+            AkSoundEngine.PostEvent("NME_Zone_Enter", gameObject);
         }
     }
 
@@ -107,11 +114,13 @@ public class EnemyHandler : MonoBehaviour
         if (collision.TryGetComponent<CrosshairController>(out var crosshair))
         {
             _isCrosshairOnEnemy = false;
+            crosshair.RemoveEnemyFromPotentialLockList(this);
+            AkSoundEngine.PostEvent("NME_Zone_Exit", gameObject);
         }
     }
 
     private void OnDestroy()
     {
-        _crosshairController.OnSlingshotFired -= SlingshotFired;
+        _crosshairController.RemoveEnemyFromPotentialLockList(this);
     }
 }
