@@ -52,6 +52,12 @@ public class GameData : ScriptableObject
     [Tooltip("Y axis range from 0 for enemy to spawn.")]
     public float Yrange = 1000f;
 
+    [Header("SCORE")]
+    [Tooltip("Last registered score this session.")]
+    public int Score = 0;
+    [Tooltip("Last registered highscore this session.")]
+    public int Highscore = 0;
+
 }
 
 
