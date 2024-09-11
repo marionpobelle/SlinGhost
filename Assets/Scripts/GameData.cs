@@ -6,9 +6,9 @@ public class GameData : ScriptableObject
     [Header("Slingshot")]
     [Tooltip("The minimum time between shots.")]
     public float CooldownBetweenShotsInSeconds = 0.5f;
-    [Tooltip("The minimum time between shots.")]
+    [Tooltip("The amount of time in seconds the crosshair needs to be on the crosshair to be considered as locked")]
     public float lockOnDelay = 0.1f;
-    [Tooltip("The minimum time between shots.")]
+    [Tooltip("The amount of time in seconds needed to unlock an enemy when the crossair is not on it anymore")]
     public float delockDelay = 0.7f;
 
     [Header("Enemy")]
