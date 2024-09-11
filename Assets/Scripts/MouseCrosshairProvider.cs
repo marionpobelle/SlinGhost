@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Sets the position of the crosshair controller to the position of the mouse cursor on the plane.
@@ -8,6 +9,7 @@ using UnityEngine;
 /// </summary>
 public class MouseCrosshairProvider : MonoBehaviour
 {
+    [SerializeField] private float _currentStrechAmount;
     private CrosshairController _crosshairController;
     private Camera _mainCamera;
     
@@ -31,6 +33,8 @@ public class MouseCrosshairProvider : MonoBehaviour
         {
             Debug.LogError("Main camera not found in the scene.", this);
         }
+        
+        AkSoundEngine.PostEvent("SLG_Stretch_Start", gameObject);
     }
 
     private void Update()
@@ -49,6 +53,10 @@ public class MouseCrosshairProvider : MonoBehaviour
             _crosshairController.Fire();
             StartCoroutine(CooldownCoroutine());
         }
+
+        _currentStrechAmount += Mouse.current.scroll.y.ReadValue() / 10000;
+        _currentStrechAmount = Mathf.Clamp(_currentStrechAmount, 0, 1);
+        AkSoundEngine.SetRTPCValue("Stretch", _currentStrechAmount);
     }
     
     private IEnumerator CooldownCoroutine()
