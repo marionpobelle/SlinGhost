@@ -17,15 +17,8 @@ public class MenuHandler : MonoBehaviour
 
     [Header("SETTINGS")]
     [SerializeField] private GameObject _settingsPanel;
-    [SerializeField] private Button _difficultyButton;
     [SerializeField] private Button _audioButton;
     [SerializeField] private Button _closeButton;
-
-    [Header("DIFFICULTY")]
-    [SerializeField] private GameObject _difficultyPanel;
-    [SerializeField] private Toggle _wheelchairToggle;
-    [SerializeField] private Slider _difficultySlider;
-    [SerializeField] private Button _difficultyReturnButton;
 
     [Header("AUDIO")]
     [SerializeField] private GameObject _audioPanel;
@@ -49,14 +42,8 @@ public class MenuHandler : MonoBehaviour
         _quitButton.onClick.AddListener(OnQuitClicked);
 
         //SETTINGS
-        _difficultyButton.onClick.AddListener(OnDifficultyClicked);
         _audioButton.onClick.AddListener(OnAudioClicked);
         _closeButton.onClick.AddListener(OnCloseClicked);
-
-        //DIFFICULTY
-        _wheelchairToggle.onValueChanged.AddListener((value) => OnWheelchairModeChanged(_wheelchairToggle));
-        _difficultySlider.onValueChanged.AddListener(OnDifficultyChanged);
-        _difficultyReturnButton.onClick.AddListener(OnDifficultyReturnClicked);
 
         //AUDIO
         _masterSlider.onValueChanged.AddListener(OnMasterChanged);
@@ -66,17 +53,10 @@ public class MenuHandler : MonoBehaviour
         _targetSlider.onValueChanged.AddListener(OnTargetChanged);
         _audioReturnButton.onClick.AddListener(OnAudioReturnClicked);
 
-        //SET UP
-        if (_wheelchairToggle.isOn); //TO DO : Turn on wheelchair mode.
-        else if (!_wheelchairToggle.isOn); //TO DO : Turn off wheelchair mode.
-
-        //TO DO : Use _difficultySlider.value (in between 0 and 1) to set the difficulty.
-
         _currentPanel = _mainPanel;
         _layoutEventSystem.SetSelectedGameObject(_playButton.gameObject);
         _mainPanel.SetActive(true);
         _settingsPanel.SetActive(false);
-        _difficultyPanel.SetActive(false);
         _audioPanel.SetActive(false);
     }
 
@@ -88,14 +68,8 @@ public class MenuHandler : MonoBehaviour
         _quitButton.onClick.RemoveListener(OnQuitClicked);
 
         //SETTINGS
-        _difficultyButton.onClick.RemoveListener(OnDifficultyClicked);
         _audioButton.onClick.RemoveListener(OnAudioClicked);
         _closeButton.onClick.RemoveListener(OnCloseClicked);
-
-        //DIFFICULTY
-        _wheelchairToggle.onValueChanged.RemoveListener((value) => OnWheelchairModeChanged(_wheelchairToggle));
-        _difficultySlider.onValueChanged.RemoveListener(OnDifficultyChanged);
-        _difficultyReturnButton.onClick.RemoveListener(OnDifficultyReturnClicked);
 
         //AUDIO
         _masterSlider.onValueChanged.RemoveListener(OnMasterChanged);
@@ -127,13 +101,6 @@ public class MenuHandler : MonoBehaviour
     }
 
     //SETTINGS
-    private void OnDifficultyClicked()
-    {
-        _currentPanel.SetActive(false);
-        _currentPanel = _difficultyPanel;
-        _difficultyPanel.SetActive(true);
-        _layoutEventSystem.SetSelectedGameObject(_difficultyReturnButton.gameObject);
-    }
 
     private void OnAudioClicked()
     {
@@ -149,32 +116,6 @@ public class MenuHandler : MonoBehaviour
         _currentPanel = _mainPanel;
         _mainPanel.SetActive(true);
         _layoutEventSystem.SetSelectedGameObject(_settingsButton.gameObject);
-    }
-
-    //DIFFICULTY
-    private void OnWheelchairModeChanged(Toggle wheelchairToggle)
-    {
-        if (_wheelchairToggle.isOn)
-        {
-            //TO DO : Turn on wheelchair mode.
-        }
-        else
-        {
-            //TO DO : Turn off wheelchair mode.
-        }
-    }
-
-    private void OnDifficultyChanged(float arg0)
-    {
-        //TO DO : Use _difficultySlider.value (in between 0 and 1) to set the difficulty.
-    }
-
-    private void OnDifficultyReturnClicked()
-    {
-        _currentPanel.SetActive(false);
-        _currentPanel = _settingsPanel;
-        _settingsPanel.SetActive(true);
-        _layoutEventSystem.SetSelectedGameObject(_difficultyButton.gameObject);
     }
 
     //AUDIO

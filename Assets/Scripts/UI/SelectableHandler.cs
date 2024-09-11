@@ -13,6 +13,7 @@ public class SelectableHandler : MonoBehaviour, ISelectHandler
     {
         //AUDIO
         //Play sounds depending on what is the _selectableObject : name or int
+        Debug.Log("Button selected : " + _selectableObject);
         AkSoundEngine.SetSwitch("ButtonType",_selectableObject.ToString(), gameObject);
         AkSoundEngine.PostEvent("OnSelect", gameObject);
     }
@@ -22,12 +23,9 @@ public class SelectableHandler : MonoBehaviour, ISelectHandler
         Play, //int = 0
         Settings, //int = 1
         Quit, // ...
-        Difficulty,
         Audio,
         Close,
         Return,
-        DifficultySlider,
-        WheelchairMode,
         MasterVolume,
         SFXVolume,
         MusicVolume,
