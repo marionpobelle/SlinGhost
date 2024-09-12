@@ -90,7 +90,7 @@ public class EnemyHandler : MonoBehaviour
         {
              _gameData.Score++;
              AkSoundEngine.PostEvent("NME_Death", gameObject);
-             GameHandler.Instance.SpawnEnemy();
+             GameHandler.Instance.StartCoroutine(GameHandler.Instance.SpawnEnemy());
              Destroy(this.gameObject);
         }
     }
@@ -105,7 +105,6 @@ public class EnemyHandler : MonoBehaviour
 
     public float GetScaleRatio()
     {
-        //Debug.Log(Mathf.InverseLerp(.1f, _maxTriggerScale, transform.localScale.x));
         return Mathf.InverseLerp(.1f, _maxTriggerScale, transform.localScale.x);
     }
 

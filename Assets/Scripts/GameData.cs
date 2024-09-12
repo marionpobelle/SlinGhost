@@ -31,6 +31,8 @@ public class GameData : ScriptableObject
     public float Xrange = 1000f;
     [Tooltip("Y axis range from 0 for enemy to spawn.")]
     public float Yrange = 1000f;
+    [Tooltip("Spawn delay in between enemies spawning.")]
+    public float SpawnDelay = 2f;
 
     [Header("SCORE")]
     [Tooltip("Last registered score this session.")]
