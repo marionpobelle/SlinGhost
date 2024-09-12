@@ -130,7 +130,7 @@ Material:
     - _Color_3_darkest: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _splatter_color: {r: 1, g: 0.49801764, b: 0, a: 0}
+    - _splatter_color: {r: 1, g: 0.4117647, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5465112371627809648
 MonoBehaviour:

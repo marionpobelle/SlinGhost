@@ -24,11 +24,11 @@ namespace AK
         static const AkUniqueID NME_ZONE_EXIT = 542453335U;
         static const AkUniqueID ONCLICK = 21544190U;
         static const AkUniqueID ONSELECT = 829756566U;
-        static const AkUniqueID PLAY_WARNING = 1471872846U;
         static const AkUniqueID SCORE_UP = 3248278131U;
         static const AkUniqueID SLG_FIRE = 191779598U;
         static const AkUniqueID SLG_STRETCH_START = 2917512008U;
         static const AkUniqueID SLG_STRETCH_STOP = 4232021140U;
+        static const AkUniqueID WARNING = 2176025603U;
         static const AkUniqueID WIN = 979765101U;
     } // namespace EVENTS
 
@@ -78,6 +78,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID AD_TOGGLE = 3472823137U;
         static const AkUniqueID DISTANCE = 1240670792U;
         static const AkUniqueID DISTANCETOTAL = 985456950U;
         static const AkUniqueID ELEVATION = 2141048674U;

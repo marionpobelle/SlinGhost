@@ -7,7 +7,8 @@ using UnityEngine;
 public class CrosshairController : MonoBehaviour
 {
     public event Action<Vector3> OnSlingshotFired;
-
+    public float CurrentStretchAmout; // Set by the providers
+    
     [SerializeField] List<EnemyHandler> potentialLockOnEnemies = new List<EnemyHandler>();
     [SerializeField] GameData gameData;
     [SerializeField] EnemyHandler enemyToLock;
@@ -17,6 +18,7 @@ public class CrosshairController : MonoBehaviour
     [SerializeField] AnimationCurve projectileAdditionalHeightCurve;
     [SerializeField] float projectileAdditionalHeightMultiplier = 1;
     [SerializeField] Transform projectileInstance;
+    [SerializeField] RotateProjectile rotateProjectile;
 
     bool isLockedOn = false;
     bool isLockChanging = false;
@@ -49,6 +51,7 @@ public class CrosshairController : MonoBehaviour
         //Raycast and launch projectile to hit
 
         ShootProjectile();
+        OnSlingshotFired?.Invoke(transform.position);
     }
 
     void ShootProjectile()
@@ -64,6 +67,7 @@ public class CrosshairController : MonoBehaviour
             projectileTargetPos = transform.position;
         }
 
+        rotateProjectile.StartRotation();
         isShootingProjectile = true;
         projectileStartTime = Time.time;
     }
@@ -98,6 +102,7 @@ public class CrosshairController : MonoBehaviour
         {
             isShootingProjectile = false;
             projectileInstance.position = projectileStartPos.position;
+            rotateProjectile.StopRotation();
             //spawn projectile splatter
         }
     }

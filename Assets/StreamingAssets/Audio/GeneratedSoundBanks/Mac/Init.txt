@@ -5,6 +5,7 @@ State	ID	Name	State Group			Notes
 	89505537	Gameplay	Music			
 	748895195	None	Music			
 	2607556080	Menu	Music			
+	2716678721	Victory	Music			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	

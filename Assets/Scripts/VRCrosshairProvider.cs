@@ -25,10 +25,13 @@ public class VRCrosshairProvider : MonoBehaviour
     private float _lastFireTime;
     private VRControllerRaycastOrigin _raycastOrigin;
 
-    private void Start()
+    /*private void Awake()
     {
+        XRGeneralSettings.Instance.Manager.StopSubsystems();
+        XRGeneralSettings.Instance.Manager.DeinitializeLoader();
         if( XRGeneralSettings.Instance.Manager.activeLoader )
         {
+            Debug.Log("Deinitializing XR SDK, because it already exists");
             XRGeneralSettings.Instance.Manager.StopSubsystems();
             XRGeneralSettings.Instance.Manager.DeinitializeLoader();
         }
@@ -36,8 +39,10 @@ public class VRCrosshairProvider : MonoBehaviour
         XRGeneralSettings.Instance.Manager.InitializeLoaderSync();
         XRGeneralSettings.Instance.Manager.StartSubsystems();
         Debug.Log("XR SDK initialized.", this);
-        
-        
+    }*/
+
+    private void Start()
+    {
         _crosshairController = FindObjectOfType<CrosshairController>();
         if (!_crosshairController)
         {
@@ -139,6 +144,7 @@ public class VRCrosshairProvider : MonoBehaviour
     
     private void UpdateCrosshairPosition()
     {
+        if (!_raycastOrigin) return;
         // Do a raycast from the VR controller to determine the position of the crosshair
         if (Physics.Raycast(_raycastOrigin.transform.position, _raycastOrigin.transform.forward, out var hit))
         {
@@ -152,6 +158,7 @@ public class VRCrosshairProvider : MonoBehaviour
 
     private void UpdateFiring()
     {
+        if (!_pose) return;
         _position = _pose.transform.position;
         _rotation = _pose.transform.eulerAngles;
         
@@ -170,10 +177,13 @@ public class VRCrosshairProvider : MonoBehaviour
     
     private void UpdateStretch()
     {
+        if (!_pose) return;
+        if (!_crosshairController) return;
         float distanceFromIdleToController = Vector3.Distance(_idlePosition, _pose.transform.position);
         float distanceFromIdleToFullStretch = Vector3.Distance(_idlePosition, _fullStretchPosition);
         _currentStrechAmount = distanceFromIdleToController / distanceFromIdleToFullStretch;
         _currentStrechAmount = Mathf.Clamp(_currentStrechAmount, 0, 1);
+        _crosshairController.CurrentStretchAmout = _currentStrechAmount;
         AkSoundEngine.SetRTPCValue("Stretch", _currentStrechAmount);
     }
     
