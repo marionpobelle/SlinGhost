@@ -25,7 +25,10 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _activate_wind: 1
+    - _wind_density: 0.08
+    - _wind_strength: 0.18
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &7304649043580442847
