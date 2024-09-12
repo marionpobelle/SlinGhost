@@ -150,8 +150,6 @@ public class EnemyHandler : MonoBehaviour
 
     private void OnDestroy()
     {
-        _crosshairController.RemoveEnemyFromPotentialLockList(this); 
-        _crosshairController.UpdateDistanceValue(9999);
-        _crosshairController.UpdateCurrentScaleRatio(0);
+        _crosshairController.RemoveEnemyFromPotentialLockList(this);
     }
 }
