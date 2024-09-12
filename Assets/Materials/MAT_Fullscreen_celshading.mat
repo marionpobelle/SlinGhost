@@ -117,9 +117,9 @@ Material:
     - _depth_line: 8.16
     - _depth_line_bias: 2.62
     - _line_thickness: 0.0057
-    - _step_0: 0.84
-    - _step_1: 0.409
-    - _step_2: 0.206
+    - _step_0: 0.195
+    - _step_1: 0.114
+    - _step_2: 0.059
     - _strength: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
@@ -130,7 +130,7 @@ Material:
     - _Color_3_darkest: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _splatter_color: {r: 1, g: 0.49801764, b: 0, a: 0}
+    - _splatter_color: {r: 1, g: 0.4117647, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5465112371627809648
 MonoBehaviour:

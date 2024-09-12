@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: edgedetect
   m_EditorClassIdentifier: 
   m_Active: 1
-  injectionPoint: 600
+  injectionPoint: 450
   fetchColorBuffer: 1
   requirements: 0
   passMaterial: {fileID: 2100000, guid: 7e736dcd082af6747894777301bdbad9, type: 2}
