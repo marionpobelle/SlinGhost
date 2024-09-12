@@ -90,7 +90,7 @@ public class EnemyHandler : MonoBehaviour
         {
              _gameData.Score++;
              AkSoundEngine.PostEvent("NME_Death", gameObject);
-             GameHandler.Instance.SpawnEnemy();
+             GameHandler.Instance.StartCoroutine(GameHandler.Instance.SpawnEnemy());
              Destroy(this.gameObject);
         }
     }
