@@ -20,6 +20,7 @@ public class CrosshairController : MonoBehaviour
     [SerializeField] float projectileAdditionalHeightMultiplier = 1;
     [SerializeField] Transform projectileInstance;
     [SerializeField] RotateProjectile rotateProjectile;
+    [SerializeField] GameObject splatterPrefab;
 
     bool isLockedOn = false;
     bool isLockChanging = false;
@@ -123,10 +124,11 @@ public class CrosshairController : MonoBehaviour
 
         if (posInSimulation >= 1)
         {
+            Instantiate(splatterPrefab, projectilePosition, Quaternion.identity);
             isShootingProjectile = false;
             projectileInstance.position = projectileStartPos.position;
             rotateProjectile.StopRotation();
-            //spawn projectile splatter
+            AkSoundEngine.PostEvent("NME_Hit", gameObject);
         }
     }
 
