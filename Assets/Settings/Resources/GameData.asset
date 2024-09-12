@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CooldownBetweenShotsInSeconds: 1
   lockOnDelay: 0.1
-  delockDelay: 0.5
+  delockDelay: 1
   EnemyDefaultScale: 0.1
   EnemyMinTriggerScale: 0.2
   EnemyMaxTriggerScale: 0.3
   EnemyMinScaleStep: 0.00005
   EnemyMaxScaleStep: 0.0001
   EnemyHP: 1
-  ColliderRadius: 1.2
+  ColliderRadius: 1.7
   Xrange: 0.7
   Yrange: 0.7
-  Score: 10
+  SpawnDelay: 2
+  Score: 4
