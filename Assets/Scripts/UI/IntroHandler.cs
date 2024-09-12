@@ -21,6 +21,8 @@ public class IntroHandler : MonoBehaviour
 
     private IEnumerator PlayIntro()
     {
+        AkSoundEngine.SetState("Music", "Menu");
+        AkSoundEngine.PostEvent("Music", gameObject);
         FadeIn(_p20Image);
         yield return new WaitForSeconds(_fadeTime);
         FadeOut(_p20Image);
