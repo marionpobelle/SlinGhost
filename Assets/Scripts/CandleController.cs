@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class CandleController : MonoBehaviour
 {
+    [SerializeField] bool enableLEDs;
     [SerializeField] private CrosshairController crosshairController;
     [SerializeField] private SerialController serialController;
     float nextAllowedMessage;
 
     private void Update()
     {
+        if (enableLEDs)
         UpdateLightIntensity(crosshairController.CurrentEnemyRatio);
     }
 
@@ -18,16 +20,21 @@ public class CandleController : MonoBehaviour
     {
         if (Time.time > 1 && Time.time > nextAllowedMessage)
         {
-            int lightStrength = Mathf.Clamp(
-                Mathf.RoundToInt(
-                    Mathf.Lerp(
-                        0, 
-                        255, 
-                        intensityRatio)),
-                    0,
-                    255);
+            string message;
+            if (intensityRatio <.3f)
+            {
+                message = "0";
+            }
+            else if (intensityRatio < .3f)
+            {
+                message = "1";
+            }
+            else
+            {
+                message = "2";
+            }
 
-            serialController.SendSerialMessage(lightStrength.ToString());
+            serialController.SendSerialMessage(message);
             nextAllowedMessage = Time.time + .1f;
         }
     }
