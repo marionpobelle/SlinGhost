@@ -570,6 +570,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &534377610 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 531399724833359168, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+    type: 3}
+  m_PrefabInstance: {fileID: 924834794}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &651584591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -789,12 +795,33 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8458657247322464488, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.073
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458657247322464488, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458657247322464488, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.441
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4002182649754319474, guid: 99b4e24b3f657834fa39fb9aa85fc5da, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99b4e24b3f657834fa39fb9aa85fc5da, type: 3}
+--- !u!4 &924834795 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8458657247322464488, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+    type: 3}
+  m_PrefabInstance: {fileID: 924834794}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1015044334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d45cdd875d437a9c71d4744b8c6ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentStrechAmount: 0
 --- !u!4 &1413446859
 Transform:
   m_ObjectHideFlags: 0
@@ -1111,6 +1139,16 @@ PrefabInstance:
       propertyPath: lockOffDuration
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4392302011405644223, guid: 3cc3f9196f8785c48927270b46fb19e7,
+        type: 3}
+      propertyPath: projectileInstance
+      value: 
+      objectReference: {fileID: 534377610}
+    - target: {fileID: 4392302011405644223, guid: 3cc3f9196f8785c48927270b46fb19e7,
+        type: 3}
+      propertyPath: projectileStartPos
+      value: 
+      objectReference: {fileID: 924834795}
     - target: {fileID: 7502351424634469743, guid: 3cc3f9196f8785c48927270b46fb19e7,
         type: 3}
       propertyPath: m_LocalPosition.x
