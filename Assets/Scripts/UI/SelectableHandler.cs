@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SelectableHandler : MonoBehaviour, ISelectHandler
+public class SelectableHandler : MonoBehaviour, ISelectHandler, IPointerEnterHandler
 {
     [SerializeField] private SelectableObject _selectableObject;
 
@@ -15,6 +15,13 @@ public class SelectableHandler : MonoBehaviour, ISelectHandler
         //Play sounds depending on what is the _selectableObject : name or int
         Debug.Log("Button selected : " + _selectableObject);
         AkSoundEngine.SetSwitch("ButtonType",_selectableObject.ToString(), gameObject);
+        AkSoundEngine.PostEvent("OnSelect", gameObject);
+    }
+
+    public void OnPointerEnter(PointerEventData pointerEventData)
+    {
+        Debug.Log("Cursor Entering " + name + " GameObject");
+        AkSoundEngine.SetSwitch("ButtonType", _selectableObject.ToString(), gameObject);
         AkSoundEngine.PostEvent("OnSelect", gameObject);
     }
 
