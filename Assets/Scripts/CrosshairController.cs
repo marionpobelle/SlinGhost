@@ -135,7 +135,9 @@ public class CrosshairController : MonoBehaviour
 
         if (posInSimulation >= 1)
         {
-            Instantiate(splatterPrefab, projectilePosition, Quaternion.identity);
+            var quaternion = Quaternion.Euler(90, 0, 0);
+            var splatterInstance = Instantiate(splatterPrefab, projectilePosition + new Vector3(0,2,0), quaternion);
+            // PLAY SPLATTER SOUND HERE
             isShootingProjectile = false;
             projectileInstance.position = projectileStartPos.position;
             rotateProjectile.StopRotation();
