@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Unity.CodeEditor;
 using UnityEditor;
-using UnityEngine.Windows.WebCam;
+using UnityEngine;
 
 [CustomEditor(typeof(EnemyHandler))]
 public class EnemyEditor : Editor

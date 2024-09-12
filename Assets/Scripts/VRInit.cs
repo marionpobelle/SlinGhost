@@ -1,6 +1,6 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Management;
-using System.Collections;
 
 public class VRInit : MonoBehaviour {
 
