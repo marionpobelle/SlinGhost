@@ -22,7 +22,8 @@ public class GameData : ScriptableObject
     public float EnemyMaxScaleStep = 2f;
     [Tooltip("How many enemies need to be killed until the difficutly increases.")]
     public int EnemiesUntilDifficultyIncrease = 3;
-    
+    [Tooltip("Maximum step size of the enemy.")]
+    public int MaxStep = 5;
 
 
     [Tooltip("Enemy health points default.")]

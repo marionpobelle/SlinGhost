@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class EnemyHandler : MonoBehaviour
 {
@@ -84,6 +85,13 @@ public class EnemyHandler : MonoBehaviour
         else
         {
             _scaleStep = _gameData.EnemyMinScaleStep * stepMultiplier; //Random.Range(_gameData.EnemyMinScaleStep, _gameData.EnemyMaxScaleStep);
+
+            if (stepMultiplier >= _gameData.MaxStep + 1)
+            {
+                _scaleStep = _gameData.EnemyMinScaleStep * _gameData.MaxStep;
+                stepMultiplier = _gameData.MaxStep;
+            }
+            
         }
 
         _currentSize = (GetPercent(_maxTriggerScale, transform.localScale.x)).ToString();

@@ -20,9 +20,11 @@ MonoBehaviour:
   EnemyMaxTriggerScale: 0.3
   EnemyMinScaleStep: 0.00005
   EnemyMaxScaleStep: 0.0001
+  EnemiesUntilDifficultyIncrease: 3
+  MaxStep: 5
   EnemyHP: 1
   ColliderRadius: 1.7
   Xrange: 0.7
   Yrange: 0.7
   SpawnDelay: 2
-  Score: 4
+  Score: 7
