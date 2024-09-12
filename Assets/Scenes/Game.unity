@@ -1136,11 +1136,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4392302011405644223, guid: 3cc3f9196f8785c48927270b46fb19e7,
         type: 3}
-      propertyPath: lockOffDuration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4392302011405644223, guid: 3cc3f9196f8785c48927270b46fb19e7,
-        type: 3}
       propertyPath: projectileInstance
       value: 
       objectReference: {fileID: 534377610}
