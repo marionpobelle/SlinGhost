@@ -9,7 +9,8 @@ public class CandleController : MonoBehaviour
 
     private void Update()
     {
-        if (enableLEDs) UpdateLightIntensity(crosshairController.CurrentEnemyRatio);
+        if (enableLEDs) 
+            UpdateLightIntensity(crosshairController.CurrentEnemyRatio);
     }
 
     public void UpdateLightIntensity(float intensityRatio)
@@ -21,7 +22,7 @@ public class CandleController : MonoBehaviour
             {
                 message = "0";
             }
-            else if (intensityRatio < .3f)
+            else if (intensityRatio < .6f)
             {
                 message = "1";
             }
