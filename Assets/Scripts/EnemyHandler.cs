@@ -17,6 +17,8 @@ public class EnemyHandler : MonoBehaviour
 
     [SerializeField] private string _currentSize;
     public SphereCollider EnemyCollider;
+    
+    private EnemySpawnPoint _spawnPoint; // Only used for Z positioning of the enemy on spawn
 
     private void Awake()
     {
@@ -34,7 +36,18 @@ public class EnemyHandler : MonoBehaviour
         }
         float randomCoordX =  Random.Range(-_gameData.Xrange, _gameData.Xrange);
         float randomCoordY =  Random.Range(-_gameData.Yrange, _gameData.Yrange);
-        transform.position = new UnityEngine.Vector3(randomCoordY, randomCoordX, 0);
+        
+        var enemySpawnPoint = FindObjectOfType<EnemySpawnPoint>();
+        if (enemySpawnPoint)
+        {
+            transform.position = new UnityEngine.Vector3(randomCoordY, randomCoordX, enemySpawnPoint.transform.position.z);
+        }
+        else
+        {
+            transform.position = new UnityEngine.Vector3(randomCoordY, randomCoordX, 0);
+        }
+        
+        
         //_timeOffset = Random.Range(0f, 100f);
     }
 
