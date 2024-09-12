@@ -142,7 +142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5678270446175179270}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.02441166, y: 0.92508703, z: 0.047618896, w: 0.37596613}
+  m_LocalRotation: {x: 0.024415033, y: 0.9250885, z: 0.04761565, w: 0.3759627}
   m_LocalPosition: {x: -0.7887785, y: -0.43194067, z: 2.058}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   _offsetRotation: {x: 0, y: 0, z: 0}
   _position: {x: 0, y: 0, z: 0}
   _rotation: {x: 0, y: 0, z: 0}
-  _fireThreshold: 5
+  _fireThreshold: 3
   _cooldown: 1
   _currentVelocity: {x: 0, y: 0, z: 0}
   _currentVelocityMagnitude: 0

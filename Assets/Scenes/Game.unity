@@ -1065,11 +1065,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: VRCrosshairProvider
       objectReference: {fileID: 0}
-    - target: {fileID: 5678270446175179270, guid: 7a2859a93bebdda4bb7b4bbf201fb62d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
