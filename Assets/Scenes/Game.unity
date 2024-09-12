@@ -1319,6 +1319,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dfc368124d542028feb9d38a4c39559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1234799500
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5109878375240541876, guid: c1c949a7d0ad5934f9e5fb1b10f4b2f5,
+        type: 3}
+      propertyPath: crosshairController
+      value: 
+      objectReference: {fileID: 1088107576}
+    - target: {fileID: 5644903510569777281, guid: c1c949a7d0ad5934f9e5fb1b10f4b2f5,
+        type: 3}
+      propertyPath: m_Name
+      value: CandleController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076218240540122744, guid: c1c949a7d0ad5934f9e5fb1b10f4b2f5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076218240540122744, guid: c1c949a7d0ad5934f9e5fb1b10f4b2f5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076218240540122744, guid: c1c949a7d0ad5934f9e5fb1b10f4b2f5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076218240540122744, guid: c1c949a7d0ad5934f9e5fb1b10f4b2f5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076218240540122744, guid: c1c949a7d0ad5934f9e5fb1b10f4b2f5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076218240540122744, guid: c1c949a7d0ad5934f9e5fb1b10f4b2f5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076218240540122744, guid: c1c949a7d0ad5934f9e5fb1b10f4b2f5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076218240540122744, guid: c1c949a7d0ad5934f9e5fb1b10f4b2f5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076218240540122744, guid: c1c949a7d0ad5934f9e5fb1b10f4b2f5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076218240540122744, guid: c1c949a7d0ad5934f9e5fb1b10f4b2f5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c1c949a7d0ad5934f9e5fb1b10f4b2f5, type: 3}
 --- !u!1 &1413446857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,29 +1798,38 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: 8.44911
+        outSlope: 8.44911
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
-        outWeight: 0
+        outWeight: 0.1815171
       - serializedVersion: 3
-        time: 0.5012207
-        value: 1
-        inSlope: -0.023939064
-        outSlope: -0.023939064
+        time: 0.25
+        value: 1.0043564
+        inSlope: 0.0067627435
+        outSlope: 0.0067627435
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.22963667
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.75
+        value: -1
+        inSlope: 0.008887371
+        outSlope: 0.008887371
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
         value: 0
-        inSlope: -0.0098906
-        outSlope: -0.0098906
+        inSlope: 4.9648833
+        outSlope: 4.9648833
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.14367354
+        inWeight: 0.24559522
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -1783,7 +1865,7 @@ MonoBehaviour:
     DissipationMode: 2
     DissipationDistance: 100
     PropagationSpeed: 343
-  DefaultVelocity: {x: 0, y: -0.01, z: 0}
+  DefaultVelocity: {x: -0.01, y: -0.01, z: 0}
 --- !u!1001 &2052690734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1882,4 +1964,4 @@ SceneRoots:
   - {fileID: 59750749}
   - {fileID: 755783533}
   - {fileID: 1413446859}
-  - {fileID: 620200041}
+  - {fileID: 1234799500}
