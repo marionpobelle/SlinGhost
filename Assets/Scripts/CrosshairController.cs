@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,18 +31,6 @@ public class CrosshairController : MonoBehaviour
     public float DistanceFromEnemy;
     public float CurrentEnemyRatio;
 
-    private AkAudioListener _crosshairAudioListener;
-    private SpriteRenderer _crosshairSpriteRenderer;
-
-    private void Awake()
-    {
-        _crosshairAudioListener = GetComponentInChildren<AkAudioListener>();
-        if (_crosshairAudioListener == null) Debug.LogError("Coudln't retrieve Crosshair Audiolistener !");
-
-        _crosshairSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        if (_crosshairSpriteRenderer == null) Debug.LogError("Coudln't retrieve Crosshair SpriteRenderer !");
-    }
-
     public void Fire()
     {
         if (nextAllowedFire > Time.time)
@@ -68,7 +55,6 @@ public class CrosshairController : MonoBehaviour
 
     void ShootProjectile()
     {
-        StartCoroutine(CrosshairCouldown());
         if (lockedOnEnemy)
         {
             projectileTargetPos = lockedOnEnemy.transform.position;
@@ -82,19 +68,6 @@ public class CrosshairController : MonoBehaviour
 
         isShootingProjectile = true;
         projectileStartTime = Time.time;
-    }
-
-    private IEnumerator CrosshairCouldown()
-    {
-        
-        GameHandler.Instance.GameHandlerAudioListener.enabled = true;
-        _crosshairAudioListener.enabled = false;
-        _crosshairSpriteRenderer.enabled = false;
-        yield return new WaitForSeconds(gameData.CooldownBetweenShotsInSeconds);
-        _crosshairSpriteRenderer.enabled = true;
-        _crosshairAudioListener.enabled = true;
-        GameHandler.Instance.GameHandlerAudioListener.enabled = false;
-        
     }
 
     private void Update()

@@ -132,11 +132,11 @@ public class MenuHandler : MonoBehaviour
     {
         if (_voiceToggle.isOn)
         {
-            AkSoundEngine.SetRTPCValue("AD_Toggle", 1);
+            //TO DO : Turn on voice over mode
         }
         else
         {
-            AkSoundEngine.SetRTPCValue("AD_Toggle", 0);
+            //TO DO : Turn off voice over mode
         }
     }
 
@@ -149,7 +149,6 @@ public class MenuHandler : MonoBehaviour
     private void OnSFXChanged(float arg0)
     {
         AkSoundEngine.SetRTPCValue("SFX_Level", _sfxSlider.value);
-        AkSoundEngine.PostEvent("NME_Hit", gameObject);
     }
 
     private void OnMusicChanged(float arg0)
