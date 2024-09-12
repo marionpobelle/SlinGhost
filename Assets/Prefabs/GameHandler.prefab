@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1261642361012995014}
   - component: {fileID: 1633183884216898133}
+  - component: {fileID: 6051517230096867149}
+  - component: {fileID: 4927617867571042767}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -46,3 +48,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 6096294936691078542, guid: 4832f28c4aa935b428627a5f39983c51,
     type: 3}
+  EnemyCount: 0
+  GameHandlerAudioListener: {fileID: 0}
+--- !u!114 &6051517230096867149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9165412992046951253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fa95e629b731c4e863c25aebd8dd81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &4927617867571042767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9165412992046951253}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b99c8140f696148b82a530f609d874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
