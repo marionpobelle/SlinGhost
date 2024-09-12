@@ -29,7 +29,8 @@ Material:
     - _activate_wind: 1
     - _wind_density: 0.08
     - _wind_strength: 0.18
-    m_Colors: []
+    m_Colors:
+    - _wind_movement: {r: 6.61, g: -3.51, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7304649043580442847
 MonoBehaviour:
