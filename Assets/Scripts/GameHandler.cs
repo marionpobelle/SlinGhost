@@ -10,6 +10,7 @@ public class GameHandler : MonoBehaviour
     public static GameHandler Instance;
     private GameData _gameData;
     public int EnemyCount;
+    public AkAudioListener GameHandlerAudioListener;
 
     private void Awake()
     {
@@ -17,6 +18,8 @@ public class GameHandler : MonoBehaviour
         _gameData = Data.GameData;
         EnemyCount = 0;
         _gameData.Score = 0;
+        GameHandlerAudioListener = GetComponentInChildren<AkAudioListener>();
+        if (GameHandlerAudioListener == null) Debug.LogError("Coudln't retrieve Game Handler Audiolistener !");
     }
 
     private void Start()

@@ -91,6 +91,9 @@ MonoBehaviour:
     m_RotationOrder: 4
   projectileAdditionalHeightMultiplier: 0.2
   projectileInstance: {fileID: 0}
+  rotateProjectile: {fileID: 0}
+  splatterPrefab: {fileID: 6035354345898411767, guid: 4845af7facc106a49b8ecd778559de74,
+    type: 3}
   DistanceFromEnemy: 0
   CurrentEnemyRatio: 0
 --- !u!135 &7690307478715901432
