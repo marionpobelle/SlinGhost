@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{CF3B6F73-0D05-B2C8-FAF5-0D68199A83D8}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{59A4A1AA-6C84-EEB2-D682-2D9B49922EFA}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -43,6 +43,7 @@
 				<GameParameter Id="3203397129" Name="SS_Air_TimeOfDay"/>
 				<GameParameter Id="3238454324" Name="Stretch"/>
 				<GameParameter Id="3394486108" Name="NME_Level"/>
+				<GameParameter Id="3472823137" Name="AD_Toggle"/>
 				<GameParameter Id="3715662592" Name="SS_Air_Storm"/>
 				<GameParameter Id="3847924954" Name="SS_Air_Presence"/>
 				<GameParameter Id="3966939032" Name="TriggerZone_Toggle"/>
@@ -208,7 +209,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{82ED0E31-BC35-6F4D-A0CC-C566B7A6220D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2C50BFF4-7815-7A85-AF5B-F6D3AB57A10E}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -315,6 +316,10 @@
 				<File Id="509451948" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-001.wav</ShortName>
 					<CachePath>SFX/Ghost_Laughter-001_2A2787AB.wem</CachePath>
+				</File>
+				<File Id="523736070" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SLG_Stretch-002.wav</ShortName>
+					<CachePath>SFX/SLG_Stretch-002_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="550476572" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-019.wav</ShortName>
@@ -684,6 +689,7 @@
 				<Event Id="2917512008" Name="SLG_Stretch_Start" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="472132911"/>
+						<MediaRef Id="523736070"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4232021140" Name="SLG_Stretch_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -698,6 +704,7 @@
 				<GameParameter Id="1240670792" Name="Distance"/>
 				<GameParameter Id="2141048674" Name="Elevation"/>
 				<GameParameter Id="3238454324" Name="Stretch"/>
+				<GameParameter Id="3472823137" Name="AD_Toggle"/>
 				<GameParameter Id="3966939032" Name="TriggerZone_Toggle"/>
 			</GameParameters>
 			<StateGroups>
@@ -732,5 +739,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DAF5021B-E319-ECFB-ABEF-715438F1D5F9}</FileHash>
+	<FileHash>{EFD25EA0-EEBD-472A-26F2-F94A52232236}</FileHash>
 </SoundBanksInfo>

@@ -56,6 +56,7 @@ public class MouseCrosshairProvider : MonoBehaviour
 
         _currentStrechAmount += Mouse.current.scroll.y.ReadValue() / 10000;
         _currentStrechAmount = Mathf.Clamp(_currentStrechAmount, 0, 1);
+        Debug.Log(_currentStrechAmount);
         AkSoundEngine.SetRTPCValue("Stretch", _currentStrechAmount);
     }
     

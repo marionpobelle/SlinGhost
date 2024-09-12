@@ -78,6 +78,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID AD_TOGGLE = 3472823137U;
         static const AkUniqueID DISTANCE = 1240670792U;
         static const AkUniqueID DISTANCETOTAL = 985456950U;
         static const AkUniqueID ELEVATION = 2141048674U;
