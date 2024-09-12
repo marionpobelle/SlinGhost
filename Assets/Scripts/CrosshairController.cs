@@ -86,11 +86,15 @@ public class CrosshairController : MonoBehaviour
 
     private IEnumerator CrosshairCouldown()
     {
-        //AUDIO TO DO : use GameHandler.Instance.GameHandlerAudioListener && _crosshairAudioListener
+        
+        GameHandler.Instance.GameHandlerAudioListener.enabled = true;
+        _crosshairAudioListener.enabled = false;
         _crosshairSpriteRenderer.enabled = false;
         yield return new WaitForSeconds(gameData.CooldownBetweenShotsInSeconds);
         _crosshairSpriteRenderer.enabled = true;
-        //AUDIO TO DO : use GameHandler.Instance.GameHandlerAudioListener && _crosshairAudioListener
+        _crosshairAudioListener.enabled = true;
+        GameHandler.Instance.GameHandlerAudioListener.enabled = false;
+        
     }
 
     private void Update()

@@ -6,9 +6,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	595342759	NME_Spawn			\Default Work Unit\NME_Spawn	
 	829756566	OnSelect			\Default Work Unit\OnSelect	
 	979765101	Win			\Default Work Unit\Win	
-	1471872846	Play_Warning			\Default Work Unit\Play_Warning	
 	1559875400	Back			\Default Work Unit\Back	
 	1706673613	NME_Hit			\Default Work Unit\NME_Hit	
+	2176025603	Warning			\Default Work Unit\Warning	
 	2537597519	NME_Zone_Enter			\Default Work Unit\NME_Zone_Enter	
 	2917512008	SLG_Stretch_Start			\Default Work Unit\SLG_Stretch_Start	
 	3248278131	Score_Up			\Default Work Unit\Score_Up	

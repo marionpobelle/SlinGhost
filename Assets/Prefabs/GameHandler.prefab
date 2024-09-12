@@ -49,6 +49,7 @@ MonoBehaviour:
   _enemyPrefab: {fileID: 6096294936691078542, guid: 4832f28c4aa935b428627a5f39983c51,
     type: 3}
   EnemyCount: 0
+  GameHandlerAudioListener: {fileID: 0}
 --- !u!114 &6051517230096867149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,5 +84,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b99c8140f696148b82a530f609d874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 0
+  isDefaultListener: 1
   listenerId: 0
