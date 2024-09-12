@@ -20,6 +20,10 @@ public class GameData : ScriptableObject
     [Tooltip("By how much the enemy moves each step range for random value.")]
     public float EnemyMinScaleStep = 1f;
     public float EnemyMaxScaleStep = 2f;
+    [Tooltip("How many enemies need to be killed until the difficutly increases.")]
+    public int EnemiesUntilDifficultyIncrease = 3;
+    
+
 
     [Tooltip("Enemy health points default.")]
     public int EnemyHP = 1;
