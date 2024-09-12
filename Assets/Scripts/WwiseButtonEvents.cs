@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Event = AK.Wwise.Event;
 
 public class WwiseButtonEvents : MonoBehaviour
 {
-    [SerializeField] AK.Wwise.Event[] _events;
+    [SerializeField] Event[] _events;
 
     public void PlayWwiseEvent(int i)
     {

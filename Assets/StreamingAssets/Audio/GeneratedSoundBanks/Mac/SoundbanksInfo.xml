@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1EE34B1C-1ECC-7245-F14C-D7EDA733E552}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{85C6F336-DBA1-6BA8-E03E-D42AFC574529}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -22,7 +22,6 @@
 				<Bus Id="52442795" Name="Binaural"/>
 				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="1551306167" Name="UI"/>
-				<Bus Id="2804736953" Name="Passthrough"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
@@ -209,7 +208,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{56317083-956C-0CF3-A035-F4E17DEC2447}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{DBEDDDC2-45F6-EE3F-75A9-CF2364F76931}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -485,7 +484,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="1706673613" Name="NME_Hit" DurationType="OneShot" DurationMin="1.2760504" DurationMax="1.7317778">
+				<Event Id="1706673613" Name="NME_Hit" DurationType="OneShot" DurationMin="0.8760504" DurationMax="1.3317778">
 					<MediaRefs>
 						<MediaRef Id="397276058"/>
 						<MediaRef Id="397658424"/>
@@ -736,5 +735,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3D77946A-91A7-68B7-107B-AA04AE3DAC53}</FileHash>
+	<FileHash>{0BC015D6-90C8-8A53-AFA6-019A6C781040}</FileHash>
 </SoundBanksInfo>
