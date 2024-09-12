@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PluginInfo Platform="Mac" BasePlatform="Mac">
+	<PluginLibs>
+		<PluginLib LibName="Wwise Parametric EQ" LibId="6881283" Type="Effect" DLL="AkParametricEQ" StaticLib="AkParametricEQFX"/>
+		<PluginLib LibName="Wwise Compressor" LibId="7077891" Type="Effect" DLL="AkCompressor" StaticLib="AkCompressorFX"/>
+		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
+		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
+	</PluginLibs>
+	<FileHash>{4F06765B-72C6-27BB-15C7-62D9B3B03720}</FileHash>
+</PluginInfo>

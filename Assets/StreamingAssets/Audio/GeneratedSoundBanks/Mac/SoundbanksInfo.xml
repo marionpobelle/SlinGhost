@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>E:/Slingshot/HyperSlingshot</ProjectRoot>
+		<SourceFilesRoot>E:/Slingshot/HyperSlingshot/.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>E:/Slingshot/HyperSlingshot/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1EE34B1C-1ECC-7245-F14C-D7EDA733E552}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="52442795" Name="Binaural"/>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="2804736953" Name="Passthrough"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="683874092" Name="NME_Scale"/>
+				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
+				<GameParameter Id="985456950" Name="DistanceTotal"/>
+				<GameParameter Id="1029930033" Name="SS_Air_Fury"/>
+				<GameParameter Id="1240670792" Name="Distance"/>
+				<GameParameter Id="1351367891" Name="SS_Air_Fear"/>
+				<GameParameter Id="1394542388" Name="UI_Level"/>
+				<GameParameter Id="2141048674" Name="Elevation"/>
+				<GameParameter Id="2177735725" Name="Music_Level"/>
+				<GameParameter Id="2648548617" Name="SS_Air_Month"/>
+				<GameParameter Id="2780599685" Name="SFX_Level"/>
+				<GameParameter Id="3002758120" Name="SS_Air_Freefall"/>
+				<GameParameter Id="3074696722" Name="SS_Air_Size"/>
+				<GameParameter Id="3203397129" Name="SS_Air_TimeOfDay"/>
+				<GameParameter Id="3238454324" Name="Stretch"/>
+				<GameParameter Id="3394486108" Name="NME_Level"/>
+				<GameParameter Id="3472823137" Name="AD_Toggle"/>
+				<GameParameter Id="3715662592" Name="SS_Air_Storm"/>
+				<GameParameter Id="3847924954" Name="SS_Air_Presence"/>
+				<GameParameter Id="3966939032" Name="TriggerZone_Toggle"/>
+				<GameParameter Id="4160247818" Name="SS_Air_Turbulence"/>
+				<GameParameter Id="4245676100" Name="Master_Level"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3991942870" Name="Music">
+					<States>
+						<State Id="89505537" Name="Gameplay"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+						<State Id="2716678721" Name="Victory"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="3399545293" Name="ButtonType">
+					<Switches>
+						<Switch Id="290942698" Name="Difficulty"/>
+						<Switch Id="849915761" Name="DifficultySlider"/>
+						<Switch Id="988953028" Name="SFXVolume"/>
+						<Switch Id="1069811801" Name="Audio"/>
+						<Switch Id="1256202815" Name="Play"/>
+						<Switch Id="1451272583" Name="Close"/>
+						<Switch Id="2346531308" Name="MusicVolume"/>
+						<Switch Id="2910527622" Name="Settings"/>
+						<Switch Id="2918011349" Name="MasterVolume"/>
+						<Switch Id="3260108748" Name="TargetVolume"/>
+						<Switch Id="3415057477" Name="UIVolume"/>
+						<Switch Id="3859834159" Name="Return"/>
+						<Switch Id="3930794392" Name="Quit"/>
+						<Switch Id="4054299888" Name="WheelchairMode"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+			<AcousticTextures>
+				<AcousticTexture Id="504532776" Name="Brick">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="18"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="23"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="513139656" Name="Mountain">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="841620460" Name="Concrete">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="14"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1755085759" Name="Wood_Deep">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="1"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="8"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1873957695" Name="Anechoic">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1970351858" Name="Fabric">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="3"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="13"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="48"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="72"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2058049674" Name="Wood">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2412606308" Name="Carpet">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="46"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="45"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="76"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2637588553" Name="Tile">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="67"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="41"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2928161104" Name="Curtains">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="7"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="60"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="84"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3195498748" Name="Cork_Tiles">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="14"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="30"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="73"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3670307564" Name="Drywall">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="2"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4168643977" Name="Acoustic_Banner">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="37"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4262522749" Name="Wood_Bright">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="10"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="9"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+			</AcousticTextures>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{56317083-956C-0CF3-A035-F4E17DEC2447}">
+			<ShortName>main</ShortName>
+			<Path>main.bnk</Path>
+			<Media>
+				<File Id="15632848" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Move-004.wav</ShortName>
+					<CachePath>SFX/Ghost_Move-004_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="24627663" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TriggerZone-002.wav</ShortName>
+					<CachePath>SFX/TriggerZone-002_620B9533.wem</CachePath>
+				</File>
+				<File Id="30005427" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-014.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-014_818F3B66.wem</CachePath>
+				</File>
+				<File Id="56179963" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-002.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-002_818F3B66.wem</CachePath>
+				</File>
+				<File Id="65663430" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 13.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 13_818F3B66.wem</CachePath>
+				</File>
+				<File Id="77050662" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-018.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-018_818F3B66.wem</CachePath>
+				</File>
+				<File Id="83890821" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Move-002.wav</ShortName>
+					<CachePath>SFX/Ghost_Move-002_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="94734955" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-005.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-005_818F3B66.wem</CachePath>
+				</File>
+				<File Id="98849893" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-013.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-013_818F3B66.wem</CachePath>
+				</File>
+				<File Id="107380109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 4.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="128907944" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 8.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 8_818F3B66.wem</CachePath>
+				</File>
+				<File Id="167367052" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Move-003.wav</ShortName>
+					<CachePath>SFX/Ghost_Move-003_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="201521654" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-020.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-020_818F3B66.wem</CachePath>
+				</File>
+				<File Id="231964784" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-021.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-021_818F3B66.wem</CachePath>
+				</File>
+				<File Id="236303231" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Move-001.wav</ShortName>
+					<CachePath>SFX/Ghost_Move-001_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="294114357" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Move-005.wav</ShortName>
+					<CachePath>SFX/Ghost_Move-005_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="336006796" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 11.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 11_818F3B66.wem</CachePath>
+				</File>
+				<File Id="339661756" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-008.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-008_818F3B66.wem</CachePath>
+				</File>
+				<File Id="397276058" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy_Hit-001.wav</ShortName>
+					<CachePath>SFX/Enemy_Hit-001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="397658424" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy_Hit-003.wav</ShortName>
+					<CachePath>SFX/Enemy_Hit-003_818F3B66.wem</CachePath>
+				</File>
+				<File Id="400722481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Move-006.wav</ShortName>
+					<CachePath>SFX/Ghost_Move-006_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="438065145" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-007.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-007_818F3B66.wem</CachePath>
+				</File>
+				<File Id="440802488" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 5.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="472132911" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SLG_Stretch-001.wav</ShortName>
+					<CachePath>SFX/SLG_Stretch-001_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="473012841" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 10.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 10_818F3B66.wem</CachePath>
+				</File>
+				<File Id="509451948" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-001.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-001_2A2787AB.wem</CachePath>
+				</File>
+				<File Id="523736070" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SLG_Stretch-002.wav</ShortName>
+					<CachePath>SFX/SLG_Stretch-002_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="550476572" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-019.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-019_818F3B66.wem</CachePath>
+				</File>
+				<File Id="555763139" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy_Hit-002.wav</ShortName>
+					<CachePath>SFX/Enemy_Hit-002_818F3B66.wem</CachePath>
+				</File>
+				<File Id="576794218" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SLG_Fire.wav</ShortName>
+					<CachePath>SFX/SLG_Fire_818F3B66.wem</CachePath>
+				</File>
+				<File Id="661831790" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-016.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-016_818F3B66.wem</CachePath>
+				</File>
+				<File Id="668258626" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 2.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="731602718" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-015.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-015_818F3B66.wem</CachePath>
+				</File>
+				<File Id="744643511" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Warning.wav</ShortName>
+					<CachePath>SFX/Warning_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="774271890" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VictoryStinger.wav</ShortName>
+					<CachePath>SFX/VictoryStinger_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="777307637" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-006.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-006_818F3B66.wem</CachePath>
+				</File>
+				<File Id="787034331" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-022.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-022_818F3B66.wem</CachePath>
+				</File>
+				<File Id="803365634" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B_818F3B66.wem</CachePath>
+				</File>
+				<File Id="837476499" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slinghost_V1.wav</ShortName>
+					<CachePath>SFX/Slinghost_V1_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="846697140" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 7.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="870557716" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 12.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 12_818F3B66.wem</CachePath>
+				</File>
+				<File Id="889594309" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TriggerZone-001.wav</ShortName>
+					<CachePath>SFX/TriggerZone-001_807DD976.wem</CachePath>
+				</File>
+				<File Id="900162309" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 9.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 9_818F3B66.wem</CachePath>
+				</File>
+				<File Id="902172471" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu_Segment (1).wav</ShortName>
+					<CachePath>SFX/Menu_Segment (1)_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="912402991" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 14.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 14_818F3B66.wem</CachePath>
+				</File>
+				<File Id="912744587" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-009.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-009_818F3B66.wem</CachePath>
+				</File>
+				<File Id="933500569" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-004.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-004_CAB7C0BB.wem</CachePath>
+				</File>
+				<File Id="940154327" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-003.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-003_818F3B66.wem</CachePath>
+				</File>
+				<File Id="949619428" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Portal spawn.wav</ShortName>
+					<CachePath>SFX/Portal spawn_818F3B66.wem</CachePath>
+				</File>
+				<File Id="965093550" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Score_Up-001.wav</ShortName>
+					<CachePath>SFX/Score_Up-001_A9CB3C46.wem</CachePath>
+				</File>
+				<File Id="974327661" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ghost_Laughter-017.wav</ShortName>
+					<CachePath>SFX/Ghost_Laughter-017_818F3B66.wem</CachePath>
+				</File>
+				<File Id="995461531" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 6.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1004975446" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy_Hit-004.wav</ShortName>
+					<CachePath>SFX/Enemy_Hit-004_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1026356411" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostHover_BW3669.wav</ShortName>
+					<CachePath>SFX/GhostHover_BW3669_3C090834.wem</CachePath>
+				</File>
+				<File Id="1045767381" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 1.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1070347322" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Warning.wav</ShortName>
+					<CachePath>SFX/Warning_1BE9961A.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="274456923" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="515446453" Name="Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="1559875400" Name="Back" DurationType="OneShot" DurationMin="0.25049952" DurationMax="0.25049952">
+					<MediaRefs>
+						<MediaRef Id="24627663"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="174960569" Name="Loose" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3991942870" Name="Music" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3991942870" Id="2607556080"/>
+							<MediaRefs>
+								<MediaRef Id="837476499"/>
+								<MediaRef Id="902172471"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3991942870" Id="89505537"/>
+							<MediaRefs>
+								<MediaRef Id="837476499"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3991942870" Id="2716678721"/>
+							<MediaRefs>
+								<MediaRef Id="774271890"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="4145749436" Name="NME_Death" DurationType="OneShot" DurationMin="5.1174393" DurationMax="5.1174393">
+					<MediaRefs>
+						<MediaRef Id="965093550"/>
+						<MediaRef Id="1026356411"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="515446453"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="1706673613" Name="NME_Hit" DurationType="OneShot" DurationMin="1.2760504" DurationMax="1.7317778">
+					<MediaRefs>
+						<MediaRef Id="397276058"/>
+						<MediaRef Id="397658424"/>
+						<MediaRef Id="555763139"/>
+						<MediaRef Id="1004975446"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="515446453"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="3843687674" Name="NME_Signal" MaxAttenuation="3" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="15632848"/>
+						<MediaRef Id="83890821"/>
+						<MediaRef Id="167367052"/>
+						<MediaRef Id="236303231"/>
+						<MediaRef Id="294114357"/>
+						<MediaRef Id="400722481"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="515446453"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="595342759" Name="NME_Spawn" MaxAttenuation="3" DurationType="OneShot" DurationMin="1.866994" DurationMax="7.3503156">
+					<MediaRefs>
+						<MediaRef Id="30005427"/>
+						<MediaRef Id="56179963"/>
+						<MediaRef Id="77050662"/>
+						<MediaRef Id="94734955"/>
+						<MediaRef Id="98849893"/>
+						<MediaRef Id="201521654"/>
+						<MediaRef Id="231964784"/>
+						<MediaRef Id="339661756"/>
+						<MediaRef Id="438065145"/>
+						<MediaRef Id="509451948"/>
+						<MediaRef Id="550476572"/>
+						<MediaRef Id="661831790"/>
+						<MediaRef Id="731602718"/>
+						<MediaRef Id="777307637"/>
+						<MediaRef Id="787034331"/>
+						<MediaRef Id="912744587"/>
+						<MediaRef Id="933500569"/>
+						<MediaRef Id="940154327"/>
+						<MediaRef Id="949619428"/>
+						<MediaRef Id="974327661"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="274456923"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2537597519" Name="NME_Zone_Enter" DurationType="OneShot" DurationMin="0.17811726" DurationMax="0.17811726">
+					<MediaRefs>
+						<MediaRef Id="889594309"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="542453335" Name="NME_Zone_Exit" DurationType="OneShot" DurationMin="0.25049952" DurationMax="0.25049952">
+					<MediaRefs>
+						<MediaRef Id="24627663"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="21544190" Name="OnClick" DurationType="OneShot" DurationMin="1.2865275" DurationMax="1.2865275">
+					<MediaRefs>
+						<MediaRef Id="1070347322"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="829756566" Name="OnSelect" DurationType="OneShot" DurationMin="1.0135" DurationMax="2.5735">
+					<MediaRefs>
+						<MediaRef Id="889594309"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="2918011349"/>
+							<MediaRefs>
+								<MediaRef Id="900162309"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="290942698"/>
+							<MediaRefs>
+								<MediaRef Id="668258626"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="2910527622"/>
+							<MediaRefs>
+								<MediaRef Id="846697140"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="1451272583"/>
+							<MediaRefs>
+								<MediaRef Id="803365634"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="988953028"/>
+							<MediaRefs>
+								<MediaRef Id="336006796"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="3415057477"/>
+							<MediaRefs>
+								<MediaRef Id="912402991"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="4054299888"/>
+							<MediaRefs>
+								<MediaRef Id="128907944"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="3260108748"/>
+							<MediaRefs>
+								<MediaRef Id="870557716"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="2346531308"/>
+							<MediaRefs>
+								<MediaRef Id="473012841"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="1256202815"/>
+							<MediaRefs>
+								<MediaRef Id="440802488"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="3930794392"/>
+							<MediaRefs>
+								<MediaRef Id="995461531"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="3859834159"/>
+							<MediaRefs>
+								<MediaRef Id="65663430"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="849915761"/>
+							<MediaRefs>
+								<MediaRef Id="107380109"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="1069811801" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="1045767381"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3248278131" Name="Score_Up" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="191779598" Name="SLG_Fire" DurationType="OneShot" DurationMin="1.5555446" DurationMax="1.5555446">
+					<MediaRefs>
+						<MediaRef Id="576794218"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2917512008" Name="SLG_Stretch_Start" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="472132911"/>
+						<MediaRef Id="523736070"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4232021140" Name="SLG_Stretch_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2176025603" Name="Warning" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="30005427"/>
+						<MediaRef Id="56179963"/>
+						<MediaRef Id="77050662"/>
+						<MediaRef Id="94734955"/>
+						<MediaRef Id="98849893"/>
+						<MediaRef Id="201521654"/>
+						<MediaRef Id="231964784"/>
+						<MediaRef Id="339661756"/>
+						<MediaRef Id="438065145"/>
+						<MediaRef Id="509451948"/>
+						<MediaRef Id="550476572"/>
+						<MediaRef Id="661831790"/>
+						<MediaRef Id="731602718"/>
+						<MediaRef Id="744643511"/>
+						<MediaRef Id="777307637"/>
+						<MediaRef Id="787034331"/>
+						<MediaRef Id="912744587"/>
+						<MediaRef Id="933500569"/>
+						<MediaRef Id="940154327"/>
+						<MediaRef Id="974327661"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="274456923"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="979765101" Name="Win" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3991942870" Id="2716678721" Name="Victory"/>
+					</ActionSetState>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="683874092" Name="NME_Scale"/>
+				<GameParameter Id="1240670792" Name="Distance"/>
+				<GameParameter Id="2141048674" Name="Elevation"/>
+				<GameParameter Id="3238454324" Name="Stretch"/>
+				<GameParameter Id="3472823137" Name="AD_Toggle"/>
+				<GameParameter Id="3966939032" Name="TriggerZone_Toggle"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3991942870" Name="Music">
+					<States>
+						<State Id="89505537" Name="Gameplay"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+						<State Id="2716678721" Name="Victory"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="3399545293" Name="ButtonType">
+					<Switches>
+						<Switch Id="290942698" Name="Difficulty"/>
+						<Switch Id="849915761" Name="DifficultySlider"/>
+						<Switch Id="988953028" Name="SFXVolume"/>
+						<Switch Id="1069811801" Name="Audio"/>
+						<Switch Id="1256202815" Name="Play"/>
+						<Switch Id="1451272583" Name="Close"/>
+						<Switch Id="2346531308" Name="MusicVolume"/>
+						<Switch Id="2910527622" Name="Settings"/>
+						<Switch Id="2918011349" Name="MasterVolume"/>
+						<Switch Id="3260108748" Name="TargetVolume"/>
+						<Switch Id="3415057477" Name="UIVolume"/>
+						<Switch Id="3859834159" Name="Return"/>
+						<Switch Id="3930794392" Name="Quit"/>
+						<Switch Id="4054299888" Name="WheelchairMode"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{3D77946A-91A7-68B7-107B-AA04AE3DAC53}</FileHash>
+</SoundBanksInfo>
