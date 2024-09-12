@@ -75,7 +75,7 @@ public class EnemyHandler : MonoBehaviour
             GameHandler.Instance.EndGame();
         }
         _currentSize = (GetPercent(_maxTriggerScale, transform.localScale.x)).ToString();
-        Debug.Log(_currentSize);
+        //Debug.Log(_currentSize);
         AkSoundEngine.SetRTPCValue("NME_Scale", GetPercent(_maxTriggerScale, transform.localScale.x));
 
         //If enemy reached 70% of the maximum scale, warning sound starts
