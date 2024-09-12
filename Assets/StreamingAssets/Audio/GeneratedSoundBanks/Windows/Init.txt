@@ -32,7 +32,6 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	52442795	Binaural			\Default Work Unit\Master Audio Bus\Binaural	
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
-	2804736953	Passthrough			\Default Work Unit\Master Audio Bus\Passthrough	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 

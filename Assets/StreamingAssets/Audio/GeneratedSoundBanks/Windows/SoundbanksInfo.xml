@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A87F6BF2-6171-1C42-B742-EAA99E757E73}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{512196E5-9C0D-5A10-C32C-85F57BD99D7C}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -22,7 +22,6 @@
 				<Bus Id="52442795" Name="Binaural"/>
 				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="1551306167" Name="UI"/>
-				<Bus Id="2804736953" Name="Passthrough"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
@@ -209,7 +208,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{56317083-956C-0CF3-A035-F4E17DEC2447}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A8D97F03-825E-9980-FC65-FDDA166E4E2A}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -736,5 +735,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A9D002E6-FB87-472E-139A-D448CD9C8120}</FileHash>
+	<FileHash>{73745689-C625-63C7-785F-23D69A4A0153}</FileHash>
 </SoundBanksInfo>
