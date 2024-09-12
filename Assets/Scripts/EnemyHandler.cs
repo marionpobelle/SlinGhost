@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyHandler : MonoBehaviour
@@ -14,6 +15,7 @@ public class EnemyHandler : MonoBehaviour
     private int _currentHP;
     private float _scaleStep;
     private float _maxTriggerScale;
+    private bool _alert = false;
 
     [SerializeField] private string _currentSize;
     public SphereCollider EnemyCollider;
@@ -65,13 +67,24 @@ public class EnemyHandler : MonoBehaviour
     {
         //Change enemy scale according to speed
         transform.localScale = transform.localScale + new UnityEngine.Vector3(_scaleStep, _scaleStep, _scaleStep);
+        
         //If enemy reached maximum scale, end the game
         if (transform.localScale.x >= _maxTriggerScale)
         {
+            AkSoundEngine.PostEvent("Loose", gameObject);
             GameHandler.Instance.EndGame();
         }
         _currentSize = (GetPercent(_maxTriggerScale, transform.localScale.x)).ToString();
-        AkSoundEngine.SetRTPCValue("NME_Scale", transform.localScale.y);
+        //Debug.Log(_currentSize);
+        AkSoundEngine.SetRTPCValue("NME_Scale", GetPercent(_maxTriggerScale, transform.localScale.x));
+
+        //If enemy reached 70% of the maximum scale, warning sound starts
+        if (GetPercent(_maxTriggerScale, transform.localScale.x) >= 70f && _alert == false)
+        {
+            _alert = true;
+            AkSoundEngine.PostEvent("Warning", gameObject);
+        }
+
         AkSoundEngine.SetRTPCValue("Elevation", transform.position.y - _crosshairController.transform.position.y);
 
         _crosshairController.UpdateDistanceValue(GetDistanceFromCrosshair());
@@ -82,9 +95,10 @@ public class EnemyHandler : MonoBehaviour
     {
         Debug.LogWarning("ENEMY HIT");
         _currentHP--;
-        if(-_currentHP > 0)
+        AkSoundEngine.PostEvent("NME_Hit", gameObject);
+        if (-_currentHP > 0)
         {
-             AkSoundEngine.PostEvent("NME_Hit", gameObject);
+             
         }
         else if (_currentHP <= 0)
         {
@@ -105,6 +119,7 @@ public class EnemyHandler : MonoBehaviour
 
     public float GetScaleRatio()
     {
+        //Debug.Log(Mathf.InverseLerp(.1f, _maxTriggerScale, transform.localScale.x));
         return Mathf.InverseLerp(.1f, _maxTriggerScale, transform.localScale.x);
     }
 
@@ -135,6 +150,8 @@ public class EnemyHandler : MonoBehaviour
 
     private void OnDestroy()
     {
-        _crosshairController.RemoveEnemyFromPotentialLockList(this);
+        _crosshairController.RemoveEnemyFromPotentialLockList(this); 
+        _crosshairController.UpdateDistanceValue(9999);
+        _crosshairController.UpdateCurrentScaleRatio(0);
     }
 }

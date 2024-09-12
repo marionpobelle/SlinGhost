@@ -18,6 +18,7 @@ public class CrosshairController : MonoBehaviour
     [SerializeField] AnimationCurve projectileAdditionalHeightCurve;
     [SerializeField] float projectileAdditionalHeightMultiplier = 1;
     [SerializeField] Transform projectileInstance;
+    [SerializeField] RotateProjectile rotateProjectile;
 
     bool isLockedOn = false;
     bool isLockChanging = false;
@@ -66,6 +67,7 @@ public class CrosshairController : MonoBehaviour
             projectileTargetPos = transform.position;
         }
 
+        rotateProjectile.StartRotation();
         isShootingProjectile = true;
         projectileStartTime = Time.time;
     }
@@ -100,6 +102,7 @@ public class CrosshairController : MonoBehaviour
         {
             isShootingProjectile = false;
             projectileInstance.position = projectileStartPos.position;
+            rotateProjectile.StopRotation();
             //spawn projectile splatter
         }
     }
