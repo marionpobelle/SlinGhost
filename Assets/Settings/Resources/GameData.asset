@@ -15,61 +15,13 @@ MonoBehaviour:
   CooldownBetweenShotsInSeconds: 1
   lockOnDelay: 0.1
   delockDelay: 0.5
-  EnemyMinScale: 0.1
-  EnemyMaxScale: 10
-  EnemyScaleMinStep: 0.00005
-  EnemyScaleMaxStep: 0.1
-  MovementCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: -1
-      outSlope: -1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: -1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 3
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 4
-      value: 0
-      inSlope: -1
-      outSlope: -1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 1
-    m_RotationOrder: 4
-  EnemySpeed: 1
-  EnemyMovementOffset: 0.8
-  EnemyHP: 3
+  EnemyDefaultScale: 0.1
+  EnemyMinTriggerScale: 0.2
+  EnemyMaxTriggerScale: 0.3
+  EnemyMinScaleStep: 0.00005
+  EnemyMaxScaleStep: 0.0001
+  EnemyHP: 1
   ColliderRadius: 1.2
-  TimeInterval: 5
-  Increase: 0.00005
-  MaxAmountEnemies: 5
-  enemySpawnAmount: 1
-  minSpawnTime: 1
-  maxSpawnTime: 5
-  Xrange: 0.6
-  Yrange: 0.6
+  Xrange: 0.7
+  Yrange: 0.7
+  Score: 10

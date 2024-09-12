@@ -7,7 +7,8 @@ using UnityEngine;
 public class CrosshairController : MonoBehaviour
 {
     public event Action<Vector3> OnSlingshotFired;
-
+    public float CurrentStretchAmout; // Set by the providers
+    
     [SerializeField] List<EnemyHandler> potentialLockOnEnemies = new List<EnemyHandler>();
     [SerializeField] GameData gameData;
     [SerializeField] EnemyHandler enemyToLock;
@@ -27,6 +28,8 @@ public class CrosshairController : MonoBehaviour
     Vector3 projectileTargetPos;
 
     public bool IsLockedOn => isLockedOn;
+    public float DistanceFromEnemy;
+    public float CurrentEnemyRatio;
 
     public void Fire()
     {
@@ -36,6 +39,7 @@ public class CrosshairController : MonoBehaviour
         nextAllowedFire = Time.time + gameData.CooldownBetweenShotsInSeconds;
 
         Debug.Log("Slingshot fired to : " + lockedOnEnemy, this);
+        AkSoundEngine.PostEvent("SLG_Fire", gameObject);
 
         if (lockedOnEnemy)
         {
@@ -46,13 +50,11 @@ public class CrosshairController : MonoBehaviour
         //Raycast and launch projectile to hit
 
         ShootProjectile();
+        OnSlingshotFired?.Invoke(transform.position);
     }
 
     void ShootProjectile()
     {
-        if (projectileInstance != null)
-            DestroyImmediate(projectileInstance);
-
         if (lockedOnEnemy)
         {
             projectileTargetPos = lockedOnEnemy.transform.position;
@@ -162,5 +164,15 @@ public class CrosshairController : MonoBehaviour
     {
         if (potentialLockOnEnemies.Contains(enemyHandler))
             potentialLockOnEnemies.Remove(enemyHandler);
+    }
+
+    public void UpdateDistanceValue(float distanceFromEnemy)
+    {
+        DistanceFromEnemy = distanceFromEnemy;
+    }
+
+    public void UpdateCurrentScaleRatio(float currentEnemyRatio)
+    {
+        CurrentEnemyRatio = currentEnemyRatio;
     }
 }

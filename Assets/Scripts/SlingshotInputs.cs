@@ -3,23 +3,23 @@ using UnityEngine;
 
 public class SlingshotInputs : MonoBehaviour
 {
-    private Joycon joycon;
+    float[] stick;
+    Vector3 gyro;
+    Vector3 accel;
+    int jc_ind = 0;
+    Quaternion orientation;
+    Joycon joycon;
 
-    // Values made available via Unity
-    public float[] stick;
-    public Vector3 gyro;
-    public Vector3 accel;
-    public int jc_ind = 0;
-    public Quaternion orientation;
-
+    [SerializeField] float baseVibrationValue = .2f;
+    [SerializeField] float curveDuration = 1f;
+    [SerializeField] AnimationCurve aimingVibrationCurve;
     [SerializeField] CrosshairController crosshairController;
+    [SerializeField] float pauseBetweenCurves = 1f;
+    [SerializeField] float enemyDistanceThreshold = .5f;
 
-    [SerializeField] Queue<Vector3> latestAccelValues;
-    [SerializeField] int accelQueueSize = 25;
-    [SerializeField] float fireThreshold = 2;
-    [SerializeField] float sensitivity = 20;
-
-    bool wasShotFired = false;
+    bool isEvaluatingCurve;
+    float startCurveTime;
+    float nextAllowedCurve;
 
     void Start()
     {
@@ -29,16 +29,8 @@ public class SlingshotInputs : MonoBehaviour
         // get the public Joycon array attached to the JoyconManager in scene
         if (JoyconManager.Instance.j.Count != 0)
             joycon = JoyconManager.Instance.j[0];
-
-        latestAccelValues = new Queue<Vector3>();
-
-        for (int i = 0; i < accelQueueSize; i++)
-        {
-            latestAccelValues.Enqueue(Vector3.zero);
-        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         // make sure the Joycon only gets checked if attached
@@ -47,31 +39,50 @@ public class SlingshotInputs : MonoBehaviour
 
         CacheValues();
 
+        //Depending on the scale of the enemy
+        float vibrationStrengthMultiplier = baseVibrationValue + crosshairController.CurrentEnemyRatio;
+
         //Haptic feedback
-        joycon.SetRumble(
-            crosshairController.IsLockedOn ? 160 : 0,
-            crosshairController.IsLockedOn ? 320 : 0,
-            crosshairController.IsLockedOn ? .6f : 0);
-
-        float averageAccel = 0;
-        foreach (Vector3 accelValue in latestAccelValues)
+        if (crosshairController.IsLockedOn)
         {
-            averageAccel += accelValue.z;
+            joycon.SetRumble(160, 320, .6f * vibrationStrengthMultiplier);
         }
-        averageAccel /= accelQueueSize;
-
-        if (!wasShotFired && averageAccel > fireThreshold || joycon.GetButtonDown(Joycon.Button.DPAD_UP))
+        else if (crosshairController.DistanceFromEnemy <= enemyDistanceThreshold)
         {
-            Debug.Log("SHOT FIRED");
-            crosshairController.Fire();
-            wasShotFired = true;
-        }
+            bool vibrate = false;
 
-        if (averageAccel < 0)
+            if (!isEvaluatingCurve && Time.time >= nextAllowedCurve)
+            {
+                nextAllowedCurve = Time.time + curveDuration + pauseBetweenCurves * Mathf.InverseLerp(.5f, enemyDistanceThreshold, crosshairController.DistanceFromEnemy);
+                startCurveTime = Time.time;
+                isEvaluatingCurve = true;
+            }
+            else if (isEvaluatingCurve && Time.time > startCurveTime + curveDuration)
+            {
+                isEvaluatingCurve = false;
+            }
+
+            if (isEvaluatingCurve)
+            {
+                float curveValue = aimingVibrationCurve.Evaluate(
+                    Mathf.InverseLerp(
+                        startCurveTime,
+                        startCurveTime + curveDuration,
+                        Time.time));
+
+                if (curveValue > .5f)
+                    vibrate = true;
+            }
+
+            if (vibrate)
+                joycon.SetRumble(160, 320, .6f * vibrationStrengthMultiplier);
+            else
+                joycon.SetRumble(0, 0, 0);
+        }
+        else
         {
-            wasShotFired = false;
+            joycon.SetRumble(0, 0, 0);
         }
-
     }
 
     private void CacheValues()
@@ -79,27 +90,6 @@ public class SlingshotInputs : MonoBehaviour
         orientation = joycon.GetVector();
         accel = joycon.GetAccel();
         gyro = joycon.GetGyro();
-
-        latestAccelValues.Dequeue();
-        latestAccelValues.Enqueue(accel);
-    }
-
-    public static Quaternion Average(List<Quaternion> quaternions)
-    {
-        if (quaternions == null || quaternions.Count < 1)
-            return Quaternion.identity;
-
-        if (quaternions.Count < 2)
-            return quaternions[0];
-
-        int count = quaternions.Count;
-        float weight = 1.0f / (float)count;
-        Quaternion avg = Quaternion.identity;
-
-        for (int i = 0; i < count; i++)
-            avg *= Quaternion.Slerp(Quaternion.identity, quaternions[i], weight);
-
-        return avg;
     }
 }
 
