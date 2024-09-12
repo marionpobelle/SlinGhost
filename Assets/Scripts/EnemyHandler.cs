@@ -92,7 +92,7 @@ public class EnemyHandler : MonoBehaviour
 
     public float GetScaleRatio()
     {
-        Debug.Log(Mathf.InverseLerp(.1f, _maxTriggerScale, transform.localScale.x));
+        //Debug.Log(Mathf.InverseLerp(.1f, _maxTriggerScale, transform.localScale.x));
         return Mathf.InverseLerp(.1f, _maxTriggerScale, transform.localScale.x);
     }
 
