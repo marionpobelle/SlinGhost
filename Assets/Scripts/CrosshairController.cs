@@ -27,6 +27,7 @@ public class CrosshairController : MonoBehaviour
     float enemyLockTimer;
     float nextAllowedFire;
     Vector3 projectileTargetPos;
+    Vector3 projectileHitDirection;
 
     public bool IsLockedOn => isLockedOn;
     public float DistanceFromEnemy;
@@ -64,7 +65,17 @@ public class CrosshairController : MonoBehaviour
         }
         else
         {
-            projectileTargetPos = transform.position;
+            projectileHitDirection = Quaternion.Euler(45, 0, 0) * transform.forward;
+            if (Physics.Raycast(transform.position + new Vector3(0, 0, 1), Quaternion.Euler(45, 0, 0) * transform.forward, out var hit))
+            {
+                //Debug.Log("Hit : " + hit.collider.gameObject, this);
+                projectileTargetPos = hit.point;
+            }
+            else
+            {
+                //Debug.Log("No hit", this);
+                projectileTargetPos = transform.position;
+            }
         }
 
         rotateProjectile.StartRotation();
@@ -177,5 +188,12 @@ public class CrosshairController : MonoBehaviour
     public void UpdateCurrentScaleRatio(float currentEnemyRatio)
     {
         CurrentEnemyRatio = currentEnemyRatio;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(projectileTargetPos, 0.1f);
+        Gizmos.DrawRay(projectileTargetPos, projectileHitDirection);
     }
 }
