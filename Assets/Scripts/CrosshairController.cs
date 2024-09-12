@@ -7,7 +7,8 @@ using UnityEngine;
 public class CrosshairController : MonoBehaviour
 {
     public event Action<Vector3> OnSlingshotFired;
-
+    public float CurrentStretchAmout; // Set by the providers
+    
     [SerializeField] List<EnemyHandler> potentialLockOnEnemies = new List<EnemyHandler>();
     [SerializeField] GameData gameData;
     [SerializeField] EnemyHandler enemyToLock;
@@ -49,6 +50,7 @@ public class CrosshairController : MonoBehaviour
         //Raycast and launch projectile to hit
 
         ShootProjectile();
+        OnSlingshotFired?.Invoke(transform.position);
     }
 
     void ShootProjectile()
