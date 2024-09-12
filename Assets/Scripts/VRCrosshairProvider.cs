@@ -174,6 +174,7 @@ public class VRCrosshairProvider : MonoBehaviour
         float distanceFromIdleToFullStretch = Vector3.Distance(_idlePosition, _fullStretchPosition);
         _currentStrechAmount = distanceFromIdleToController / distanceFromIdleToFullStretch;
         _currentStrechAmount = Mathf.Clamp(_currentStrechAmount, 0, 1);
+        _crosshairController.CurrentStretchAmout = _currentStrechAmount;
         AkSoundEngine.SetRTPCValue("Stretch", _currentStrechAmount);
     }
     

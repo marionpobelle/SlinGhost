@@ -46,6 +46,7 @@ public class MouseCrosshairProvider : MonoBehaviour
         {
             // Set the crosshair position to the hit point
             _crosshairController.transform.position = hit.point;
+            //Debug.Log(hit.collider.gameObject.name);
         }
         if (Input.GetMouseButtonDown(0))
         {
@@ -56,6 +57,7 @@ public class MouseCrosshairProvider : MonoBehaviour
 
         _currentStrechAmount += Mouse.current.scroll.y.ReadValue() / 10000;
         _currentStrechAmount = Mathf.Clamp(_currentStrechAmount, 0, 1);
+        _crosshairController.CurrentStretchAmout = _currentStrechAmount;
         AkSoundEngine.SetRTPCValue("Stretch", _currentStrechAmount);
     }
     
