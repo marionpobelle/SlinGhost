@@ -1070,6 +1070,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15cd3a5fa9403c14b84ca1d5df3e5f4c, type: 3}
+--- !u!114 &690371314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1626353993176170362, guid: 99b4e24b3f657834fa39fb9aa85fc5da,
+    type: 3}
+  m_PrefabInstance: {fileID: 924834794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc63a8284701414582ff7f859dd506b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &755783533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1397,7 +1409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1413446858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1442,7 +1454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1430054521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1606,6 +1618,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crosshair
       objectReference: {fileID: 0}
+    - target: {fileID: 4392302011405644223, guid: 3cc3f9196f8785c48927270b46fb19e7,
+        type: 3}
+      propertyPath: rotateProjectile
+      value: 
+      objectReference: {fileID: 690371314}
     - target: {fileID: 4392302011405644223, guid: 3cc3f9196f8785c48927270b46fb19e7,
         type: 3}
       propertyPath: projectileInstance
