@@ -25,7 +25,7 @@ public class GameHandler : MonoBehaviour
 
     private void Start()
     {
-        SpawnEnemy();
+        StartCoroutine(SpawnEnemy());
     }
 
     public void EndGame()
@@ -35,8 +35,9 @@ public class GameHandler : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    public void SpawnEnemy()
+    public IEnumerator SpawnEnemy()
     {
+        yield return new WaitForSeconds(_gameData.SpawnDelay);
         Instantiate(_enemyPrefab);
         EnemyCount++;
         Debug.Log("We spawned " + EnemyCount + " ghosts in total at this point !");

@@ -83,7 +83,6 @@ public class SlingshotInputs : MonoBehaviour
         {
             joycon.SetRumble(0, 0, 0);
         }
-
     }
 
     private void CacheValues()
