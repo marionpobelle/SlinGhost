@@ -208,7 +208,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A8D97F03-825E-9980-FC65-FDDA166E4E2A}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{DBEDDDC2-45F6-EE3F-75A9-CF2364F76931}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -484,7 +484,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="1706673613" Name="NME_Hit" DurationType="OneShot" DurationMin="1.2760504" DurationMax="1.7317778">
+				<Event Id="1706673613" Name="NME_Hit" DurationType="OneShot" DurationMin="0.8760504" DurationMax="1.3317778">
 					<MediaRefs>
 						<MediaRef Id="397276058"/>
 						<MediaRef Id="397658424"/>
@@ -735,5 +735,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F20FE929-DE88-8ACA-3599-9B91D369C1A6}</FileHash>
+	<FileHash>{0BC015D6-90C8-8A53-AFA6-019A6C781040}</FileHash>
 </SoundBanksInfo>
