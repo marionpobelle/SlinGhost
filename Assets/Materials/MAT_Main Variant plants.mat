@@ -40,7 +40,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _wind_density: 0.6
-    - _wind_strength: 0.48
+    - _wind_strength: 0.12
     m_Colors:
     - _wind_movement: {r: 2, g: -3.51, b: 0, a: 0}
   m_BuildTextureStacks: []
