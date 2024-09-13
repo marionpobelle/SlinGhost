@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,6 +19,8 @@ public class CrosshairController : MonoBehaviour
     [SerializeField] AnimationCurve projectileAdditionalHeightCurve;
     [SerializeField] float projectileAdditionalHeightMultiplier = 1;
     [SerializeField] Transform projectileInstance;
+    [SerializeField] RotateProjectile rotateProjectile;
+    [SerializeField] GameObject splatterPrefab;
 
     bool isLockedOn = false;
     bool isLockChanging = false;
@@ -26,10 +29,23 @@ public class CrosshairController : MonoBehaviour
     float enemyLockTimer;
     float nextAllowedFire;
     Vector3 projectileTargetPos;
+    Vector3 projectileHitDirection;
 
     public bool IsLockedOn => isLockedOn;
     public float DistanceFromEnemy;
     public float CurrentEnemyRatio;
+
+    private AkAudioListener _crosshairAudioListener;
+    private SpriteRenderer _crosshairSpriteRenderer;
+
+    private void Awake()
+    {
+        _crosshairAudioListener = GetComponentInChildren<AkAudioListener>();
+        if (_crosshairAudioListener == null) Debug.LogError("Coudln't retrieve Crosshair Audiolistener !");
+
+        _crosshairSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        if (_crosshairSpriteRenderer == null) Debug.LogError("Coudln't retrieve Crosshair SpriteRenderer !");
+    }
 
     public void Fire()
     {
@@ -55,6 +71,7 @@ public class CrosshairController : MonoBehaviour
 
     void ShootProjectile()
     {
+        StartCoroutine(CrosshairCouldown());
         if (lockedOnEnemy)
         {
             projectileTargetPos = lockedOnEnemy.transform.position;
@@ -63,11 +80,31 @@ public class CrosshairController : MonoBehaviour
         }
         else
         {
-            projectileTargetPos = transform.position;
+            projectileHitDirection = Quaternion.Euler(45, 0, 0) * transform.forward;
+            if (Physics.Raycast(transform.position + new Vector3(0, 0, 1), Quaternion.Euler(45, 0, 0) * transform.forward, out var hit))
+            {
+                //Debug.Log("Hit : " + hit.collider.gameObject, this);
+                projectileTargetPos = hit.point;
+            }
+            else
+            {
+                //Debug.Log("No hit", this);
+                projectileTargetPos = transform.position;
+            }
         }
 
+        rotateProjectile.StartRotation();
         isShootingProjectile = true;
         projectileStartTime = Time.time;
+    }
+
+    private IEnumerator CrosshairCouldown()
+    {
+        //AUDIO TO DO : use GameHandler.Instance.GameHandlerAudioListener && _crosshairAudioListener
+        _crosshairSpriteRenderer.enabled = false;
+        yield return new WaitForSeconds(gameData.CooldownBetweenShotsInSeconds);
+        _crosshairSpriteRenderer.enabled = true;
+        //AUDIO TO DO : use GameHandler.Instance.GameHandlerAudioListener && _crosshairAudioListener
     }
 
     private void Update()
@@ -98,9 +135,13 @@ public class CrosshairController : MonoBehaviour
 
         if (posInSimulation >= 1)
         {
+            var quaternion = Quaternion.Euler(90, 0, 0);
+            var splatterInstance = Instantiate(splatterPrefab, projectilePosition + new Vector3(0,2,0), quaternion);
+            // PLAY SPLATTER SOUND HERE
             isShootingProjectile = false;
             projectileInstance.position = projectileStartPos.position;
-            //spawn projectile splatter
+            rotateProjectile.StopRotation();
+            AkSoundEngine.PostEvent("NME_Hit", gameObject);
         }
     }
 
@@ -174,5 +215,12 @@ public class CrosshairController : MonoBehaviour
     public void UpdateCurrentScaleRatio(float currentEnemyRatio)
     {
         CurrentEnemyRatio = currentEnemyRatio;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(projectileTargetPos, 0.1f);
+        Gizmos.DrawRay(projectileTargetPos, projectileHitDirection);
     }
 }

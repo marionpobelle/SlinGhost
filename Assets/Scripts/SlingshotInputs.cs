@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SlingshotInputs : MonoBehaviour
@@ -83,6 +82,11 @@ public class SlingshotInputs : MonoBehaviour
         {
             joycon.SetRumble(0, 0, 0);
         }
+    }
+
+    private void OnDestroy()
+    {
+        joycon.SetRumble(0, 0, 0);
     }
 
     private void CacheValues()
