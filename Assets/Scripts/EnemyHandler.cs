@@ -1,7 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class EnemyHandler : MonoBehaviour
 {
+    
     private GameData _gameData;
 
     private CrosshairController _crosshairController;
@@ -16,11 +19,22 @@ public class EnemyHandler : MonoBehaviour
 
     [SerializeField] private string _currentSize;
     public SphereCollider EnemyCollider;
+    [SerializeField] private List<GameObject> _ghostBodies;
+    [SerializeField] private DecalProjector _decalGhostFace;
     
     private EnemySpawnPoint _spawnPoint; // Only used for Z positioning of the enemy on spawn
+    private static readonly int FaceSelector = Shader.PropertyToID("_Face_selector");
 
     private void Awake()
     {
+        foreach (var go in _ghostBodies)
+        {
+            go.SetActive(false);
+        }
+        _ghostBodies[Random.Range(0, _ghostBodies.Count)].SetActive(true);
+        _decalGhostFace.material.SetFloat(FaceSelector, Random.Range(1,4));
+        
+        
         _gameData = Data.GameData;
         transform.localScale = new Vector3(_gameData.EnemyDefaultScale, _gameData.EnemyDefaultScale, _gameData.EnemyDefaultScale);
         _crosshairPosition = Vector3.zero;
