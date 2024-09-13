@@ -21,6 +21,8 @@ public class IntroHandler : MonoBehaviour
 
     private IEnumerator PlayIntro()
     {
+        AkSoundEngine.SetState("Music", "Menu");
+        AkSoundEngine.PostEvent("Music", gameObject);
         FadeIn(_p20Image);
         yield return new WaitForSeconds(_fadeTime);
         FadeOut(_p20Image);
@@ -37,6 +39,8 @@ public class IntroHandler : MonoBehaviour
         yield return new WaitForSeconds(_fadeTime);
         yield return new WaitForSeconds(_delayTime);
         SceneManager.LoadScene("Menu");
+        AkSoundEngine.SetState("Music", "Menu");
+        AkSoundEngine.PostEvent("Music", gameObject);
     }
 
     public void FadeIn(CanvasGroup canvasGroup)

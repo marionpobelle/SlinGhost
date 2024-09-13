@@ -62,14 +62,20 @@ public class MenuHandler : MonoBehaviour
         _mainPanel.SetActive(true);
         _settingsPanel.SetActive(false);
         _audioPanel.SetActive(false);
-
-        if (_voiceToggle.isOn); //TO DO : Turn on voice over mode
-        else if (!_voiceToggle.isOn); //TO DO : Turn off voice over mode
-
         Data.GameData.EnemyMinScaleStep = Data.GameData.EnemyMinScaleStepMEDIUM;
         Data.GameData.MaxStep = Data.GameData.MaxStepMEDIUM;
         Data.GameData.ColliderRadius = Data.GameData.ColliderRadiusMEDIUM;
         _difficultySlider.value = Data.GameData.CurrentDifficulty;
+        if (_voiceToggle.isOn)
+            AkSoundEngine.SetRTPCValue("AD_Toggle", 1); //Turn on voice over mode
+        else if (!_voiceToggle.isOn)
+            AkSoundEngine.SetRTPCValue("AD_Toggle", 0); //Turn off voice over mode
+
+        _masterSlider.value = 0.75f;
+        _sfxSlider.value = 0.75f;
+        _musicSlider.value = 0.75f;
+        _uiSlider.value = 0.75f;
+        _targetSlider.value = 0.75f;
     }
 
     private void OnDestroy()
@@ -136,11 +142,11 @@ public class MenuHandler : MonoBehaviour
     {
         if (_voiceToggle.isOn)
         {
-            //TO DO : Turn on voice over mode
+            AkSoundEngine.SetRTPCValue("AD_Toggle", 1);
         }
         else
         {
-            //TO DO : Turn off voice over mode
+            AkSoundEngine.SetRTPCValue("AD_Toggle", 0);
         }
     }
 
@@ -178,6 +184,7 @@ public class MenuHandler : MonoBehaviour
     private void OnSFXChanged(float arg0)
     {
         AkSoundEngine.SetRTPCValue("SFX_Level", _sfxSlider.value);
+        AkSoundEngine.PostEvent("NME_Hit", gameObject);
     }
 
     private void OnMusicChanged(float arg0)
@@ -188,11 +195,13 @@ public class MenuHandler : MonoBehaviour
     private void OnUIChanged(float arg0)
     {
         AkSoundEngine.SetRTPCValue("UI_Level", _uiSlider.value);
+        AkSoundEngine.PostEvent("OnClick", gameObject);
     }
 
     private void OnTargetChanged(float arg0)
     {
         AkSoundEngine.SetRTPCValue("Target_Level", _targetSlider.value);
+        AkSoundEngine.PostEvent("NME_Taunt", gameObject);
     }
 
     private void OnAudioReturnClicked()
