@@ -18,22 +18,23 @@ MonoBehaviour:
   EnemyDefaultScale: 0.1
   EnemyMinTriggerScale: 0.2
   EnemyMaxTriggerScale: 0.3
-  EnemyMinScaleStep: 0.00005
+  EnemyMinScaleStep: 0.00006
   EnemyMaxScaleStep: 0.0001
   EnemiesUntilDifficultyIncrease: 3
-  MaxStep: 5
+  MaxStep: 7
   EnemyHP: 1
-  ColliderRadius: 1.7
+  ColliderRadius: 1.5
   EnemyMinScaleStepEASY: 0.00004
   MaxStepEASY: 2
   ColliderRadiusEASY: 1.9
   EnemyMinScaleStepMEDIUM: 0.00005
-  MaxStepMEDIUM: 3
+  MaxStepMEDIUM: 5
   ColliderRadiusMEDIUM: 1.7
   EnemyMinScaleStepHARD: 0.00006
-  MaxStepHARD: 7
+  MaxStepHARD: 8
   ColliderRadiusHARD: 1.5
-  Xrange: 0.7
-  Yrange: 0.7
+  CurrentDifficulty: 2
+  Xrange: 0.5
+  Yrange: 0.5
   SpawnDelay: 2
-  Score: 7
+  Score: 10
