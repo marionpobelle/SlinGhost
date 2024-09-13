@@ -34,6 +34,7 @@ public class SelectableHandler : MonoBehaviour, ISelectHandler, IPointerEnterHan
         MusicVolume,
         UIVolume,
         TargetVolume,
+        DifficultySlider
         VoiceToggle
     }
 

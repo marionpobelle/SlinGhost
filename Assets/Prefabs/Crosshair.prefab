@@ -94,6 +94,8 @@ MonoBehaviour:
   rotateProjectile: {fileID: 0}
   splatterPrefab: {fileID: 6035354345898411767, guid: 4845af7facc106a49b8ecd778559de74,
     type: 3}
+  pumpkinExplosion: {fileID: 3832320470862138423, guid: 42fdf694e7deaaa43984fad724586053,
+    type: 3}
   DistanceFromEnemy: 0
   CurrentEnemyRatio: 0
 --- !u!135 &7690307478715901432

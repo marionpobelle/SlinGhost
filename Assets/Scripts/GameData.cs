@@ -20,11 +20,29 @@ public class GameData : ScriptableObject
     [Tooltip("By how much the enemy moves each step range for random value.")]
     public float EnemyMinScaleStep = 1f;
     public float EnemyMaxScaleStep = 2f;
+    [Tooltip("How many enemies need to be killed until the difficutly increases.")]
+    public int EnemiesUntilDifficultyIncrease = 3;
+    [Tooltip("Maximum step size of the enemy.")]
+    public int MaxStep = 5;
+
 
     [Tooltip("Enemy health points default.")]
     public int EnemyHP = 1;
     [Tooltip("Enemy capsule collider radius.")]
     public float ColliderRadius = 1.2f;
+
+    [Header("DIFFICULTY SETTINGS")]
+    public float EnemyMinScaleStepEASY = 0f;
+    public float MaxStepEASY = 0f;
+    public float ColliderRadiusEASY = 0f;
+
+    public float EnemyMinScaleStepMEDIUM = 0f;
+    public float MaxStepMEDIUM = 0f;
+    public float ColliderRadiusMEDIUM = 0f;
+
+    public float EnemyMinScaleStepHARD = 0f;
+    public float MaxStepHARD = 0f;
+    public float ColliderRadiusHARD = 0f;
 
     [Header("Spawner")]
     [Tooltip("X axis range from 0 for enemy to spawn.")]
