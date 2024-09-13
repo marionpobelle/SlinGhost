@@ -128,11 +128,11 @@ public class MenuHandler : MonoBehaviour
     {
         if (_voiceToggle.isOn)
         {
-            //TO DO : Turn on voice over mode
+            AkSoundEngine.SetRTPCValue("AD_Toggle", 1);
         }
         else
         {
-            //TO DO : Turn off voice over mode
+            AkSoundEngine.SetRTPCValue("AD_Toggle", 0);
         }
     }
 
