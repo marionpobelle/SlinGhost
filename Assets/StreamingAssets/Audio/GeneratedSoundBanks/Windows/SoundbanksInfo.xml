@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{512196E5-9C0D-5A10-C32C-85F57BD99D7C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{797A0E51-DE52-0B51-B5D3-94F5BDAE1AB7}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -22,6 +22,7 @@
 				<Bus Id="52442795" Name="Binaural"/>
 				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="1886858558" Name="AD"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
@@ -63,6 +64,7 @@
 				<SwitchGroup Id="3399545293" Name="ButtonType">
 					<Switches>
 						<Switch Id="290942698" Name="Difficulty"/>
+						<Switch Id="590914013" Name="VoiceToggle"/>
 						<Switch Id="849915761" Name="DifficultySlider"/>
 						<Switch Id="988953028" Name="SFXVolume"/>
 						<Switch Id="1069811801" Name="Audio"/>
@@ -73,6 +75,7 @@
 						<Switch Id="2918011349" Name="MasterVolume"/>
 						<Switch Id="3260108748" Name="TargetVolume"/>
 						<Switch Id="3415057477" Name="UIVolume"/>
+						<Switch Id="3687230321" Name="ScreenShakeToggle"/>
 						<Switch Id="3859834159" Name="Return"/>
 						<Switch Id="3930794392" Name="Quit"/>
 						<Switch Id="4054299888" Name="WheelchairMode"/>
@@ -208,7 +211,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{DBEDDDC2-45F6-EE3F-75A9-CF2364F76931}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D4B32A59-2FB1-8EE3-16C6-23651C74A7A3}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -235,6 +238,10 @@
 				<File Id="77050662" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-018.wav</ShortName>
 					<CachePath>SFX/Ghost_Laughter-018_818F3B66.wem</CachePath>
+				</File>
+				<File Id="83251048" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 15.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 15_818F3B66.wem</CachePath>
 				</File>
 				<File Id="83890821" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Move-002.wav</ShortName>
@@ -339,6 +346,10 @@
 				<File Id="668258626" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Voice Designer, Sarah B 2.wav</ShortName>
 					<CachePath>SFX/Soundly Voice Designer, Sarah B 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="694194518" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 16.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 16_818F3B66.wem</CachePath>
 				</File>
 				<File Id="731602718" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-015.wav</ShortName>
@@ -541,6 +552,16 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
+				<Event Id="4244453982" Name="NME_Taunt" MaxAttenuation="3" DurationType="OneShot" DurationMin="1.866994" DurationMax="1.866994">
+					<MediaRefs>
+						<MediaRef Id="509451948"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="274456923"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
 				<Event Id="2537597519" Name="NME_Zone_Enter" DurationType="OneShot" DurationMin="0.17811726" DurationMax="0.17811726">
 					<MediaRefs>
 						<MediaRef Id="889594309"/>
@@ -622,6 +643,12 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="590914013"/>
+							<MediaRefs>
+								<MediaRef Id="83251048"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="3930794392"/>
 							<MediaRefs>
 								<MediaRef Id="995461531"/>
@@ -637,6 +664,12 @@
 							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="849915761"/>
 							<MediaRefs>
 								<MediaRef Id="107380109"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="3687230321"/>
+							<MediaRefs>
+								<MediaRef Id="694194518"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -717,6 +750,7 @@
 				<SwitchGroup Id="3399545293" Name="ButtonType">
 					<Switches>
 						<Switch Id="290942698" Name="Difficulty"/>
+						<Switch Id="590914013" Name="VoiceToggle"/>
 						<Switch Id="849915761" Name="DifficultySlider"/>
 						<Switch Id="988953028" Name="SFXVolume"/>
 						<Switch Id="1069811801" Name="Audio"/>
@@ -727,6 +761,7 @@
 						<Switch Id="2918011349" Name="MasterVolume"/>
 						<Switch Id="3260108748" Name="TargetVolume"/>
 						<Switch Id="3415057477" Name="UIVolume"/>
+						<Switch Id="3687230321" Name="ScreenShakeToggle"/>
 						<Switch Id="3859834159" Name="Return"/>
 						<Switch Id="3930794392" Name="Quit"/>
 						<Switch Id="4054299888" Name="WheelchairMode"/>
@@ -735,5 +770,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F8CE4831-2EA3-6AA2-73CD-07F30BCE055B}</FileHash>
+	<FileHash>{1272D92C-11A0-3E22-D86F-61EDA7EAE704}</FileHash>
 </SoundBanksInfo>
