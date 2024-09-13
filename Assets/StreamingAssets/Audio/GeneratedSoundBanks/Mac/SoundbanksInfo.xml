@@ -63,6 +63,7 @@
 				<SwitchGroup Id="3399545293" Name="ButtonType">
 					<Switches>
 						<Switch Id="290942698" Name="Difficulty"/>
+						<Switch Id="590914013" Name="VoiceToggle"/>
 						<Switch Id="849915761" Name="DifficultySlider"/>
 						<Switch Id="988953028" Name="SFXVolume"/>
 						<Switch Id="1069811801" Name="Audio"/>
@@ -208,7 +209,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4B2C3F2E-F7C0-8AB2-2982-C46A57051B5F}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{1498BDA3-1B66-A46C-DB5D-05F32AA63278}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -235,6 +236,10 @@
 				<File Id="77050662" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Laughter-018.wav</ShortName>
 					<CachePath>SFX/Ghost_Laughter-018_818F3B66.wem</CachePath>
+				</File>
+				<File Id="83251048" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Sarah B 15.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Sarah B 15_818F3B66.wem</CachePath>
 				</File>
 				<File Id="83890821" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ghost_Move-002.wav</ShortName>
@@ -622,6 +627,12 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="590914013"/>
+							<MediaRefs>
+								<MediaRef Id="83251048"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3399545293" Id="3930794392"/>
 							<MediaRefs>
 								<MediaRef Id="995461531"/>
@@ -717,6 +728,7 @@
 				<SwitchGroup Id="3399545293" Name="ButtonType">
 					<Switches>
 						<Switch Id="290942698" Name="Difficulty"/>
+						<Switch Id="590914013" Name="VoiceToggle"/>
 						<Switch Id="849915761" Name="DifficultySlider"/>
 						<Switch Id="988953028" Name="SFXVolume"/>
 						<Switch Id="1069811801" Name="Audio"/>
@@ -735,5 +747,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{488BE6FD-AB7C-04C4-10F2-52DF9E174ED9}</FileHash>
+	<FileHash>{8D1640CA-F31D-71B6-0F71-AC8485FBFE9D}</FileHash>
 </SoundBanksInfo>

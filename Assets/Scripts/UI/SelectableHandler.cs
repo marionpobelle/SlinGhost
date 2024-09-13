@@ -33,7 +33,8 @@ public class SelectableHandler : MonoBehaviour, ISelectHandler, IPointerEnterHan
         SFXVolume,
         MusicVolume,
         UIVolume,
-        TargetVolume
+        TargetVolume,
+        VoiceToggle
     }
 
 }

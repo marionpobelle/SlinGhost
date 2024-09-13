@@ -145,6 +145,7 @@ public class MenuHandler : MonoBehaviour
     private void OnSFXChanged(float arg0)
     {
         AkSoundEngine.SetRTPCValue("SFX_Level", _sfxSlider.value);
+        AkSoundEngine.PostEvent("NME_Hit", gameObject);
     }
 
     private void OnMusicChanged(float arg0)

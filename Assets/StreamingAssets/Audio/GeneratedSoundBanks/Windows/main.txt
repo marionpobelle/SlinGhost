@@ -22,6 +22,7 @@ Switch Group	ID	Name			Wwise Object Path	Notes
 
 Switch	ID	Name	Switch Group			Notes
 	290942698	Difficulty	ButtonType			
+	590914013	VoiceToggle	ButtonType			
 	849915761	DifficultySlider	ButtonType			
 	988953028	SFXVolume	ButtonType			
 	1069811801	Audio	ButtonType			
@@ -64,6 +65,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	56179963	Ghost_Laughter-002	E:\Slingshot\HyperSlingshot\.cache\Windows\SFX\Ghost_Laughter-002_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt\Ghost_Laughter-002		437682
 	65663430	Return	E:\Slingshot\HyperSlingshot\.cache\Windows\SFX\Soundly Voice Designer, Sarah B 13_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\Return		147312
 	77050662	Ghost_Laughter-018	E:\Slingshot\HyperSlingshot\.cache\Windows\SFX\Ghost_Laughter-018_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt\Ghost_Laughter-018		434078
+	83251048	VoiceToggle	E:\Slingshot\HyperSlingshot\.cache\Windows\SFX\Soundly Voice Designer, Sarah B 15_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioDescription\AD_Button\VoiceToggle		147312
 	83890821	Ghost_Move-002	E:\Slingshot\HyperSlingshot\.cache\Windows\SFX\Ghost_Move-002_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Signal\Ghost_Move-002		1058010
 	94734955	Ghost_Laughter-005	E:\Slingshot\HyperSlingshot\.cache\Windows\SFX\Ghost_Laughter-005_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt\Ghost_Laughter-005		402362
 	98849893	Ghost_Laughter-013	E:\Slingshot\HyperSlingshot\.cache\Windows\SFX\Ghost_Laughter-013_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\NME_Taunt\Ghost_Laughter-013		512554
