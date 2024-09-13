@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Playables;
 
 public class EnemyHandler : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class EnemyHandler : MonoBehaviour
     private EnemySpawnPoint _spawnPoint; // Only used for Z positioning of the enemy on spawn
     private static readonly int FaceSelector = Shader.PropertyToID("_Face_selector");
 
+    public int stepMultiplier;
+
     private void Awake()
     {
         foreach (var go in _ghostBodies)
@@ -40,7 +43,8 @@ public class EnemyHandler : MonoBehaviour
         _crosshairPosition = Vector3.zero;
         _isCrosshairOnEnemy = false;
         _currentHP = _gameData.EnemyHP;
-        _scaleStep = Random.Range(_gameData.EnemyMinScaleStep, _gameData.EnemyMaxScaleStep);
+
+        
         _maxTriggerScale = Random.Range(_gameData.EnemyMinTriggerScale, _gameData.EnemyMaxTriggerScale);
         if (this.gameObject.TryGetComponent<SphereCollider>(out var collider))
         {
@@ -85,6 +89,25 @@ public class EnemyHandler : MonoBehaviour
             AkSoundEngine.PostEvent("Loose", gameObject);
             GameHandler.Instance.EndGame();
         }
+
+        stepMultiplier = Mathf.FloorToInt(GameHandler.Instance.EnemyCount / Data.GameData.EnemiesUntilDifficultyIncrease);
+
+        if (stepMultiplier == 0)
+        {
+            _scaleStep = _gameData.EnemyMinScaleStep;
+        }
+        else
+        {
+            _scaleStep = _gameData.EnemyMinScaleStep * stepMultiplier; //Random.Range(_gameData.EnemyMinScaleStep, _gameData.EnemyMaxScaleStep);
+
+            if (stepMultiplier >= _gameData.MaxStep + 1)
+            {
+                _scaleStep = _gameData.EnemyMinScaleStep * _gameData.MaxStep;
+                stepMultiplier = _gameData.MaxStep;
+            }
+            
+        }
+
         _currentSize = (GetPercent(_maxTriggerScale, transform.localScale.x)).ToString();
         //Debug.Log(_currentSize);
         AkSoundEngine.SetRTPCValue("NME_Scale", GetPercent(_maxTriggerScale, transform.localScale.x));
