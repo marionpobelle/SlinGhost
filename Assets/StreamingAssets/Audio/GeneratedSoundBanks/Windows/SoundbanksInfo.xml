@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{512196E5-9C0D-5A10-C32C-85F57BD99D7C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{797A0E51-DE52-0B51-B5D3-94F5BDAE1AB7}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -22,6 +22,7 @@
 				<Bus Id="52442795" Name="Binaural"/>
 				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="1886858558" Name="AD"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
@@ -209,7 +210,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{1498BDA3-1B66-A46C-DB5D-05F32AA63278}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E426D1EB-8A5D-F621-C9CD-1E5F57E7C20A}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -546,6 +547,16 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
+				<Event Id="4244453982" Name="NME_Taunt" MaxAttenuation="3" DurationType="OneShot" DurationMin="1.866994" DurationMax="1.866994">
+					<MediaRefs>
+						<MediaRef Id="509451948"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="274456923"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
 				<Event Id="2537597519" Name="NME_Zone_Enter" DurationType="OneShot" DurationMin="0.17811726" DurationMax="0.17811726">
 					<MediaRefs>
 						<MediaRef Id="889594309"/>
@@ -747,5 +758,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3A1E0FFA-B772-7B72-926B-EF38410E8D37}</FileHash>
+	<FileHash>{26DDA192-78DE-3539-45F7-17B8D954F67C}</FileHash>
 </SoundBanksInfo>

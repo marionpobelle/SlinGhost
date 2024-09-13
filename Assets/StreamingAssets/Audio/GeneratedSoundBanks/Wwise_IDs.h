@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID NME_HIT = 1706673613U;
         static const AkUniqueID NME_SIGNAL = 3843687674U;
         static const AkUniqueID NME_SPAWN = 595342759U;
+        static const AkUniqueID NME_TAUNT = 4244453982U;
         static const AkUniqueID NME_ZONE_ENTER = 2537597519U;
         static const AkUniqueID NME_ZONE_EXIT = 542453335U;
         static const AkUniqueID ONCLICK = 21544190U;
@@ -111,6 +112,7 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AD = 1886858558U;
         static const AkUniqueID BINAURAL = 52442795U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;

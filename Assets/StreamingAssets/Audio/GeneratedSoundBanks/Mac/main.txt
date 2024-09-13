@@ -16,6 +16,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3991942870	Music			\Default Work Unit\Music	
 	4145749436	NME_Death			\Default Work Unit\NME_Death	
 	4232021140	SLG_Stretch_Stop			\Default Work Unit\SLG_Stretch_Stop	
+	4244453982	NME_Taunt			\Default Work Unit\NME_Taunt	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	3399545293	ButtonType			\Default Work Unit\ButtonType	
