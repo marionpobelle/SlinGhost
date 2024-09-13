@@ -86,7 +86,7 @@ public class SlingshotInputs : MonoBehaviour
 
     private void OnDestroy()
     {
-        joycon.SetRumble(0, 0, 0);
+        joycon?.SetRumble(0, 0, 0);
     }
 
     private void CacheValues()
