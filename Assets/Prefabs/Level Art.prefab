@@ -27,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766497192236486473}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.008662139, w: 0.9999625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.593, y: -0.606, z: 2.8752418}
-  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_LocalScale: {x: 2.5713003, y: 1.0000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7061154313604886071}
@@ -248,7 +248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8868921883483248902}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.008662139, w: 0.9999625}
+  m_LocalRotation: {x: 0, y: 0, z: -0.008665422, w: 0.99996245}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -564,6 +564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plant_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1fe3229c78ea6a945a9b249f5baf69aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -911,6 +916,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 787a1057b8ee3ed41994c97f8ae64e0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1004,6 +1014,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plant_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1fe3229c78ea6a945a9b249f5baf69aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1335,6 +1350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plant_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 787a1057b8ee3ed41994c97f8ae64e0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3164,6 +3184,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1fe3229c78ea6a945a9b249f5baf69aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3257,6 +3282,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plant_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1fe3229c78ea6a945a9b249f5baf69aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3534,6 +3564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass_04 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b50bf2d05b4229d4b8c582b11e371ebf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4864,6 +4899,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1fe3229c78ea6a945a9b249f5baf69aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5703,6 +5743,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plant_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 787a1057b8ee3ed41994c97f8ae64e0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
