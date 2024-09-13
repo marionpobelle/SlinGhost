@@ -69,7 +69,7 @@ public class MenuHandler : MonoBehaviour
         Data.GameData.EnemyMinScaleStep = Data.GameData.EnemyMinScaleStepMEDIUM;
         Data.GameData.MaxStep = Data.GameData.MaxStepMEDIUM;
         Data.GameData.ColliderRadius = Data.GameData.ColliderRadiusMEDIUM;
-        _difficultySlider.value = 1f;
+        _difficultySlider.value = Data.GameData.CurrentDifficulty;
     }
 
     private void OnDestroy()
@@ -151,18 +151,21 @@ public class MenuHandler : MonoBehaviour
             Data.GameData.EnemyMinScaleStep = Data.GameData.EnemyMinScaleStepEASY;
             Data.GameData.MaxStep = Data.GameData.MaxStepEASY;
             Data.GameData.ColliderRadius = Data.GameData.ColliderRadiusEASY;
+            Data.GameData.CurrentDifficulty = 0;
         }
         else if(_difficultySlider.value == 2) //Hard
         {
             Data.GameData.EnemyMinScaleStep = Data.GameData.EnemyMinScaleStepHARD;
             Data.GameData.MaxStep = Data.GameData.MaxStepHARD;
             Data.GameData.ColliderRadius = Data.GameData.ColliderRadiusHARD;
+            Data.GameData.CurrentDifficulty = 2;
         }
         else //Medium
         {
             Data.GameData.EnemyMinScaleStep = Data.GameData.EnemyMinScaleStepMEDIUM;
             Data.GameData.MaxStep = Data.GameData.MaxStepMEDIUM;
             Data.GameData.ColliderRadius = Data.GameData.ColliderRadiusMEDIUM;
+            Data.GameData.CurrentDifficulty = 1;
         }
     }
 

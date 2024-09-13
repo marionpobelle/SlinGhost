@@ -43,6 +43,8 @@ public class GameData : ScriptableObject
     public float EnemyMinScaleStepHARD = 0f;
     public int MaxStepHARD = 0;
     public float ColliderRadiusHARD = 0f;
+    //0 EASY 1 MEDIUM 2 HARD
+    public int CurrentDifficulty = 1;
 
     [Header("Spawner")]
     [Tooltip("X axis range from 0 for enemy to spawn.")]
