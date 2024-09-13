@@ -31,6 +31,19 @@ public class GameData : ScriptableObject
     [Tooltip("Enemy capsule collider radius.")]
     public float ColliderRadius = 1.2f;
 
+    [Header("DIFFICULTY SETTINGS")]
+    public float EnemyMinScaleStepEASY = 0f;
+    public float MaxStepEASY = 0f;
+    public float ColliderRadiusEASY = 0f;
+
+    public float EnemyMinScaleStepMEDIUM = 0f;
+    public float MaxStepMEDIUM = 0f;
+    public float ColliderRadiusMEDIUM = 0f;
+
+    public float EnemyMinScaleStepHARD = 0f;
+    public float MaxStepHARD = 0f;
+    public float ColliderRadiusHARD = 0f;
+
     [Header("Spawner")]
     [Tooltip("X axis range from 0 for enemy to spawn.")]
     public float Xrange = 1000f;
