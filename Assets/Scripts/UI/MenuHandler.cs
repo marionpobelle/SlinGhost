@@ -18,6 +18,7 @@ public class MenuHandler : MonoBehaviour
     [SerializeField] private Button _audioButton;
     [SerializeField] private Button _closeButton;
     [SerializeField] private Toggle _voiceToggle;
+    [SerializeField] private Slider _difficultySlider;
 
     [Header("AUDIO")]
     [SerializeField] private GameObject _audioPanel;
@@ -45,6 +46,7 @@ public class MenuHandler : MonoBehaviour
         _audioButton.onClick.AddListener(OnAudioClicked);
         _closeButton.onClick.AddListener(OnCloseClicked);
         _voiceToggle.onValueChanged.AddListener((value) => OnVoiceChanged(_voiceToggle));
+        _difficultySlider.onValueChanged.AddListener(OnDifficultyChanged);
 
         //AUDIO
         _masterSlider.onValueChanged.AddListener(OnMasterChanged);
@@ -60,7 +62,10 @@ public class MenuHandler : MonoBehaviour
         _mainPanel.SetActive(true);
         _settingsPanel.SetActive(false);
         _audioPanel.SetActive(false);
-
+        Data.GameData.EnemyMinScaleStep = Data.GameData.EnemyMinScaleStepMEDIUM;
+        Data.GameData.MaxStep = Data.GameData.MaxStepMEDIUM;
+        Data.GameData.ColliderRadius = Data.GameData.ColliderRadiusMEDIUM;
+        _difficultySlider.value = 0.5f;
         if (_voiceToggle.isOn)
             AkSoundEngine.SetRTPCValue("AD_Toggle", 1); //Turn on voice over mode
         else if (!_voiceToggle.isOn)
@@ -84,6 +89,7 @@ public class MenuHandler : MonoBehaviour
         _audioButton.onClick.RemoveListener(OnAudioClicked);
         _closeButton.onClick.RemoveListener(OnCloseClicked);
         _voiceToggle.onValueChanged.RemoveListener((value) => OnVoiceChanged(_voiceToggle));
+        _difficultySlider.onValueChanged.AddListener(OnDifficultyChanged);
 
         //AUDIO
         _masterSlider.onValueChanged.RemoveListener(OnMasterChanged);
@@ -141,6 +147,28 @@ public class MenuHandler : MonoBehaviour
         else
         {
             AkSoundEngine.SetRTPCValue("AD_Toggle", 0);
+        }
+    }
+
+    private void OnDifficultyChanged(float arg0)
+    {
+        if(_difficultySlider.value == 0) //Easy
+        {
+            Data.GameData.EnemyMinScaleStep = Data.GameData.EnemyMinScaleStepEASY;
+            Data.GameData.MaxStep = Data.GameData.MaxStepEASY;
+            Data.GameData.ColliderRadius = Data.GameData.ColliderRadiusEASY;
+        }
+        else if(_difficultySlider.value == 1) //Hard
+        {
+            Data.GameData.EnemyMinScaleStep = Data.GameData.EnemyMinScaleStepHARD;
+            Data.GameData.MaxStep = Data.GameData.MaxStepHARD;
+            Data.GameData.ColliderRadius = Data.GameData.ColliderRadiusHARD;
+        }
+        else //Medium
+        {
+            Data.GameData.EnemyMinScaleStep = Data.GameData.EnemyMinScaleStepMEDIUM;
+            Data.GameData.MaxStep = Data.GameData.MaxStepMEDIUM;
+            Data.GameData.ColliderRadius = Data.GameData.ColliderRadiusMEDIUM;
         }
     }
 
