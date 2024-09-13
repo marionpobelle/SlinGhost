@@ -65,15 +65,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_100bf1ef205e4dbe945c9591d556825b_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 4be326a7f12eeaf469cc103ba36d179e, type: 3}
+        m_Texture: {fileID: 2800000, guid: c29a13a527f460f4a925cf48d3237f85, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_83ae7fad6f7d41b0b3209892f922a54b_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: c3f850b85bec6d543aa09132dcc1ff8a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 22a5176bf3082b544bb08fd2d5bb3bd5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_a79abb77b2734978bd7eb228c3aeb768_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 05e5ee33b1817d74cbd754f0b065f51d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8d36b67b8233a4b419d77512a8333595, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -120,7 +120,7 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _Face_selector: 2
+    - _Face_selector: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
