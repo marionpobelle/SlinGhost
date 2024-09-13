@@ -9,7 +9,7 @@ public class CrosshairController : MonoBehaviour
 {
     public event Action<Vector3> OnSlingshotFired;
     public float CurrentStretchAmout; // Set by the providers
-    
+
     [SerializeField] List<EnemyHandler> potentialLockOnEnemies = new List<EnemyHandler>();
     [SerializeField] GameData gameData;
     [SerializeField] EnemyHandler enemyToLock;
@@ -21,6 +21,7 @@ public class CrosshairController : MonoBehaviour
     [SerializeField] Transform projectileInstance;
     [SerializeField] RotateProjectile rotateProjectile;
     [SerializeField] GameObject splatterPrefab;
+    [SerializeField] GameObject pumpkinExplosion;
 
     bool isLockedOn = false;
     bool isLockChanging = false;
@@ -37,7 +38,7 @@ public class CrosshairController : MonoBehaviour
 
     private AkAudioListener _crosshairAudioListener;
     private SpriteRenderer _crosshairSpriteRenderer;
-
+    EnemyHandler enemyToKill;
     private void Awake()
     {
         _crosshairAudioListener = GetComponentInChildren<AkAudioListener>();
@@ -57,12 +58,6 @@ public class CrosshairController : MonoBehaviour
         Debug.Log("Slingshot fired to : " + lockedOnEnemy, this);
         AkSoundEngine.PostEvent("SLG_Fire", gameObject);
 
-        if (lockedOnEnemy)
-        {
-            lockedOnEnemy.HitEnemy();
-            //Launch projectile to enemy
-        }
-
         //Raycast and launch projectile to hit
 
         ShootProjectile();
@@ -71,10 +66,12 @@ public class CrosshairController : MonoBehaviour
 
     void ShootProjectile()
     {
+        enemyToKill = lockedOnEnemy;
         StartCoroutine(CrosshairCouldown());
         if (lockedOnEnemy)
         {
             projectileTargetPos = lockedOnEnemy.transform.position;
+            lockedOnEnemy.ToggleVisuals(true);
             //Stop enemy from moving
             //When done, destroy enemy
         }
@@ -100,11 +97,13 @@ public class CrosshairController : MonoBehaviour
 
     private IEnumerator CrosshairCouldown()
     {
-        //AUDIO TO DO : use GameHandler.Instance.GameHandlerAudioListener && _crosshairAudioListener
+        GameHandler.Instance.GameHandlerAudioListener.enabled = true;
+        _crosshairAudioListener.enabled = false;
         _crosshairSpriteRenderer.enabled = false;
         yield return new WaitForSeconds(gameData.CooldownBetweenShotsInSeconds);
         _crosshairSpriteRenderer.enabled = true;
-        //AUDIO TO DO : use GameHandler.Instance.GameHandlerAudioListener && _crosshairAudioListener
+        GameHandler.Instance.GameHandlerAudioListener.enabled = false;
+        _crosshairAudioListener.enabled = true;
     }
 
     private void Update()
@@ -138,15 +137,22 @@ public class CrosshairController : MonoBehaviour
             if (projectilePosition.y < -1f) // Avoid creating splatter mid-air
             {
                 var quaternion = Quaternion.Euler(90, 0, 0);
-                var splatterInstance = Instantiate(splatterPrefab, projectilePosition + new Vector3(0,.05f,0), quaternion);
+                var splatterInstance = Instantiate(splatterPrefab, projectilePosition + new Vector3(0, .05f, 0), quaternion);
                 Debug.Log("Splatter created at : " + projectilePosition, this);
             }
-            
+
+            Debug.Log("Exploded at: " + projectilePosition, this);
+            Instantiate(pumpkinExplosion, projectilePosition, Quaternion.identity);
             // PLAY SPLATTER SOUND HERE
             isShootingProjectile = false;
             projectileInstance.position = projectileStartPos.position;
             rotateProjectile.StopRotation();
             AkSoundEngine.PostEvent("NME_Hit", gameObject);
+
+            if (enemyToKill)
+            {
+                enemyToKill.HitEnemy();
+            }
         }
     }
 

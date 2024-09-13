@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID NME_HIT = 1706673613U;
         static const AkUniqueID NME_SIGNAL = 3843687674U;
         static const AkUniqueID NME_SPAWN = 595342759U;
+        static const AkUniqueID NME_TAUNT = 4244453982U;
         static const AkUniqueID NME_ZONE_ENTER = 2537597519U;
         static const AkUniqueID NME_ZONE_EXIT = 542453335U;
         static const AkUniqueID ONCLICK = 21544190U;
@@ -66,10 +67,12 @@ namespace AK
                 static const AkUniqueID PLAY = 1256202815U;
                 static const AkUniqueID QUIT = 3930794392U;
                 static const AkUniqueID RETURN = 3859834159U;
+                static const AkUniqueID SCREENSHAKETOGGLE = 3687230321U;
                 static const AkUniqueID SETTINGS = 2910527622U;
                 static const AkUniqueID SFXVOLUME = 988953028U;
                 static const AkUniqueID TARGETVOLUME = 3260108748U;
                 static const AkUniqueID UIVOLUME = 3415057477U;
+                static const AkUniqueID VOICETOGGLE = 590914013U;
                 static const AkUniqueID WHEELCHAIRMODE = 4054299888U;
             } // namespace SWITCH
         } // namespace BUTTONTYPE
@@ -110,6 +113,7 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AD = 1886858558U;
         static const AkUniqueID BINAURAL = 52442795U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;

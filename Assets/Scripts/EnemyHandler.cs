@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Playables;
 
 public class EnemyHandler : MonoBehaviour
 {
-    
+
     private GameData _gameData;
 
     private CrosshairController _crosshairController;
@@ -21,35 +22,33 @@ public class EnemyHandler : MonoBehaviour
     public SphereCollider EnemyCollider;
     [SerializeField] private List<GameObject> _ghostBodies;
     [SerializeField] private DecalProjector _decalGhostFace;
-    
+
     private EnemySpawnPoint _spawnPoint; // Only used for Z positioning of the enemy on spawn
     private static readonly int FaceSelector = Shader.PropertyToID("_Face_selector");
 
+    public int stepMultiplier;
+
     private void Awake()
     {
-        foreach (var go in _ghostBodies)
-        {
-            go.SetActive(false);
-        }
-        _ghostBodies[Random.Range(0, _ghostBodies.Count)].SetActive(true);
-        _decalGhostFace.material.SetFloat(FaceSelector, Random.Range(1,4));
-        
-        
+        ToggleVisuals(false);
+
+
         _gameData = Data.GameData;
         transform.localScale = new Vector3(_gameData.EnemyDefaultScale, _gameData.EnemyDefaultScale, _gameData.EnemyDefaultScale);
         _crosshairPosition = Vector3.zero;
         _isCrosshairOnEnemy = false;
         _currentHP = _gameData.EnemyHP;
-        _scaleStep = Random.Range(_gameData.EnemyMinScaleStep, _gameData.EnemyMaxScaleStep);
+
+        
         _maxTriggerScale = Random.Range(_gameData.EnemyMinTriggerScale, _gameData.EnemyMaxTriggerScale);
         if (this.gameObject.TryGetComponent<SphereCollider>(out var collider))
         {
             collider.radius = _gameData.ColliderRadius;
             EnemyCollider = collider;
         }
-        float randomCoordX =  Random.Range(-_gameData.Xrange, _gameData.Xrange);
-        float randomCoordY =  Random.Range(-_gameData.Yrange, _gameData.Yrange);
-        
+        float randomCoordX = Random.Range(-_gameData.Xrange, _gameData.Xrange);
+        float randomCoordY = Random.Range(-_gameData.Yrange, _gameData.Yrange);
+
         var enemySpawnPoint = FindObjectOfType<EnemySpawnPoint>();
         if (enemySpawnPoint)
         {
@@ -59,8 +58,8 @@ public class EnemyHandler : MonoBehaviour
         {
             transform.position = new Vector3(randomCoordY, randomCoordX, 0);
         }
-        
-        
+
+
         //_timeOffset = Random.Range(0f, 100f);
     }
 
@@ -78,13 +77,32 @@ public class EnemyHandler : MonoBehaviour
     {
         //Change enemy scale according to speed
         transform.localScale = transform.localScale + new Vector3(_scaleStep, _scaleStep, _scaleStep);
-        
+
         //If enemy reached maximum scale, end the game
         if (transform.localScale.x >= _maxTriggerScale)
         {
             AkSoundEngine.PostEvent("Loose", gameObject);
             GameHandler.Instance.EndGame();
         }
+
+        stepMultiplier = Mathf.FloorToInt(GameHandler.Instance.EnemyCount / Data.GameData.EnemiesUntilDifficultyIncrease);
+
+        if (stepMultiplier == 0)
+        {
+            _scaleStep = _gameData.EnemyMinScaleStep;
+        }
+        else
+        {
+            _scaleStep = _gameData.EnemyMinScaleStep * stepMultiplier; //Random.Range(_gameData.EnemyMinScaleStep, _gameData.EnemyMaxScaleStep);
+
+            if (stepMultiplier >= _gameData.MaxStep + 1)
+            {
+                _scaleStep = _gameData.EnemyMinScaleStep * _gameData.MaxStep;
+                stepMultiplier = _gameData.MaxStep;
+            }
+            
+        }
+
         _currentSize = (GetPercent(_maxTriggerScale, transform.localScale.x)).ToString();
         //Debug.Log(_currentSize);
         AkSoundEngine.SetRTPCValue("NME_Scale", GetPercent(_maxTriggerScale, transform.localScale.x));
@@ -94,6 +112,12 @@ public class EnemyHandler : MonoBehaviour
         {
             _alert = true;
             AkSoundEngine.PostEvent("Warning", gameObject);
+        }
+
+        //Enemy kill feedback
+        if (GetPercent(_maxTriggerScale, transform.localScale.x) >= 98f)
+        {
+            ToggleVisuals(true);
         }
 
         AkSoundEngine.SetRTPCValue("Elevation", transform.position.y - _crosshairController.transform.position.y);
@@ -109,14 +133,27 @@ public class EnemyHandler : MonoBehaviour
         AkSoundEngine.PostEvent("NME_Hit", gameObject);
         if (-_currentHP > 0)
         {
-             
+
         }
         else if (_currentHP <= 0)
         {
-             _gameData.Score++;
-             AkSoundEngine.PostEvent("NME_Death", gameObject);
-             GameHandler.Instance.StartCoroutine(GameHandler.Instance.SpawnEnemy());
-             Destroy(this.gameObject);
+            _gameData.Score++;
+            AkSoundEngine.PostEvent("NME_Death", gameObject);
+            GameHandler.Instance.StartCoroutine(GameHandler.Instance.SpawnEnemy());
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void ToggleVisuals(bool toggle = true)
+    {
+        foreach (var go in _ghostBodies)
+        {
+            go.SetActive(false);
+        }
+        if (toggle)
+        {
+            _ghostBodies[Random.Range(0, _ghostBodies.Count)].SetActive(true);
+            _decalGhostFace.material.SetFloat(FaceSelector, Random.Range(1, 4));
         }
     }
 
@@ -161,7 +198,7 @@ public class EnemyHandler : MonoBehaviour
 
     private void OnDestroy()
     {
-        _crosshairController.RemoveEnemyFromPotentialLockList(this); 
+        _crosshairController.RemoveEnemyFromPotentialLockList(this);
         _crosshairController.UpdateDistanceValue(9999);
         _crosshairController.UpdateCurrentScaleRatio(0);
     }
