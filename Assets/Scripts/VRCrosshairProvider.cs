@@ -162,9 +162,9 @@ public class VRCrosshairProvider : MonoBehaviour
         
         float deltaTime = Time.deltaTime;
         _currentVelocity = (_position - _previousPosition) / deltaTime;
-        _currentVelocityMagnitude = _currentVelocity.magnitude;
+        _currentVelocityMagnitude = _pose.GetVelocity().magnitude;
 
-        if (_currentVelocity.magnitude > _fireThreshold && Time.time - _lastFireTime >= _cooldown)
+        if (_pose.GetAngularVelocity().magnitude > _fireThreshold && Time.time - _lastFireTime >= _cooldown)
         {
             FireDetected();
             _lastFireTime = Time.time;
@@ -189,7 +189,7 @@ public class VRCrosshairProvider : MonoBehaviour
     private void FireDetected()
     {
         // Implement the logic for when a fire is detected
-        Debug.Log("Fire detected!");
+        Debug.Log("Fire detected with force: " + _pose.GetAngularVelocity().magnitude, this);
         _crosshairController.Fire();
     }
 

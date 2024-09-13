@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ab39d5bcc6d5e49a9e92dcde5fb372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseVibrationValue: 2
   curveDuration: 0.3
   aimingVibrationCurve:
     serializedVersion: 2

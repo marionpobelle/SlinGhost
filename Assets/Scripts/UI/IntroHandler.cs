@@ -39,8 +39,6 @@ public class IntroHandler : MonoBehaviour
         yield return new WaitForSeconds(_fadeTime);
         yield return new WaitForSeconds(_delayTime);
         SceneManager.LoadScene("Menu");
-        AkSoundEngine.SetState("Music", "Menu");
-        AkSoundEngine.PostEvent("Music", gameObject);
     }
 
     public void FadeIn(CanvasGroup canvasGroup)
