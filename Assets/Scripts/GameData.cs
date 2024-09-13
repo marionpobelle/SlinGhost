@@ -33,15 +33,15 @@ public class GameData : ScriptableObject
 
     [Header("DIFFICULTY SETTINGS")]
     public float EnemyMinScaleStepEASY = 0f;
-    public float MaxStepEASY = 0f;
+    public int MaxStepEASY = 0;
     public float ColliderRadiusEASY = 0f;
 
     public float EnemyMinScaleStepMEDIUM = 0f;
-    public float MaxStepMEDIUM = 0f;
+    public int MaxStepMEDIUM = 0;
     public float ColliderRadiusMEDIUM = 0f;
 
     public float EnemyMinScaleStepHARD = 0f;
-    public float MaxStepHARD = 0f;
+    public int MaxStepHARD = 0;
     public float ColliderRadiusHARD = 0f;
 
     [Header("Spawner")]
