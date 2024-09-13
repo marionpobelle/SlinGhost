@@ -16,6 +16,7 @@ public class VRCrosshairProvider : MonoBehaviour
     [SerializeField] private float _currentStrechAmount; // Between 0 and 1
     [SerializeField] private Vector3 _idlePosition; // Saved in PlayerPrefs
     [SerializeField] private Vector3 _fullStretchPosition; // Saved in PlayerPrefs
+    [SerializeField] private AnimationCurve _stretchCurve;
     private CrosshairController _crosshairController;
     private SteamVR_Behaviour_Pose _pose;
     private Vector3 _previousPosition;
@@ -180,6 +181,7 @@ public class VRCrosshairProvider : MonoBehaviour
         float distanceFromIdleToFullStretch = Vector3.Distance(_idlePosition, _fullStretchPosition);
         _currentStrechAmount = distanceFromIdleToController / distanceFromIdleToFullStretch;
         _currentStrechAmount = Mathf.Clamp(_currentStrechAmount, 0, 1);
+        _currentStrechAmount = _stretchCurve.Evaluate(_currentStrechAmount);
         _crosshairController.CurrentStretchAmout = _currentStrechAmount;
         AkSoundEngine.SetRTPCValue("Stretch", _currentStrechAmount);
     }
