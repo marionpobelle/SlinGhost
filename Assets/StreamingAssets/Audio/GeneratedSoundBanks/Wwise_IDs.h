@@ -67,6 +67,7 @@ namespace AK
                 static const AkUniqueID PLAY = 1256202815U;
                 static const AkUniqueID QUIT = 3930794392U;
                 static const AkUniqueID RETURN = 3859834159U;
+                static const AkUniqueID SCREENSHAKETOGGLE = 3687230321U;
                 static const AkUniqueID SETTINGS = 2910527622U;
                 static const AkUniqueID SFXVOLUME = 988953028U;
                 static const AkUniqueID TARGETVOLUME = 3260108748U;

@@ -4795,6 +4795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 897010533}
   - component: {fileID: 897010534}
+  - component: {fileID: 897010535}
   m_Layer: 5
   m_Name: VoiceToggle
   m_TagString: Untagged
@@ -4871,6 +4872,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!114 &897010535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897010532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e05476dd33ca53d4caf476130c8010bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selectableObject: 13
 --- !u!1 &910556888
 GameObject:
   m_ObjectHideFlags: 0
