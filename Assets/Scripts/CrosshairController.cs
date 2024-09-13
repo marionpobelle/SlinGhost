@@ -21,6 +21,7 @@ public class CrosshairController : MonoBehaviour
     [SerializeField] Transform projectileInstance;
     [SerializeField] RotateProjectile rotateProjectile;
     [SerializeField] GameObject splatterPrefab;
+    [SerializeField] GameObject pumpkinExplosion;
 
     bool isLockedOn = false;
     bool isLockChanging = false;
@@ -142,6 +143,8 @@ public class CrosshairController : MonoBehaviour
                 Debug.Log("Splatter created at : " + projectilePosition, this);
             }
             
+                Debug.Log("Exploded at: " + projectilePosition, this);
+            Instantiate(pumpkinExplosion, projectilePosition, Quaternion.identity);
             // PLAY SPLATTER SOUND HERE
             isShootingProjectile = false;
             projectileInstance.position = projectileStartPos.position;
