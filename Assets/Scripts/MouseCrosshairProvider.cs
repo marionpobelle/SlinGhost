@@ -18,6 +18,7 @@ public class MouseCrosshairProvider : MonoBehaviour
     private void Awake()
     {
         _cooldownInSeconds = new WaitForSeconds(Data.GameData.CooldownBetweenShotsInSeconds);
+        Cursor.visible = false;
     }
 
     private void Start()
