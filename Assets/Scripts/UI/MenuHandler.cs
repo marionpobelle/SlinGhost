@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -32,6 +33,7 @@ public class MenuHandler : MonoBehaviour
     [Header("NAVIGATION")]
 
     private GameObject _currentPanel;
+    private Joycon _joycon;
     [SerializeField] private EventSystem _layoutEventSystem;
 
     private void Awake()
@@ -78,6 +80,13 @@ public class MenuHandler : MonoBehaviour
         _targetSlider.value = 0.75f;
     }
 
+    private void Start()
+    {
+        // get the public Joycon array attached to the JoyconManager in scene
+        if (JoyconManager.Instance.j.Count != 0)
+            _joycon = JoyconManager.Instance.j[0];
+    }
+
     private void OnDestroy()
     {
         //MAIN
@@ -98,6 +107,16 @@ public class MenuHandler : MonoBehaviour
         _uiSlider.onValueChanged.RemoveListener(OnUIChanged);
         _targetSlider.onValueChanged.RemoveListener(OnTargetChanged);
         _audioReturnButton.onClick.RemoveListener(OnAudioReturnClicked);
+    }
+
+    private void Update()
+    {
+        if (_joycon == null) return;
+        if (_joycon.GetButton(Joycon.Button.DPAD_LEFT) || _joycon.GetButton(Joycon.Button.DPAD_DOWN))
+        {
+            // Restart with the switch controller
+            OnPlayClicked();
+        }
     }
 
     //MAIN
