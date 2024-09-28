@@ -21,6 +21,9 @@ You can find a video showcasing SlinGhost's gameplay on Youtube following this l
 You can try out SlinGhost on Itchio :
 [SlinGhost - Itchio](https://vitaminexe.itch.io/slinghost)
 
+![image (1)](https://github.com/user-attachments/assets/fce2d575-1b0c-43a6-ae56-a0b81314d6e5)
+![image](https://github.com/user-attachments/assets/973bee9f-9386-4127-9591-033759e8cecc)
+
 ## Team
 
 🎵 Sound : [Frédéric KUKOVICIC](https://itch.io/profile/fredkvc)
