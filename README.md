@@ -46,3 +46,45 @@ You can try out SlinGhost on Itchio :
 👔 Project Manager : [Léa LIONIS](https://corail.itch.io/)
 
 🧠 Ergonomic : Lud.e CHATIN.
+
+## TDL
+
+- [x] VISUALS
+- - [x] Pumpkin
+- - [x] Logo
+- - [x] UI
+- - [x] 3D ghost assets
+- - [x] 2D ghost textures
+- - [x] Cel shading
+- - [x] Splash effect
+- - [x] Outline shader
+- - [x] Background asset
+- - [x] Level Art
+  
+- [x] GAMEPLAY
+- - [x] Pumpkin fragmentation on hit
+- - [x] Enemy = movement + collider + innit + animation
+- - [x] Game loop
+- - [x] Projectile
+  
+- [x] CONTROLLER
+- - [x] VR inputs
+- - [x] Switch Joycon = ringfit haptic rumbles
+- - [x] Turn crosshair invisible when input is on cooldown
+- - [x] Screenshake when reaching maximum stretch
+
+- [x] UI
+- - [x] Main Menu
+- - [x] Settings
+- - [x] Intro scene
+ 
+- [x] AUDIO
+- - [x] Voice-over mode
+- - [x] Music
+- - [x] Aim SFX
+- - [x] Ghost SFX
+
+- [x] BUILD
+- - [x] Arduino led feedbacks
+- - [x] Frame build
+- - [x] Single button input prototype
